@@ -26,7 +26,7 @@ const CheckboxSection = ({
   const colorClasses = {
     blue: "border-blue-200 bg-blue-50",
     green: "border-green-200 bg-green-50",
-    purple: "border-purple-200 bg-purple-50",
+    sky: "border-sky-200 bg-sky-50",
     orange: "border-orange-200 bg-orange-50",
   };
 
@@ -73,7 +73,7 @@ const CheckboxSection = ({
               />
             }
             label={
-              <span className="text-xs font-medium text-purple-600 cursor-pointer">
+              <span className="text-xs font-medium text-sky-600 cursor-pointer">
                 Select All
               </span>
             }
@@ -187,7 +187,7 @@ export default function CreateArchitectModal({
               className="bg-white rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col"
             >
               {/* Header */}
-              <div className="bg-gradient-to-r from-purple-600 to-indigo-600 p-6">
+              <div className="bg-gradient-to-r from-sky-600 to-indigo-600 p-6">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
@@ -198,7 +198,7 @@ export default function CreateArchitectModal({
                         Create Content Architect
                         <Sparkles className="h-5 w-5" />
                       </h2>
-                      <p className="text-purple-100 text-sm mt-1">
+                      <p className="text-sky-100 text-sm mt-1">
                         Build your content strategy structure
                       </p>
                     </div>
@@ -231,7 +231,7 @@ export default function CreateArchitectModal({
                         setFormData({ ...formData, name: e.target.value })
                       }
                       placeholder="e.g., Main Website Content Architecture"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-lg font-semibold"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all text-lg font-semibold"
                       autoFocus
                     />
                   </div>
@@ -239,7 +239,7 @@ export default function CreateArchitectModal({
                   {/* Selection Section */}
                   <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
                     <div className="flex items-center gap-3 mb-6">
-                      <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+                      <div className="w-10 h-10 bg-gradient-to-br from-sky-500 to-blue-500 rounded-lg flex items-center justify-center">
                         <Target className="h-5 w-5 text-white" />
                       </div>
                       <div>
@@ -283,7 +283,7 @@ export default function CreateArchitectModal({
                           setFormData({ ...formData, contentTypes: selected })
                         }
                         icon={FolderTree}
-                        color="purple"
+                        color="sky"
                       />
                     </div>
                   </div>

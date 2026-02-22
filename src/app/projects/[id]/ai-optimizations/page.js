@@ -224,7 +224,7 @@ export default function AIOptimizationsPage({ params }) {
     <div className="w-full px-4 mt-2" style={{ backgroundColor: "#FAFAFA", minHeight: "calc(100vh - 100px)" }}>
       <div className="max-w-full mx-auto space-y-4">
         <h1 className="text-2xl sm:text-3xl font-bold text-[#171717]">
-          AI Optimizations
+          AI Parent Questions
         </h1>
 
         <div className="space-y-2">

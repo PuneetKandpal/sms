@@ -126,7 +126,7 @@ const SourcePanelArticles = ({
             className="p-1 hover:bg-gray-200 rounded transition-colors duration-150"
             title={isCollapsed ? "Expand panel" : "Collapse panel"}
           >
-            <FiSidebar className="w-4 h-4 text-purple-600" />
+            <FiSidebar className="w-4 h-4 text-sky-600" />
           </button>
         </div>
         {!isCollapsed && (
@@ -136,7 +136,7 @@ const SourcePanelArticles = ({
                 <button
                   onClick={handleApprove}
                   disabled={actionLoading.approve || actionLoading.reject}
-                  className="w-full py-2 px-2 bg-purple-600 text-white rounded-md font-medium hover:bg-purple-700 transition-colors duration-150 text-sm"
+                  className="w-full py-2 px-2 bg-sky-600 text-white rounded-md font-medium hover:bg-sky-700 transition-colors duration-150 text-sm"
                 >
                   {actionLoading.approve ? (
                     <div className="flex items-center justify-center gap-2">
@@ -165,25 +165,25 @@ const SourcePanelArticles = ({
               <div className="space-y-2 mt-3">
                 <button
                   onClick={showError}
-                  className="w-full py-2 px-2 bg-purple-600 text-white rounded-md font-medium hover:bg-purple-700 transition-colors duration-150 text-sm"
+                  className="w-full py-2 px-2 bg-sky-600 text-white rounded-md font-medium hover:bg-sky-700 transition-colors duration-150 text-sm"
                 >
                   Create Social Posts
                 </button>
                 <button
                   onClick={showError}
-                  className="w-full py-2 px-2 bg-purple-600 text-white rounded-md font-medium hover:bg-purple-700 transition-colors duration-150 text-sm"
+                  className="w-full py-2 px-2 bg-sky-600 text-white rounded-md font-medium hover:bg-sky-700 transition-colors duration-150 text-sm"
                 >
                   Create AIO Content
                 </button>
                 <button
                   onClick={showError}
-                  className="w-full py-2 px-4 bg-purple-600 text-white rounded-md font-medium hover:bg-purple-700 transition-colors duration-150 text-sm"
+                  className="w-full py-2 px-4 bg-sky-600 text-white rounded-md font-medium hover:bg-sky-700 transition-colors duration-150 text-sm"
                 >
                   Create Video
                 </button>
                 <button
                   onClick={showError}
-                  className="w-full py-2 px-4 bg-purple-600 text-white rounded-md font-medium hover:bg-purple-700 transition-colors duration-150 text-sm"
+                  className="w-full py-2 px-4 bg-sky-600 text-white rounded-md font-medium hover:bg-sky-700 transition-colors duration-150 text-sm"
                 >
                   Create Webinar
                 </button>

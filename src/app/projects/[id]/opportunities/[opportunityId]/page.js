@@ -381,10 +381,10 @@ export default function OpportunityAssessmentPage({ params }) {
             </div>
 
             {/* AI Response Shimmer */}
-            <div className="bg-purple-50 rounded-xl shadow-sm border border-purple-200 p-6 flex-1">
-              <div className="h-6 bg-purple-200 rounded w-48 mb-3"></div>
-              <div className="relative h-64 bg-purple-100 rounded-lg mb-4 flex items-center justify-center">
-                <div className="h-10 w-32 bg-purple-300 rounded animate-pulse"></div>
+            <div className="bg-sky-50 rounded-xl shadow-sm border border-sky-200 p-6 flex-1">
+              <div className="h-6 bg-sky-200 rounded w-48 mb-3"></div>
+              <div className="relative h-64 bg-sky-100 rounded-lg mb-4 flex items-center justify-center">
+                <div className="h-10 w-32 bg-sky-300 rounded animate-pulse"></div>
               </div>
             </div>
           </div>

@@ -94,7 +94,7 @@ export default function SignupForm({
             onChange={(e) =>
               handleInputChange("signup", "firstName", e.target.value)
             }
-            className={`w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:bg-white transition-all duration-200 text-gray-900 placeholder-gray-500 outline-none ${
+            className={`w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500 focus:bg-white transition-all duration-200 text-gray-900 placeholder-gray-500 outline-none ${
               formErrors.firstName ? "ring-2 ring-red-300 border-red-300" : ""
             }`}
             placeholder="First Name"
@@ -118,7 +118,7 @@ export default function SignupForm({
             onChange={(e) =>
               handleInputChange("signup", "lastName", e.target.value)
             }
-            className={`w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:bg-white transition-all duration-200 text-gray-900 placeholder-gray-500 outline-none ${
+            className={`w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500 focus:bg-white transition-all duration-200 text-gray-900 placeholder-gray-500 outline-none ${
               formErrors.lastName ? "ring-2 ring-red-300 border-red-300" : ""
             }`}
             placeholder="Last Name"
@@ -142,7 +142,7 @@ export default function SignupForm({
             onChange={(e) =>
               handleInputChange("signup", "password", e.target.value)
             }
-            className={`w-full pl-12 pr-12 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:bg-white transition-all duration-200 text-gray-900 placeholder-gray-500 outline-none ${
+            className={`w-full pl-12 pr-12 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500 focus:bg-white transition-all duration-200 text-gray-900 placeholder-gray-500 outline-none ${
               formErrors.password ? "ring-2 ring-red-300 border-red-300" : ""
             }`}
             placeholder="Password"
@@ -151,7 +151,7 @@ export default function SignupForm({
           <button
             type="button"
             onClick={() => setShowPassword(!showPassword)}
-            className="absolute inset-y-0 right-0 pr-4 flex items-center hover:text-purple-600 transition-colors duration-200 cursor-pointer"
+            className="absolute inset-y-0 right-0 pr-4 flex items-center hover:text-sky-600 transition-colors duration-200 cursor-pointer"
           >
             {showPassword ? (
               <FaEyeSlash className="h-5 w-5 text-gray-400" />
@@ -181,7 +181,7 @@ export default function SignupForm({
             onChange={(e) =>
               handleInputChange("signup", "passwordConfirm", e.target.value)
             }
-            className={`w-full pl-12 pr-12 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:bg-white transition-all duration-200 text-gray-900 placeholder-gray-500 outline-none ${
+            className={`w-full pl-12 pr-12 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500 focus:bg-white transition-all duration-200 text-gray-900 placeholder-gray-500 outline-none ${
               formErrors.passwordConfirm
                 ? "ring-2 ring-red-300 border-red-300"
                 : ""
@@ -192,7 +192,7 @@ export default function SignupForm({
           <button
             type="button"
             onClick={() => setShowPasswordConfirm(!showPasswordConfirm)}
-            className="absolute inset-y-0 right-0 pr-4 flex items-center hover:text-purple-600 transition-colors duration-200 cursor-pointer"
+            className="absolute inset-y-0 right-0 pr-4 flex items-center hover:text-sky-600 transition-colors duration-200 cursor-pointer"
           >
             {showPasswordConfirm ? (
               <FaEyeSlash className="h-5 w-5 text-gray-400" />
@@ -213,7 +213,7 @@ export default function SignupForm({
         whileTap={{ scale: 0.98 }}
         type="submit"
         disabled={isSignupDisabled}
-        className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-4 px-6 rounded-2xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-lg cursor-pointer"
+        className="w-full bg-gradient-to-r from-sky-600 to-blue-600 hover:from-sky-700 hover:to-blue-700 text-white font-semibold py-4 px-6 rounded-2xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-lg cursor-pointer"
       >
         {isProcessing ? (
           <div className="flex items-center space-x-2">

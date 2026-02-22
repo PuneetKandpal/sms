@@ -21,30 +21,30 @@ import { BiExpandVertical } from "react-icons/bi";
 import Tooltip from "@mui/material/Tooltip";
 
 const SECTIONS = [
-  { key: "industries", title: "Industries", icon: Building2, color: "blue" },
+  { key: "industries", title: "School Types", icon: Building2, color: "sky" },
   {
     key: "buyer_personas",
-    title: "Buyer Personas",
+    title: "Audience Profiles",
     icon: Users,
-    color: "green",
+    color: "emerald",
   },
   {
     key: "products_and_services",
-    title: "Products & Services",
+    title: "Programs & Services",
     icon: Lightbulb,
-    color: "purple",
+    color: "violet",
   },
   {
     key: "target_markets",
-    title: "Target Markets",
+    title: "Target Communities",
     icon: Target,
-    color: "orange",
+    color: "amber",
   },
   {
     key: "differentiators",
-    title: "Differentiators",
+    title: "Reasons Families Choose You",
     icon: Globe,
-    color: "red",
+    color: "rose",
   },
   {
     key: "geo_leo_strategy",
@@ -57,16 +57,16 @@ const SECTIONS = [
 const COLORS = {
   blue: "bg-blue-50 border-blue-200 text-blue-600",
   green: "bg-green-50 border-green-200 text-green-600",
-  purple: "bg-purple-50 border-purple-200 text-purple-600",
+  sky: "bg-sky-50 border-sky-200 text-sky-600",
   orange: "bg-orange-50 border-orange-200 text-orange-600",
   red: "bg-red-50 border-red-200 text-red-600",
   indigo: "bg-indigo-50 border-indigo-200 text-indigo-600",
 };
 
-function DataItem({ children, color, onRemove, showRemove = false }) {
+function DataItem({ children, onRemove, showRemove = false }) {
   return (
     <div
-      className={`${COLORS[color]} rounded px-3 py-2 text-xs font-medium flex items-center justify-between group`}
+      className={`bg-gray-50 border border-gray-200 text-gray-800 rounded px-3 py-2 text-xs font-medium flex items-center justify-between group`}
     >
       <span className="flex-1">{children}</span>
       {showRemove && (
@@ -94,7 +94,7 @@ function DataSection({
   onPendingIndicatorClick,
   newPsKeyCount,
 }) {
-  const { key, title, icon: Icon, color } = section;
+  const { key, title, icon: Icon } = section;
   const sectionData = data?.[key];
 
   if (!sectionData) return null;
@@ -110,7 +110,7 @@ function DataSection({
         className="flex items-center justify-between w-full text-left hover:bg-gray-50 -m-2 p-2 rounded"
       >
         <div className="flex items-center space-x-2">
-          <Icon className={`w-5 h-5 text-${color}-600`} />
+          <Icon className={`w-5 h-5 text-gray-700`} />
           <h4 className="font-semibold text-gray-800">{title}</h4>
           <div className="flex items-center space-x-2">
             {key === "products_and_services" &&
@@ -173,7 +173,7 @@ function DataSection({
                   </button>
                 )}
               </div>
-              <div className={`p-3 rounded-lg ${COLORS[color]} border`}>
+              <div className={`p-3 rounded-lg bg-gray-50 border border-gray-200`}>
                 <p className="text-sm text-gray-700 leading-relaxed">
                   {sectionData.overview}
                 </p>
@@ -189,7 +189,6 @@ function DataSection({
                 {sectionData.list.map((item, index) => (
                   <DataItem
                     key={index}
-                    color={color}
                     showRemove={showRemove}
                     onRemove={() => onRemove(key, "item", null, null, index)}
                   >
@@ -213,7 +212,7 @@ function DataSection({
                   <div className="flex flex-wrap gap-1">
                     {sectionData.seo_strategy.industry_modifiers.map(
                       (item, index) => (
-                        <DataItem key={index} color={color}>
+                        <DataItem key={index}>
                           <Tag className="w-3 h-3 mr-1 inline" />
                           {item}
                         </DataItem>
@@ -231,7 +230,7 @@ function DataSection({
                   <div className="flex flex-wrap gap-1">
                     {sectionData.seo_strategy.location_based_terms.map(
                       (item, index) => (
-                        <DataItem key={index} color={color}>
+                        <DataItem key={index}>
                           <Tag className="w-3 h-3 mr-1 inline" />
                           {item}
                         </DataItem>
@@ -282,7 +281,6 @@ function DataSection({
                             {productData.keywords.map((keyword, index) => (
                               <DataItem
                                 key={index}
-                                color={color}
                                 showRemove={showRemove && !isSourceData}
                                 onRemove={() =>
                                   onRemove?.(
@@ -327,7 +325,6 @@ function DataSection({
                             {productData.map((item, index) => (
                               <DataItem
                                 key={index}
-                                color={color}
                                 showRemove={showRemove && !isSourceData}
                                 onRemove={() =>
                                   onRemove?.(
@@ -359,7 +356,7 @@ function DataSection({
 
 export default function CurrentDataSection({
   data,
-  title = "Company Overview (Source of Truth)",
+  title = "School Overview (Source of Truth)",
   onRemove,
   showRemove = false,
   expandedSections: externalExpandedSections,
@@ -387,7 +384,7 @@ export default function CurrentDataSection({
     return (
       <div className="bg-white rounded-lg p-6 border border-gray-200 text-center">
         <Building2 className="w-8 h-8 mx-auto mb-2 text-gray-400" />
-        <p className="text-gray-500">No company overview available</p>
+        <p className="text-gray-500">No school overview available</p>
       </div>
     );
   }

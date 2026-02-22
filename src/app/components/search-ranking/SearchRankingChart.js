@@ -18,7 +18,7 @@ function EmptyState({ loading }) {
     <div className="flex h-64 flex-col items-center justify-center text-center text-sm text-gray-500">
       {loading ? (
         <div className="flex flex-col items-center gap-3">
-          <span className="inline-block h-8 w-8 animate-spin rounded-full border-2 border-purple-500 border-t-transparent" />
+          <span className="inline-block h-8 w-8 animate-spin rounded-full border-2 border-sky-500 border-t-transparent" />
           Loading historical trend...
         </div>
       ) : (

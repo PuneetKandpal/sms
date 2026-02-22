@@ -268,7 +268,7 @@ export default function InvitePage() {
       </div>
 
       {/* Right Side - Illustration */}
-      <div className="w-full lg:w-1/2 bg-gradient-to-br from-purple-600 via-purple-500 to-blue-600 relative overflow-hidden min-h-[50vh] lg:min-h-screen">
+      <div className="w-full lg:w-1/2 bg-gradient-to-br from-sky-600 via-sky-500 to-blue-600 relative overflow-hidden min-h-[50vh] lg:min-h-screen">
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}

@@ -48,12 +48,12 @@ const SourcesPanelTopic = ({
 
   const hasCoreIdeas = sourcePanel.length > 0;
   const heroButtonClasses =
-    "w-full h-36 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-700 text-white text-xl font-semibold flex items-center justify-center text-center px-6 shadow-lg hover:shadow-xl transition-all duration-200";
+    "w-full h-36 rounded-2xl bg-gradient-to-br from-sky-500 to-sky-700 text-white text-xl font-semibold flex items-center justify-center text-center px-6 shadow-lg hover:shadow-xl transition-all duration-200";
   const primaryActionClasses = (disabled) =>
     `w-full cursor-pointer py-1 px-2 rounded-lg font-medium transition-colors duration-150 ${
       disabled
-        ? "bg-purple-200 text-purple-400 cursor-not-allowed"
-        : "bg-purple-600 text-white hover:bg-purple-700"
+        ? "bg-sky-200 text-sky-400 cursor-not-allowed"
+        : "bg-sky-600 text-white hover:bg-sky-700"
     }`;
   const dangerActionClasses = (disabled) =>
     `w-full cursor-pointer py-1 px-4 rounded-lg font-medium transition-colors duration-150 ${
@@ -468,7 +468,7 @@ const SourcesPanelTopic = ({
             className="p-1 hover:bg-gray-200 rounded transition-colors duration-150"
             title={isCollapsed ? "Expand panel" : "Collapse panel"}
           >
-            <FiSidebar className="w-4 h-4 text-purple-600" />
+            <FiSidebar className="w-4 h-4 text-sky-600" />
           </button>
         </div>
 

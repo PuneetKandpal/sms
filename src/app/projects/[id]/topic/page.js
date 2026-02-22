@@ -212,11 +212,11 @@ export default function TopicPage({ params }) {
       <div className="w-full p-4" style={{ backgroundColor: "#FAFAFA" }}>
         <div className="mx-auto space-y-4">
           <div>
-            <p className="text-sm uppercase tracking-[0.35em] text-gray-400">
-              Strategy &amp; Planning
+            <p className="text-sm font-semibold tracking-wider text-gray-500 uppercase mb-1">
+              Strategy &amp; Content
             </p>
             <h1 className="text-2xl sm:text-3xl font-bold text-[#171717]">
-              Topic Strategy
+              Content Topics
             </h1>
           </div>
 
@@ -242,7 +242,7 @@ export default function TopicPage({ params }) {
   if (!companyResearchChecked) {
     return (
       <div className="h-[calc(100vh-64px)] flex items-center justify-center bg-gray-50">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-sky-600"></div>
       </div>
     );
   }
@@ -255,7 +255,7 @@ export default function TopicPage({ params }) {
       <div className="mx-auto space-y-2">
         <div>
           <h1 className="text-2xl sm:text-3xl font-bold text-[#171717]">
-            Topic Strategy
+            Content Topics
           </h1>
         </div>
 

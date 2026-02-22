@@ -64,9 +64,9 @@ export default function SourceButton({
 			id: "keyword",
 			label: "Add Keyword",
 			icon: MdOutlineTag,
-			gradient: "from-purple-600 to-purple-700",
-			hoverGradient: "hover:from-purple-700 hover:to-purple-800",
-			shadowColor: "hover:shadow-purple-500/30",
+			gradient: "from-sky-600 to-sky-700",
+			hoverGradient: "hover:from-sky-700 hover:to-sky-800",
+			shadowColor: "hover:shadow-sky-500/30",
 			onClick: handleAddKeyword,
 			description: "Track specific keywords and phrases",
 		},
@@ -74,8 +74,8 @@ export default function SourceButton({
 			id: "other",
 			label: "Other Source",
 			icon: IoLibrary,
-			gradient: "from-indigo-600 to-purple-600",
-			hoverGradient: "hover:from-indigo-700 hover:to-purple-700",
+			gradient: "from-indigo-600 to-sky-600",
+			hoverGradient: "hover:from-indigo-700 hover:to-sky-700",
 			shadowColor: "hover:shadow-indigo-500/30",
 			onClick: handleOtherSource,
 			description: "Add custom data sources",
@@ -84,9 +84,9 @@ export default function SourceButton({
 			id: "competitor",
 			label: "Competitor",
 			icon: IoBusinessOutline,
-			gradient: "from-purple-600 to-pink-600",
-			hoverGradient: "hover:from-purple-700 hover:to-pink-700",
-			shadowColor: "hover:shadow-purple-500/30",
+			gradient: "from-sky-600 to-pink-600",
+			hoverGradient: "hover:from-sky-700 hover:to-pink-700",
+			shadowColor: "hover:shadow-sky-500/30",
 			onClick: handleCompetitor,
 			description: "Monitor competitor activities",
 		},
@@ -137,7 +137,7 @@ export default function SourceButton({
 										onClick={option.onClick}
 										onMouseEnter={() => setHoveredButton(option.id)}
 										onMouseLeave={() => setHoveredButton(null)}
-										className={`w-full group relative cursor-pointer overflow-hidden bg-gradient-to-r ${option.gradient} ${option.hoverGradient} text-white px-6 py-5 rounded-2xl font-semibold transition-all duration-300 hover:shadow-xl ${option.shadowColor} hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 active:scale-95`}
+										className={`w-full group relative cursor-pointer overflow-hidden bg-gradient-to-r ${option.gradient} ${option.hoverGradient} text-white px-6 py-5 rounded-2xl font-semibold transition-all duration-300 hover:shadow-xl ${option.shadowColor} hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 active:scale-95`}
 									>
 										<div className="flex items-center justify-between">
 											<div className="flex items-center space-x-4">

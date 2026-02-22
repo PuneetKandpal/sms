@@ -432,7 +432,7 @@ export default function Sidebar() {
       <div className="h-16 flex items-center justify-between px-4 border-b border-gray-200">
         {!collapsed && (
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-br from-sky-500 to-blue-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">D</span>
             </div>
             <span className="font-bold text-lg">Dashboard</span>

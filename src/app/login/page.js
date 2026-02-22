@@ -293,7 +293,7 @@ export default function LoginPage() {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className={`w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:bg-white transition-all duration-200 text-gray-900 placeholder-gray-500 outline-none ${
+                  className={`w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500 focus:bg-white transition-all duration-200 text-gray-900 placeholder-gray-500 outline-none ${
                     emailError ? "ring-2 ring-red-300 border-red-300" : ""
                   }`}
                   placeholder="Email"
@@ -316,14 +316,14 @@ export default function LoginPage() {
                   name="password"
                   value={formData.password}
                   onChange={handleInputChange}
-                  className="w-full pl-12 pr-12 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:bg-white transition-all duration-200 text-gray-900 placeholder-gray-500 outline-none"
+                  className="w-full pl-12 pr-12 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500 focus:bg-white transition-all duration-200 text-gray-900 placeholder-gray-500 outline-none"
                   placeholder="Password"
                   required
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute inset-y-0 right-0 pr-4 flex items-center hover:text-purple-600 transition-colors duration-200"
+                  className="absolute inset-y-0 right-0 pr-4 flex items-center hover:text-sky-600 transition-colors duration-200"
                 >
                   {showPassword ? (
                     <FaEyeSlash className="h-5 w-5 text-gray-400" />
@@ -341,7 +341,7 @@ export default function LoginPage() {
               type="button" // Changed from submit to button
               onClick={handleSubmit} // Changed from onSubmit to onClick
               disabled={isLoading}
-              className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-4 px-6 rounded-2xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-lg"
+              className="w-full bg-gradient-to-r from-sky-600 to-blue-600 hover:from-sky-700 hover:to-blue-700 text-white font-semibold py-4 px-6 rounded-2xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-lg"
             >
               {isLoading ? (
                 <div className="flex items-center space-x-2">
@@ -357,7 +357,7 @@ export default function LoginPage() {
             <div className="text-center mt-4">
               <a
                 href="/forgot-password"
-                className="text-sm text-gray-600 hover:text-purple-600 transition-colors duration-200 cursor-pointer"
+                className="text-sm text-gray-600 hover:text-sky-600 transition-colors duration-200 cursor-pointer"
               >
                 Forgot your password?
               </a>
@@ -369,7 +369,7 @@ export default function LoginPage() {
                 Don't have an account?{" "}
                 <a
                   href="/register"
-                  className="text-purple-600 hover:text-purple-700 font-semibold cursor-pointer"
+                  className="text-sky-600 hover:text-sky-700 font-semibold cursor-pointer"
                 >
                   Sign up here
                 </a>
@@ -380,7 +380,7 @@ export default function LoginPage() {
       </div>
 
       {/* Right Side - Illustration */}
-      <div className="w-full lg:w-1/2 bg-gradient-to-br from-purple-600 via-purple-500 to-blue-600 relative overflow-hidden min-h-[50vh] lg:min-h-screen">
+      <div className="w-full lg:w-1/2 bg-gradient-to-br from-sky-600 via-sky-500 to-blue-600 relative overflow-hidden min-h-[50vh] lg:min-h-screen">
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}

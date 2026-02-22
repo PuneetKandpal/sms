@@ -70,7 +70,7 @@ const getSearchIntentColor = (intent) => {
   if (!intent) return "bg-gray-100 text-gray-800";
   switch (intent.toLowerCase()) {
     case "commercial":
-      return "bg-purple-100 text-purple-700";
+      return "bg-sky-100 text-sky-700";
     case "informational":
       return "bg-blue-100 text-blue-700";
     case "navigational":
@@ -1183,7 +1183,7 @@ export default function KeywordTable({
                             width: 18,
                             height: 18,
                             borderRadius: "6px",
-                            backgroundColor: "#9810fa", // purple when checked
+                            backgroundColor: "#9810fa", // sky when checked
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
@@ -1635,7 +1635,7 @@ function KeywordTableSkeleton({ columns, visibleColumns, rowsCount = 10 }) {
                                 width: 18,
                                 height: 18,
                                 borderRadius: "6px",
-                                backgroundColor: "#9810fa", // purple when checked
+                                backgroundColor: "#9810fa", // sky when checked
                                 display: "flex",
                                 alignItems: "center",
                                 justifyContent: "center",

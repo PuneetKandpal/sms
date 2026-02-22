@@ -9,7 +9,7 @@ export default function LoadingState() {
         animate={{ opacity: 1 }}
         className="text-center"
       >
-        <div className="w-16 h-16 border-4 border-purple-200 border-t-purple-600 rounded-full animate-spin mx-auto mb-4"></div>
+        <div className="w-16 h-16 border-4 border-sky-200 border-t-sky-600 rounded-full animate-spin mx-auto mb-4"></div>
         <p className="text-gray-600 text-lg">Checking invitation...</p>
       </motion.div>
     </div>

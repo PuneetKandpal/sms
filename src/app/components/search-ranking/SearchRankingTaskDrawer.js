@@ -68,8 +68,8 @@ function TaskList({
                 className={clsx(
                   "relative w-full rounded-xl border px-3.5 py-2.5 text-left shadow-sm transition cursor-pointer overflow-hidden",
                   active
-                    ? "border-purple-400 bg-purple-50 shadow"
-                    : "border-gray-200 bg-white hover:border-purple-200 hover:bg-gray-50"
+                    ? "border-sky-400 bg-sky-50 shadow"
+                    : "border-gray-200 bg-white hover:border-sky-200 hover:bg-gray-50"
                 )}
                 initial={{ opacity: 0, y: 4 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -110,7 +110,7 @@ function TaskList({
                     </div>
                     <div className="flex flex-wrap items-center gap-1.5">
                       {task.providers?.length ? (
-                        <span className="inline-flex items-center rounded-md bg-purple-100 px-1.5 py-0.5 text-[10px] font-semibold text-purple-700">
+                        <span className="inline-flex items-center rounded-md bg-sky-100 px-1.5 py-0.5 text-[10px] font-semibold text-sky-700">
                           {task.providers.length} provider
                           {task.providers.length === 1 ? "" : "s"}
                         </span>
@@ -314,13 +314,13 @@ export default function SearchRankingTaskDrawer({
               <button
                 type="button"
                 onClick={onRefresh}
-                className="inline-flex items-center gap-2 rounded-full border border-purple-200 bg-purple-50 px-4 py-2 text-sm font-semibold text-purple-700 transition hover:border-purple-300 hover:bg-purple-100 disabled:cursor-not-allowed disabled:opacity-60 cursor-pointer"
+                className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-4 py-2 text-sm font-semibold text-sky-700 transition hover:border-sky-300 hover:bg-sky-100 disabled:cursor-not-allowed disabled:opacity-60 cursor-pointer"
                 disabled={loadingTasks}
               >
                 <RefreshCcw
                   className={clsx(
                     "h-4 w-4",
-                    loadingTasks && "animate-spin text-purple-600"
+                    loadingTasks && "animate-spin text-sky-600"
                   )}
                 />
                 {loadingTasks ? "Refreshing..." : "Refresh"}

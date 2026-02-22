@@ -51,9 +51,9 @@ export default function FeatureGrid() {
       {/* Feature Exploration Card */}
       <div
         onClick={() => router.push("/exploration")}
-        className="border border-gray-200 rounded-xl p-6 flex flex-col space-y-4 cursor-pointer hover:border-blue-400 hover:shadow-lg transition-all duration-200 bg-gradient-to-br from-blue-50 to-purple-50 relative overflow-hidden"
+        className="border border-gray-200 rounded-xl p-6 flex flex-col space-y-4 cursor-pointer hover:border-blue-400 hover:shadow-lg transition-all duration-200 bg-gradient-to-br from-blue-50 to-sky-50 relative overflow-hidden"
       >
-        <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-full blur-2xl" />
+        <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-400/10 to-sky-400/10 rounded-full blur-2xl" />
         <div className="relative z-10">
           <div className="text-blue-600 w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-sm">
             <Compass className="w-6 h-6" />
@@ -68,7 +68,7 @@ export default function FeatureGrid() {
             <div className="mt-3 flex items-center gap-2">
               <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all duration-500"
+                  className="h-full bg-gradient-to-r from-blue-500 to-sky-500 rounded-full transition-all duration-500"
                   style={{ width: `${stats.percentage}%` }}
                 />
               </div>

@@ -114,7 +114,7 @@ const getTagColor = (tag) => {
   const tagColors = {
     Communication: "bg-blue-500",
     Automation: "bg-green-600",
-    "24/7 Support": "bg-purple-600",
+    "24/7 Support": "bg-sky-600",
     Pricing: "bg-orange-500",
     AI: "bg-green-500",
     "Revenue Optimization": "bg-yellow-500",
@@ -122,12 +122,12 @@ const getTagColor = (tag) => {
     Reputation: "bg-red-500",
     "Guest Experience": "bg-teal-600",
     Calendar: "bg-blue-500",
-    Integration: "bg-purple-600",
+    Integration: "bg-sky-600",
     "Multi-Platform": "bg-blue-700",
     Cleaning: "bg-green-600",
     Coordination: "bg-orange-500",
     "Quality Control": "bg-yellow-600",
-    Analytics: "bg-purple-700",
+    Analytics: "bg-sky-700",
     "Cost Management": "bg-orange-700",
     Profitability: "bg-green-600",
   };

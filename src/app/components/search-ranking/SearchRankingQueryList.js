@@ -33,7 +33,7 @@ function QueryCard({ query, index, onRerun, onView }) {
               )}
             </div>
           </div>
-          <span className="inline-flex items-center gap-1 rounded-full bg-purple-50 px-3 py-1 text-xs font-semibold text-purple-700">
+          <span className="inline-flex items-center gap-1 rounded-full bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-700">
             <History className="h-3.5 w-3.5" />
             {query.totalVersions} version{query.totalVersions === 1 ? "" : "s"}
           </span>
@@ -69,7 +69,7 @@ function QueryCard({ query, index, onRerun, onView }) {
           <button
             type="button"
             onClick={() => onRerun(query)}
-            className="inline-flex items-center gap-2 rounded-xl bg-purple-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-purple-700"
+            className="inline-flex items-center gap-2 rounded-xl bg-sky-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-sky-700"
           >
             <RefreshCcw className="h-4 w-4" />
             Rerun Query
@@ -91,8 +91,8 @@ function QueryCard({ query, index, onRerun, onView }) {
 function EmptyState({ onCreate }) {
   return (
     <div className="rounded-2xl border border-dashed border-gray-300 bg-gray-50 p-10 text-center">
-      <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-purple-100">
-        <History className="h-6 w-6 text-purple-600" />
+      <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-sky-100">
+        <History className="h-6 w-6 text-sky-600" />
       </div>
       <h3 className="text-lg font-semibold text-gray-900">
         No discovery searches yet
@@ -103,7 +103,7 @@ function EmptyState({ onCreate }) {
       <button
         type="button"
         onClick={onCreate}
-        className="mt-4 inline-flex items-center justify-center rounded-xl bg-purple-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-purple-700"
+        className="mt-4 inline-flex items-center justify-center rounded-xl bg-sky-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-700"
       >
         Run a search
       </button>

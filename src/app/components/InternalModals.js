@@ -271,7 +271,7 @@ export function AddInternalModal({
 
         {isSubmitting && step === 1 ? (
           <div className="flex flex-col items-center justify-center py-12">
-            <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mb-4"></div>
+            <div className="w-12 h-12 border-4 border-sky-500 border-t-transparent rounded-full animate-spin mb-4"></div>
             <p className="text-gray-600">Processing file...</p>
           </div>
         ) : step === 1 ? (
@@ -281,7 +281,7 @@ export function AddInternalModal({
                 onClick={() => setActiveTab("text")}
                 className={`px-4 py-2 text-sm font-medium transition-colors ${
                   activeTab === "text"
-                    ? "text-purple-600 border-b-2 border-purple-600"
+                    ? "text-sky-600 border-b-2 border-sky-600"
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
@@ -292,7 +292,7 @@ export function AddInternalModal({
                 onClick={() => setActiveTab("file")}
                 className={`px-4 py-2 text-sm font-medium transition-colors ${
                   activeTab === "file"
-                    ? "text-purple-600 border-b-2 border-purple-600"
+                    ? "text-sky-600 border-b-2 border-sky-600"
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
@@ -313,7 +313,7 @@ export function AddInternalModal({
                       value={fileName}
                       onChange={(e) => setFileName(e.target.value)}
                       placeholder="Enter file name"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 mb-4"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 mb-4"
                     />
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Text Content
@@ -323,7 +323,7 @@ export function AddInternalModal({
                       onChange={(e) => setTextContent(e.target.value)}
                       placeholder="Paste your text content here..."
                       rows={12}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 resize-none"
                       required
                     />
                     <p className="mt-2 text-xs text-gray-500">
@@ -337,7 +337,7 @@ export function AddInternalModal({
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Upload Text File
                     </label>
-                    <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-purple-400 transition-colors">
+                    <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-sky-400 transition-colors">
                       <input
                         type="file"
                         accept=".txt,.pdf"
@@ -374,7 +374,7 @@ export function AddInternalModal({
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 rounded-lg disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors"
+                  className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-sky-500 to-blue-500 hover:from-sky-600 hover:to-blue-600 rounded-lg disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors"
                 >
                   {isSubmitting ? "Processing..." : "Next"}
                 </button>
@@ -398,7 +398,7 @@ export function AddInternalModal({
                         type="text"
                         value={displayName}
                         onChange={(e) => setDisplayName(e.target.value)}
-                        className="mt-1 w-full px-3 py-2 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="mt-1 w-full px-3 py-2 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
                       />
                       <p className="mt-1 text-xs text-gray-500">
                         You can edit this name before saving.
@@ -433,7 +433,7 @@ export function AddInternalModal({
                       const selected = contentTypes.find(ct => ct.slug === e.target.value);
                       setContentTypeDescription(selected?.description || "");
                     }}
-                    className="w-full px-3 py-2.5 border border-gray-300 rounded-xl bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    className="w-full px-3 py-2.5 border border-gray-300 rounded-xl bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
                   >
                     <option value="">Select content type</option>
                     {contentTypes.map((ct) => (
@@ -451,7 +451,7 @@ export function AddInternalModal({
                   <textarea
                     value={contentTypeDescription}
                     onChange={(e) => setContentTypeDescription(e.target.value)}
-                    className="w-full flex-1 px-3 py-2.5 border border-gray-300 rounded-xl bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none"
+                    className="w-full flex-1 px-3 py-2.5 border border-gray-300 rounded-xl bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-500 resize-none"
                     placeholder="Describe the content type..."
                   />
                 </div>
@@ -469,11 +469,11 @@ export function AddInternalModal({
                   value={newTag}
                   onChange={(e) => setNewTag(e.target.value)}
                   placeholder="Add a tag..."
-                  className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500"
                 />
                 <button
                   type="submit"
-                  className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 rounded-lg transition-colors"
+                  className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-sky-500 to-blue-500 hover:from-sky-600 hover:to-blue-600 rounded-lg transition-colors"
                 >
                   Add Tag
                 </button>
@@ -510,7 +510,7 @@ export function AddInternalModal({
                 type="button"
                 onClick={handleConfirm}
                 disabled={isSubmitting || !contentType}
-                className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 rounded-lg disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors"
+                className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-sky-500 to-blue-500 hover:from-sky-600 hover:to-blue-600 rounded-lg disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors"
               >
                 {isSubmitting ? "Saving..." : "Confirm & Save"}
               </button>

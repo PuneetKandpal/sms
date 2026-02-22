@@ -35,7 +35,7 @@ const InstagramPreview = ({ post, darkMode }) => (
         darkMode ? "border-gray-800" : "border-gray-100"
       } border-b`}
     >
-      <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+      <div className="w-8 h-8 bg-gradient-to-r from-sky-500 to-pink-500 rounded-full flex items-center justify-center">
         <FaInstagram className="text-white" size={16} />
       </div>
       <div className="ml-3 flex-1">

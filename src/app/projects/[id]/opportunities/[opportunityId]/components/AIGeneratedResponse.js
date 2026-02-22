@@ -374,7 +374,7 @@ function EditMarkdownModal({ open, onClose, initialContent, onSave }) {
         className="bg-white rounded-xl shadow-lg w-full max-w-5xl overflow-hidden"
       >
         {/* Header */}
-        <div className="bg-purple-100 text-purple-700 px-6 py-4 font-semibold text-lg">
+        <div className="bg-sky-100 text-sky-700 px-6 py-4 font-semibold text-lg">
           Edit AI-Generated Response
         </div>
 
@@ -388,7 +388,7 @@ function EditMarkdownModal({ open, onClose, initialContent, onSave }) {
               value={editedContent}
               onChange={(e) => setEditedContent(e.target.value)}
               rows={12}
-              className="flex-1 border border-gray-300 rounded-lg p-4 text-sm md:text-base resize-none focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className="flex-1 border border-gray-300 rounded-lg p-4 text-sm md:text-base resize-none focus:outline-none focus:ring-2 focus:ring-sky-400"
               placeholder="Edit content in Markdown..."
             />
           </div>
@@ -422,7 +422,7 @@ function EditMarkdownModal({ open, onClose, initialContent, onSave }) {
                     <li className="ml-4 mb-1" {...props} />
                   ),
                   a: ({ node, ...props }) => (
-                    <a className="text-purple-600 underline" {...props} />
+                    <a className="text-sky-600 underline" {...props} />
                   ),
                 }}
               />
@@ -440,7 +440,7 @@ function EditMarkdownModal({ open, onClose, initialContent, onSave }) {
           </button>
           <button
             onClick={() => onSave(editedContent)}
-            className="px-5 py-2 rounded-lg bg-purple-600 text-white hover:bg-purple-700 transition-colors"
+            className="px-5 py-2 rounded-lg bg-sky-600 text-white hover:bg-sky-700 transition-colors"
           >
             Save Changes
           </button>

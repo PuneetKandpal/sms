@@ -18,7 +18,7 @@ import toast from "react-hot-toast";
 // const LEVEL_COLORS = [
 //   { bgClass: "bg-blue-200", textClass: "text-blue-700" }, // Level 1 - Blue
 //   { bgClass: "bg-orange-200", textClass: "text-orange-700" }, // Level 5 - Orange
-//   { bgClass: "bg-purple-200", textClass: "text-purple-700" }, // Level 3 - Purple
+//   { bgClass: "bg-sky-200", textClass: "text-sky-700" }, // Level 3 - Purple
 //   { bgClass: "bg-emerald-200", textClass: "text-emerald-700" }, // Level 7 - Green
 //   { bgClass: "bg-rose-200", textClass: "text-rose-700" }, // Level 4 - Rose
 //   { bgClass: "bg-amber-200", textClass: "text-amber-700" }, // Level 6 - Amber
@@ -31,7 +31,7 @@ const LEVEL_COLORS = [
   { bgClass: "bg-blue-200", textClass: "text-blue-800" }, // Level 1 - Cool blue
   { bgClass: "bg-red-200", textClass: "text-red-800" }, // Level 2 - Strong red
   { bgClass: "bg-green-200", textClass: "text-green-800" }, // Level 3 - Natural green
-  { bgClass: "bg-purple-200", textClass: "text-purple-800" }, // Level 4 - Vibrant purple
+  { bgClass: "bg-sky-200", textClass: "text-sky-800" }, // Level 4 - Vibrant sky
   { bgClass: "bg-orange-200", textClass: "text-orange-800" }, // Level 5 - Golden yellow
   { bgClass: "bg-teal-200", textClass: "text-teal-800" }, // Level 6 - Blue-green
   { bgClass: "bg-rose-200", textClass: "text-rose-800" }, // Level 7 - Pinkish red
@@ -1009,8 +1009,8 @@ export default function ContentArchitectTree({
       >
         {/* Drop indicator - Before */}
         {isDragOver && dropPosition === "before" && (
-          <div className="absolute top-0 left-0 right-0 h-0.5 bg-purple-500 z-10">
-            <div className="absolute left-2 top-1/2 -translate-y-1/2 w-2 h-2 bg-purple-500 rounded-full" />
+          <div className="absolute top-0 left-0 right-0 h-0.5 bg-sky-500 z-10">
+            <div className="absolute left-2 top-1/2 -translate-y-1/2 w-2 h-2 bg-sky-500 rounded-full" />
           </div>
         )}
 
@@ -1023,7 +1023,7 @@ export default function ContentArchitectTree({
               : "text-gray-700 hover:bg-gray-100"
           } ${
             // Highlight the row that is the current drop target
-            isDragOver ? "bg-purple-50 ring-1 ring-purple-300" : ""
+            isDragOver ? "bg-sky-50 ring-1 ring-sky-300" : ""
           } ${highlightFilter ? highlightFilter.highlightClass : ""}`}
           style={{ paddingLeft: `${indentSize + 8}px` }}
           draggable={!isBeingDragged}
@@ -1062,7 +1062,7 @@ export default function ContentArchitectTree({
           {isSelected && (
             <motion.div
               layoutId="treeSelection"
-              className="absolute left-0 top-0 bottom-0 w-0.5 bg-purple-600"
+              className="absolute left-0 top-0 bottom-0 w-0.5 bg-sky-600"
               initial={false}
               transition={{
                 type: "spring",
@@ -1155,12 +1155,12 @@ export default function ContentArchitectTree({
                 e
               )
             }
-            className="flex-shrink-0 hover:bg-purple-100 rounded p-1 transition-colors"
+            className="flex-shrink-0 hover:bg-sky-100 rounded p-1 transition-colors"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             title="Add child page"
           >
-            <Plus className="h-3 w-3 text-purple-600" />
+            <Plus className="h-3 w-3 text-sky-600" />
           </motion.button>
         </motion.div>
 
@@ -1203,8 +1203,8 @@ export default function ContentArchitectTree({
 
         {/* Drop indicator - After */}
         {isDragOver && dropPosition === "after" && (
-          <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-purple-500 z-10">
-            <div className="absolute left-2 top-1/2 -translate-y-1/2 w-2 h-2 bg-purple-500 rounded-full" />
+          <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-sky-500 z-10">
+            <div className="absolute left-2 top-1/2 -translate-y-1/2 w-2 h-2 bg-sky-500 rounded-full" />
           </div>
         )}
       </motion.div>
@@ -1262,7 +1262,7 @@ export default function ContentArchitectTree({
             {hasActiveFilters && (
               <button
                 onClick={clearFilters}
-                className="text-[11px] text-purple-600 hover:text-purple-700 font-semibold uppercase tracking-wide cursor-pointer"
+                className="text-[11px] text-sky-600 hover:text-sky-700 font-semibold uppercase tracking-wide cursor-pointer"
               >
                 Clear
               </button>

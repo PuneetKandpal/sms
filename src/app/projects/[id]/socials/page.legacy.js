@@ -1613,7 +1613,7 @@ export default function SocialsPage({ params }) {
   if (!companyResearchChecked) {
     return (
       <div className="h-[calc(100vh-64px)] flex items-center justify-center bg-gray-50">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-sky-600"></div>
       </div>
     );
   }
@@ -1721,15 +1721,15 @@ export default function SocialsPage({ params }) {
                 <div className="space-y-4">
                   {/* Existing Sub-Campaign Selection Banner */}
                   {selectedExistingTask && (
-                    <div className="rounded-2xl border border-purple-200/60 bg-white shadow-sm px-5 py-4 flex flex-col gap-3">
+                    <div className="rounded-2xl border border-sky-200/60 bg-white shadow-sm px-5 py-4 flex flex-col gap-3">
                       {/* Row 1 — Title */}
                       <div className="flex items-center gap-3 min-w-0">
-                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-100 to-indigo-100 border border-purple-200 flex items-center justify-center text-purple-600 shrink-0">
+                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-100 to-indigo-100 border border-sky-200 flex items-center justify-center text-sky-600 shrink-0">
                           <Layers className="w-4 h-4" />
                         </div>
 
                         <div className="min-w-0">
-                          <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-purple-500">
+                          <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-sky-500">
                             Existing Sub-Campaign
                           </p>
                           <p className="text-sm font-semibold text-slate-900 truncate">
@@ -2028,7 +2028,7 @@ export default function SocialsPage({ params }) {
                           }}
                           className={`flex items-center p-[2px] justify-center border border-white rounded-xl transition-all duration-200 ${
                             formData.selectedPlatform === platform.id
-                              ? "border border-purple-200 bg-[#9c07ff]/10 shadow-md  "
+                              ? "border border-sky-200 bg-[#9c07ff]/10 shadow-md  "
                               : ""
                           } ${
                             selectedExistingTask
@@ -2220,7 +2220,7 @@ export default function SocialsPage({ params }) {
                         <div className="flex flex-wrap justify-between gap-2">
                           <button
                             onClick={() => setShowArticleSummaryModal(true)}
-                            className="flex-1 px-2 py-2 bg-purple-600 text-nowrap text-white rounded-lg hover:bg-purple-700 transition-colors cursor-pointer text-sm font-medium flex items-center justify-center gap-2"
+                            className="flex-1 px-2 py-2 bg-sky-600 text-nowrap text-white rounded-lg hover:bg-sky-700 transition-colors cursor-pointer text-sm font-medium flex items-center justify-center gap-2"
                           >
                             <svg
                               className="w-4 h-4"
@@ -2786,8 +2786,8 @@ export default function SocialsPage({ params }) {
 
                             {/* Row 3: UTM URL 100% */}
                             <div className="col-span-10">
-                              <div className="bg-purple-50 p-2 rounded text-xs text-purple-800">
-                                <div className="text-[11px] font-medium text-purple-700 mb-1">
+                              <div className="bg-sky-50 p-2 rounded text-xs text-sky-800">
+                                <div className="text-[11px] font-medium text-sky-700 mb-1">
                                   UTM URL
                                 </div>
                                 <div className="flex items-center gap-2">
@@ -2804,7 +2804,7 @@ export default function SocialsPage({ params }) {
                                           "UTM URL copied to clipboard!"
                                         );
                                       }}
-                                      className="px-1 py-0.5 bg-purple-100 hover:bg-purple-200 rounded text-[10px] transition-colors cursor-pointer"
+                                      className="px-1 py-0.5 bg-sky-100 hover:bg-sky-200 rounded text-[10px] transition-colors cursor-pointer"
                                       title="Copy UTM URL"
                                     >
                                       📋
@@ -2829,7 +2829,7 @@ export default function SocialsPage({ params }) {
                                         className={`px-2 py-0.5 rounded text-[10px] transition-colors cursor-pointer ${
                                           imageGenerating[idx]
                                             ? "bg-gray-400 text-white cursor-not-allowed"
-                                            : "bg-purple-500 text-white hover:bg-purple-600"
+                                            : "bg-sky-500 text-white hover:bg-sky-600"
                                         }`}
                                       >
                                         {imageGenerating[idx]
@@ -2941,7 +2941,7 @@ export default function SocialsPage({ params }) {
                               type="button"
                               onMouseEnter={handleInfoMouseEnter}
                               onMouseLeave={handleInfoMouseLeave}
-                              className="p-[1px] text-gray-500 rounded-full hover:bg-purple-200 hover:text-black cursor-pointer transition-colors"
+                              className="p-[1px] text-gray-500 rounded-full hover:bg-sky-200 hover:text-black cursor-pointer transition-colors"
                             >
                               <InfoIcon className="w-4 h-4 " />
                             </button>
@@ -3119,7 +3119,7 @@ export default function SocialsPage({ params }) {
                         }
                         className="sr-only peer"
                       />
-                      <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-purple-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-purple-600"></div>
+                      <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-sky-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-sky-600"></div>
                     </label>
                   </div>
                 </div>
@@ -3572,7 +3572,7 @@ export default function SocialsPage({ params }) {
                                   onClick={() => handlePrefillFromTask(task)}
                                   className={`w-full text-left rounded-lg p-3 border bg-white shadow-sm transition-shadow hover:shadow focus:outline-none focus:ring-2 focus:ring-[#9c07ff]/30 ${
                                     isSelected
-                                      ? "border-purple-200 ring-2 ring-[#9c07ff]/30"
+                                      ? "border-sky-200 ring-2 ring-[#9c07ff]/30"
                                       : "border-slate-100"
                                   }`}
                                 >
@@ -3586,7 +3586,7 @@ export default function SocialsPage({ params }) {
                                         <span
                                           className={`text-[11px] font-semibold px-2 py-0.5 rounded-full ring-1 ${
                                             isSocialPostGenerated
-                                              ? "bg-purple-50 text-purple-700 ring-purple-200 cursor-pointer"
+                                              ? "bg-sky-50 text-sky-700 ring-sky-200 cursor-pointer"
                                               : "bg-slate-100 text-slate-600 ring-slate-200"
                                           }`}
                                           onClick={(event) => {
@@ -3632,7 +3632,7 @@ export default function SocialsPage({ params }) {
 
                                   <div className="mt-3 flex flex-wrap gap-2 text-xs text-gray-600">
                                     {task.intent && (
-                                      <span className="px-2.5 py-1 rounded-full bg-purple-50 text-purple-700 font-semibold ring-1 ring-purple-200">
+                                      <span className="px-2.5 py-1 rounded-full bg-sky-50 text-sky-700 font-semibold ring-1 ring-sky-200">
                                         Intent: {task.intent}
                                       </span>
                                     )}

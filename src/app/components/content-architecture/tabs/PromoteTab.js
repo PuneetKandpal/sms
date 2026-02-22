@@ -143,7 +143,7 @@ export default function PromoteTab({ selectedNode }) {
         transition={{ delay: 0.5 }}
         className="flex items-stretch gap-4"
       >
-        <button className="flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-xl hover:from-purple-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl font-semibold text-lg cursor-pointer">
+        <button className="flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-sky-600 to-indigo-600 text-white rounded-xl hover:from-sky-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl font-semibold text-lg cursor-pointer">
           <Send className="h-5 w-5" />
           Send to Post Agent
         </button>
@@ -165,14 +165,14 @@ export default function PromoteTab({ selectedNode }) {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6 }}
-        className="mt-8 p-6 bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200 rounded-xl"
+        className="mt-8 p-6 bg-gradient-to-br from-sky-50 to-pink-50 border border-sky-200 rounded-xl"
       >
         <h3 className="text-lg font-semibold text-gray-900 mb-4">
           Example Post Preview (LinkedIn)
         </h3>
         <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full"></div>
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-sky-600 rounded-full"></div>
             <div>
               <div className="font-semibold text-gray-900">Your Company</div>
               <div className="text-sm text-gray-500">Just now</div>

@@ -58,7 +58,7 @@ const PLATFORMS = [
     name: "Instagram",
     icon: FaInstagram,
     color: "#E4405F",
-    gradient: "from-pink-500 to-purple-600",
+    gradient: "from-pink-500 to-sky-600",
     description: "Connect your Instagram business account",
     features: ["Posts", "Stories", "Reels"],
   },
@@ -632,7 +632,7 @@ export default function ConnectionsPage() {
                     <div className="flex gap-2">
                       <button
                         onClick={() => handleViewDetails(account)}
-                        className="cursor-pointer flex-1 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-xl text-sm font-medium transition-colors flex items-center justify-center gap-2"
+                        className="cursor-pointer flex-1 px-4 py-2 bg-sky-600 hover:bg-sky-700 text-white rounded-xl text-sm font-medium transition-colors flex items-center justify-center gap-2"
                       >
                         <FaEye size={14} />
                         View Details

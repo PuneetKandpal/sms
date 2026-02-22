@@ -447,7 +447,7 @@ export default function ArticlesPage({ params }) {
           <div className="flex items-center justify-center pt-28">
             <KnowledgeBaseGateAlert
               projectId={projectId}
-              description="Add your company research sources in the knowledge base before creating articles."
+              description="Add your school research sources in the knowledge base before creating articles."
             />
           </div>
         </div>
@@ -459,7 +459,7 @@ export default function ArticlesPage({ params }) {
   if (!companyResearchChecked) {
     return (
       <div className="h-[calc(100vh-64px)] flex items-center justify-center bg-gray-50">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-sky-600"></div>
       </div>
     );
   }
@@ -498,14 +498,14 @@ export default function ArticlesPage({ params }) {
                     className="p-1 hover:bg-gray-200 rounded transition-colors duration-150"
                     title={isCollapsed ? "Expand panel" : "Collapse panel"}
                   >
-                    <FiSidebar className="w-4 h-4 text-purple-600" />
+                    <FiSidebar className="w-4 h-4 text-sky-600" />
                   </button>
                 </div>
                 {!isCollapsed && (
                   <div className="p-4">
                     <button
                       onClick={() => setShowCreateModal(true)}
-                      className="w-full py-3 px-4 bg-purple-600 text-white rounded-md font-medium hover:bg-purple-700 transition-colors duration-150 flex items-center justify-center gap-2"
+                      className="w-full py-3 px-4 bg-sky-600 text-white rounded-md font-medium hover:bg-sky-700 transition-colors duration-150 flex items-center justify-center gap-2"
                     >
                       <svg
                         className="w-5 h-5"
@@ -535,7 +535,7 @@ export default function ArticlesPage({ params }) {
                           disabled={
                             !!updatingStage || selectedArticleRows.length === 0
                           }
-                          className="w-full py-2 px-2 bg-purple-600 text-white rounded-md font-medium hover:bg-purple-700 transition-colors duration-150 text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                          className="w-full py-2 px-2 bg-sky-600 text-white rounded-md font-medium hover:bg-sky-700 transition-colors duration-150 text-sm disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                           {updatingStage === "approved"
                             ? "Approving"
@@ -619,7 +619,7 @@ export default function ArticlesPage({ params }) {
                     value={articleForm.title}
                     onChange={(e) => handleInputChange("title", e.target.value)}
                     placeholder="Enter article title..."
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent"
                     disabled={isCreating}
                   />
                 </div>
@@ -635,7 +635,7 @@ export default function ArticlesPage({ params }) {
                       handleInputChange("overview", e.target.value)
                     }
                     placeholder="Provide a detailed overview of the article content..."
-                    className="w-full h-32 p-3 border border-gray-300 rounded-lg resize-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    className="w-full h-32 p-3 border border-gray-300 rounded-lg resize-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
                     disabled={isCreating}
                   />
                 </div>
@@ -651,7 +651,7 @@ export default function ArticlesPage({ params }) {
                       handleInputChange("blueprint_template", e.target.value)
                     }
                     placeholder="Enter blueprint template structure (e.g., ├── DISCOVER (/learn) - Learn...)"
-                    className="w-full h-40 p-3 border border-gray-300 rounded-lg resize-none focus:ring-2 focus:ring-purple-500 focus:border-transparent font-mono text-sm"
+                    className="w-full h-40 p-3 border border-gray-300 rounded-lg resize-none focus:ring-2 focus:ring-sky-500 focus:border-transparent font-mono text-sm"
                     disabled={isCreating}
                   />
                 </div>
@@ -670,7 +670,7 @@ export default function ArticlesPage({ params }) {
                       )
                     }
                     placeholder="Enter categories structure context (JTBD Task Page format, blocks, etc.)..."
-                    className="w-full h-48 p-3 border border-gray-300 rounded-lg resize-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    className="w-full h-48 p-3 border border-gray-300 rounded-lg resize-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
                     disabled={isCreating}
                   />
                 </div>
@@ -696,7 +696,7 @@ export default function ArticlesPage({ params }) {
                   !articleForm.title.trim() ||
                   !articleForm.overview.trim()
                 }
-                className="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                className="px-6 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
               >
                 {isCreating ? (
                   <>

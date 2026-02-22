@@ -53,7 +53,7 @@ function EmptyState({ loading, hasFilter }) {
             animate={{ rotate: 360 }}
             transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
           >
-            <div className="h-10 w-10 rounded-full border-3 border-purple-500 border-t-transparent" />
+            <div className="h-10 w-10 rounded-full border-3 border-sky-500 border-t-transparent" />
           </motion.div>
           <p className="font-medium">Fetching ranking data...</p>
         </div>
@@ -64,8 +64,8 @@ function EmptyState({ loading, hasFilter }) {
           transition={{ delay: 0.1 }}
           className="space-y-4 text-gray-500"
         >
-          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-100">
-            <TrendingUp className="h-7 w-7 text-purple-600" />
+          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100">
+            <TrendingUp className="h-7 w-7 text-sky-600" />
           </div>
           <div>
             <p className="text-base font-semibold text-gray-900">
@@ -199,7 +199,7 @@ export default function SearchRankingTable({ rows, loading }) {
             href={row.companyUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-xl text-sm text-purple-600 hover:text-purple-700 cursor-pointer"
+            className="w-xl text-sm text-sky-600 hover:text-sky-700 cursor-pointer"
           >
             {row.displayUrl || row.companyUrl.replace(/^https?:\/\//, "")}
           </a>
@@ -233,7 +233,7 @@ export default function SearchRankingTable({ rows, loading }) {
             {row.foundBy.map((provider) => (
               <span
                 key={provider}
-                className="inline-flex items-center rounded-full bg-purple-50 px-2 py-0.5 text-xs font-medium text-purple-700"
+                className="inline-flex items-center rounded-full bg-sky-50 px-2 py-0.5 text-xs font-medium text-sky-700"
               >
                 {provider}
               </span>
@@ -297,7 +297,7 @@ export default function SearchRankingTable({ rows, loading }) {
               href={row.companyUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-medium text-purple-600 hover:text-purple-700"
+              className="text-sm font-medium text-sky-600 hover:text-sky-700"
             >
               {row.displayUrl || row.companyUrl.replace(/^https?:\/\//, "")}
             </a>
@@ -331,7 +331,7 @@ export default function SearchRankingTable({ rows, loading }) {
           {row.foundBy.map((provider) => (
             <span
               key={provider}
-              className="inline-flex items-center rounded-full bg-purple-50 px-2 py-0.5 text-xs font-medium text-purple-700"
+              className="inline-flex items-center rounded-full bg-sky-50 px-2 py-0.5 text-xs font-medium text-sky-700"
             >
               {provider}
             </span>
@@ -421,7 +421,7 @@ export default function SearchRankingTable({ rows, loading }) {
                 className="relative flex items-center gap-1 rounded-full border border-gray-200 bg-white/80 p-1 shadow-sm"
               >
                 <motion.span
-                  className="pointer-events-none absolute top-1 bottom-1 rounded-full bg-purple-100/90"
+                  className="pointer-events-none absolute top-1 bottom-1 rounded-full bg-sky-100/90"
                   style={{ width: toggleIndicator.width || 0 }}
                   initial={false}
                   animate={{ x: toggleIndicator.left || 0 }}
@@ -446,8 +446,8 @@ export default function SearchRankingTable({ rows, loading }) {
                       className={clsx(
                         "relative z-10 flex items-center gap-1 rounded-full px-3 py-1.5 text-xs font-semibold transition",
                         isActive
-                          ? "text-purple-600"
-                          : "text-gray-500 hover:text-purple-600"
+                          ? "text-sky-600"
+                          : "text-gray-500 hover:text-sky-600"
                       )}
                     >
                       <Icon className="h-4 w-4" />
@@ -469,7 +469,7 @@ export default function SearchRankingTable({ rows, loading }) {
                     value={searchTerm}
                     onChange={(event) => setSearchTerm(event.target.value)}
                     placeholder="Search company or website"
-                    className="w-full rounded-lg border border-gray-300 pl-9 pr-3 py-2 text-sm focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200"
+                    className="w-full rounded-lg border border-gray-300 pl-9 pr-3 py-2 text-sm focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-200"
                   />
                 </div>
 
@@ -661,7 +661,7 @@ export default function SearchRankingTable({ rows, loading }) {
                         duration: 0.3,
                         ease: [0.4, 0, 0.2, 1],
                       }}
-                      className="group transition-colors hover:bg-purple-50/30 cursor-default"
+                      className="group transition-colors hover:bg-sky-50/30 cursor-default"
                     >
                       {activeColumns.map((column) => (
                         <td key={column.key} className="px-6 py-3.5 align-top">

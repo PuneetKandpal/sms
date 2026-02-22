@@ -261,7 +261,7 @@ export default function AgentCard({
           <div className="flex items-center gap-2">
             <button
               onClick={handleViewDashboard}
-              className="px-3 py-1.5 hover:cursor-pointer bg-purple-600 text-white text-sm rounded-md hover:bg-purple-700 transition-colors flex items-center gap-1"
+              className="px-3 py-1.5 hover:cursor-pointer bg-sky-600 text-white text-sm rounded-md hover:bg-sky-700 transition-colors flex items-center gap-1"
             >
               <ExternalLink className="h-3 w-3" />
               Opportunities
@@ -289,17 +289,17 @@ export default function AgentCard({
         {/* Enhanced Metrics Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
           {/* Opportunities */}
-          <div className="bg-purple-50 border border-purple-200 rounded-lg p-3">
+          <div className="bg-sky-50 border border-sky-200 rounded-lg p-3">
             <div className="flex items-center gap-2 mb-1">
-              <Target className="h-4 w-4 text-purple-600" />
-              <span className="text-xs font-medium text-purple-700 uppercase tracking-wide">
+              <Target className="h-4 w-4 text-sky-600" />
+              <span className="text-xs font-medium text-sky-700 uppercase tracking-wide">
                 Opportunities
               </span>
             </div>
-            <div className="text-xl font-bold text-purple-900">
+            <div className="text-xl font-bold text-sky-900">
               {opportunitiesCount.toLocaleString()}
             </div>
-            <div className="text-xs text-purple-600">
+            <div className="text-xs text-sky-600">
               from {totalPostsFound.toLocaleString()} posts
             </div>
           </div>
@@ -426,7 +426,7 @@ export default function AgentCard({
 
             <div className="bg-white border border-gray-200 rounded-lg p-4">
               <h5 className="font-medium text-gray-900 mb-3 flex items-center gap-2">
-                <Activity className="h-4 w-4 text-purple-600" />
+                <Activity className="h-4 w-4 text-sky-600" />
                 Task Information
               </h5>
               <div className="space-y-2 text-sm">
@@ -522,7 +522,7 @@ export default function AgentCard({
                 title="Products & Services"
                 items={agent.request_data.products_and_services || []}
                 icon={() => (
-                  <div className="w-4 h-4 bg-purple-600 rounded-sm flex items-center justify-center text-white text-xs">
+                  <div className="w-4 h-4 bg-sky-600 rounded-sm flex items-center justify-center text-white text-xs">
                     ✓
                   </div>
                 )}

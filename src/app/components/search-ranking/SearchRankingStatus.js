@@ -42,17 +42,17 @@ export default function SearchRankingStatus({
               Track the current progress of your ranking workflows.
             </p>
           </div>
-          <div className="rounded-xl bg-purple-50 px-3 py-1 text-xs font-semibold text-purple-600">
+          <div className="rounded-xl bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-600">
             {isPolling ? "Processing" : submitting ? "Submitting" : "Idle"}
           </div>
         </div>
 
         <div className="mt-6 flex items-center gap-3 text-sm text-gray-700">
-          <div className="relative flex h-10 w-10 items-center justify-center rounded-full bg-purple-100">
+          <div className="relative flex h-10 w-10 items-center justify-center rounded-full bg-sky-100">
             {showSpinner ? (
-              <Loader2 className="h-5 w-5 animate-spin text-purple-600" />
+              <Loader2 className="h-5 w-5 animate-spin text-sky-600" />
             ) : (
-              <Clock className="h-5 w-5 text-purple-600" />
+              <Clock className="h-5 w-5 text-sky-600" />
             )}
           </div>
           <div className="flex-1">

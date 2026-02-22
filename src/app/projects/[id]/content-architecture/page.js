@@ -1017,12 +1017,12 @@ export default function ContentArchitecturePage({ params }) {
             {/* Ring animation */}
             <div className="relative mb-8">
               <motion.div
-                className="w-32 h-32 rounded-full bg-gradient-to-br from-purple-200 via-blue-200 to-indigo-200"
+                className="w-32 h-32 rounded-full bg-gradient-to-br from-sky-200 via-blue-200 to-indigo-200"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
               />
               <motion.div
-                className="absolute inset-2 rounded-full border-4 border-dashed border-purple-400/70"
+                className="absolute inset-2 rounded-full border-4 border-dashed border-sky-400/70"
                 animate={{ rotate: -360 }}
                 transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
               />
@@ -1035,7 +1035,7 @@ export default function ContentArchitecturePage({ params }) {
                   ease: "easeInOut",
                 }}
               >
-                <Cpu className="h-12 w-12 text-purple-600" />
+                <Cpu className="h-12 w-12 text-sky-600" />
               </motion.div>
             </div>
 
@@ -1049,7 +1049,7 @@ export default function ContentArchitecturePage({ params }) {
             </motion.h2>
 
             <motion.p
-              className="mt-3 text-sm font-medium text-purple-600 flex items-center gap-2"
+              className="mt-3 text-sm font-medium text-sky-600 flex items-center gap-2"
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -1158,7 +1158,7 @@ export default function ContentArchitecturePage({ params }) {
   };
 
   const renderLoadingState = () => (
-    <div className="h-[calc(100vh-64px)] flex items-center justify-center bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50">
+    <div className="h-[calc(100vh-64px)] flex items-center justify-center bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-50">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -1168,7 +1168,7 @@ export default function ContentArchitecturePage({ params }) {
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 1.4, repeat: Infinity, ease: "linear" }}
-          className="w-12 h-12 border-4 border-purple-400 border-t-transparent rounded-full"
+          className="w-12 h-12 border-4 border-sky-400 border-t-transparent rounded-full"
         />
         <div className="text-center">
           <p className="text-lg font-semibold text-gray-900">
@@ -1187,11 +1187,11 @@ export default function ContentArchitecturePage({ params }) {
   // Gate: require knowledge base sources before using content architecture
   if (companyResearchChecked && !hasCompanyResearch) {
     return (
-      <div className="h-[calc(100vh-64px)] flex flex-col bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50">
+      <div className="h-[calc(100vh-64px)] flex flex-col bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-50">
         <div className="max-w-4xl mx-auto w-full px-4 pt-10">
           <div className="text-center mb-8">
             <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
-              Content Architecture
+              Content Architecture AI
             </h1>
             <p className="mt-2 text-gray-700">
               Generate and manage a structured content architecture for this
@@ -1202,7 +1202,7 @@ export default function ContentArchitecturePage({ params }) {
           <div className="flex items-center justify-center pt-28">
             <KnowledgeBaseGateAlert
               projectId={id}
-              description="Add your company research sources in the knowledge base before generating a content architecture."
+              description="Add your school research sources in the knowledge base before generating a content architecture."
             />
           </div>
         </div>
@@ -1222,7 +1222,7 @@ export default function ContentArchitecturePage({ params }) {
   // Empty state - no architect exists
   if (!architect && !generating) {
     return (
-      <div className="h-[calc(100vh-64px)] flex flex-col bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 overflow-hidden relative">
+      <div className="h-[calc(100vh-64px)] flex flex-col bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-50 overflow-hidden relative">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
@@ -1232,7 +1232,7 @@ export default function ContentArchitecturePage({ params }) {
               opacity: [0.3, 0.5, 0.3],
             }}
             transition={{ duration: 20, repeat: Infinity }}
-            className="absolute -top-1/4 -left-1/4 w-1/2 h-1/2 bg-gradient-to-br from-purple-300 to-blue-300 rounded-full blur-3xl"
+            className="absolute -top-1/4 -left-1/4 w-1/2 h-1/2 bg-gradient-to-br from-sky-300 to-blue-300 rounded-full blur-3xl"
           />
           <motion.div
             animate={{
@@ -1273,10 +1273,10 @@ export default function ContentArchitecturePage({ params }) {
                     opacity: [0.5, 0.8, 0.5],
                   }}
                   transition={{ duration: 2, repeat: Infinity }}
-                  className="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full blur-xl"
+                  className="absolute inset-0 bg-gradient-to-r from-sky-500 to-blue-500 rounded-full blur-xl"
                 />
                 <div className="relative w-32 h-32 bg-white rounded-3xl shadow-2xl flex items-center justify-center">
-                  <FolderTree className="h-16 w-16 text-purple-600" />
+                  <FolderTree className="h-16 w-16 text-sky-600" />
                   <motion.div
                     animate={{ rotate: 360 }}
                     transition={{
@@ -1297,7 +1297,7 @@ export default function ContentArchitecturePage({ params }) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-5xl font-black mb-4 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent"
+              className="text-5xl font-black mb-4 bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent"
             >
               Content Architecture AI
             </motion.h1>
@@ -1308,9 +1308,9 @@ export default function ContentArchitecturePage({ params }) {
               transition={{ delay: 0.3 }}
               className="text-xl text-gray-700 mb-8 leading-relaxed"
             >
-              Let our AI analyze your project and generate a comprehensive
-              content architecture with intelligent hierarchy, SEO optimization,
-              and strategic content planning.
+              Let our AI analyze your school's data and generate a comprehensive
+              website architecture with intelligent hierarchy, enrollment-focused
+              SEO optimization, and strategic content planning.
             </motion.p>
 
             {/* Features Grid */}
@@ -1321,7 +1321,7 @@ export default function ContentArchitecturePage({ params }) {
               className="grid grid-cols-3 gap-4 mb-10"
             >
               {[
-                { icon: Layers, label: "Smart Hierarchy", color: "purple" },
+                { icon: Layers, label: "Smart Hierarchy", color: "sky" },
                 { icon: Target, label: "SEO Focused", color: "blue" },
                 { icon: Zap, label: "Instant Setup", color: "indigo" },
               ].map((feature, i) => (
@@ -1351,17 +1351,17 @@ export default function ContentArchitecturePage({ params }) {
               }}
               whileTap={{ scale: 0.95 }}
               onClick={handleGenerateArchitect}
-              className="group relative inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white rounded-2xl font-bold text-lg overflow-hidden cursor-pointer shadow-2xl"
+              className="group relative inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 text-white rounded-2xl font-bold text-lg overflow-hidden cursor-pointer shadow-2xl"
             >
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-purple-700 via-blue-700 to-indigo-700"
+                className="absolute inset-0 bg-gradient-to-r from-sky-700 via-blue-700 to-indigo-700"
                 initial={{ x: "100%" }}
                 whileHover={{ x: 0 }}
                 transition={{ duration: 0.3 }}
               />
               <Wand2 className="h-6 w-6 relative z-10" />
               <span className="relative z-10">
-                Generate Architecture with AI
+                Generate School Architecture
               </span>
               <Sparkles className="h-5 w-5 relative z-10 group-hover:rotate-12 transition-transform" />
             </motion.button>
@@ -1457,11 +1457,11 @@ export default function ContentArchitecturePage({ params }) {
                 {/* Company Name Section */}
                 <div>
                   <h1 className="text-3xl font-bold leading-tight">
-                    Content Architecture
+                    Content Architecture AI
                   </h1>
                   <button
                     onClick={() => setShowArchitectInfo(true)}
-                    className="text-xs text-underline text-gray-600 mt-0.5 flex items-center gap-1.5 hover:text-purple-600 transition-colors cursor-pointer"
+                    className="text-xs text-underline text-gray-600 mt-0.5 flex items-center gap-1.5 hover:text-sky-600 transition-colors cursor-pointer"
                   >
                     <span className="w-1.5 h-1.5  bg-green-500 rounded-full animate-pulse"></span>
                     {architect?.name || "Content Structure"}
@@ -1494,7 +1494,7 @@ export default function ContentArchitecturePage({ params }) {
                         className="w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 flex items-center gap-2 transition-colors"
                         role="menuitem"
                       >
-                        <Info className="h-4 w-4 text-purple-600" />
+                        <Info className="h-4 w-4 text-sky-600" />
                         View architecture details
                       </button>
                       <button

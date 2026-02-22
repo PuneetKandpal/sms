@@ -72,8 +72,8 @@ const getContentTypeColor = (type) => {
     case "tofu":
       return "bg-blue-100 text-blue-700";
     case "mofu":
-    case "midf":
-      return "bg-purple-100 text-purple-700";
+    case "in progress":
+      return "bg-sky-100 text-sky-700";
     case "bofu":
       return "bg-indigo-100 text-indigo-700";
     default:
@@ -812,8 +812,9 @@ export default function TopicsTable({
                           sx={{
                             width: 18,
                             height: 18,
-                            borderRadius: "6px",
-                            backgroundColor: "#9810fa", // purple when checked
+                            "&.Mui-checked": {
+                              color: "#0284c7", // primary when checked
+                            },
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",

@@ -302,7 +302,7 @@ const AIOAnswerContentModal = ({ open, handleClose, answer }) => {
             </div>
             <button
               onClick={handlePublish}
-              className=" cursor-pointer group inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover:bg-purple-700 transition-colors duration-150"
+              className=" cursor-pointer group inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-sky-600 rounded-lg hover:bg-sky-700 transition-colors duration-150"
             >
               Publish Answer
               <Send className="w-4 h-4  transition-transform duration-300 group-hover:translate-x-[2px] group-hover:-translate-y-[2px]" />

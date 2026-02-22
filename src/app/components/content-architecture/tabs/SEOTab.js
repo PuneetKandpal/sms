@@ -275,12 +275,12 @@ export default function SEOTab({
               value={newPrimaryKeyword}
               onChange={(e) => setNewPrimaryKeyword(e.target.value)}
               onKeyPress={(e) => e.key === "Enter" && addPrimaryKeyword()}
-              className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
               placeholder="Add primary keyword (press Enter)"
             />
             <button
               onClick={addPrimaryKeyword}
-              className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium cursor-pointer"
+              className="px-6 py-3 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors font-medium cursor-pointer"
             >
               Add
             </button>
@@ -321,12 +321,12 @@ export default function SEOTab({
               value={newSecondaryKeyword}
               onChange={(e) => setNewSecondaryKeyword(e.target.value)}
               onKeyPress={(e) => e.key === "Enter" && addSecondaryKeyword()}
-              className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
               placeholder="Add secondary keyword (press Enter)"
             />
             <button
               onClick={addSecondaryKeyword}
-              className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium cursor-pointer"
+              className="px-6 py-3 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors font-medium cursor-pointer"
             >
               Add
             </button>
@@ -355,14 +355,14 @@ export default function SEOTab({
                   type="text"
                   value={metaTitle}
                   onChange={(e) => setMetaTitle(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
                   placeholder="Meta title"
                 />
                 <textarea
                   value={metaDescription}
                   onChange={(e) => setMetaDescription(e.target.value)}
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
                   placeholder="Meta description"
                 />
               </div>

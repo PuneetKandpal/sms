@@ -159,7 +159,7 @@ export default function SearchRankingChartView({
     return (
       <div className="space-y-4">
         {/* Header - Show actual content, not shimmer */}
-        <div className="rounded-xl border border-purple-200/60 bg-gradient-to-br from-purple-50/40 via-blue-50/30 to-emerald-50/20 p-4 shadow-sm">
+        <div className="rounded-xl border border-sky-200/60 bg-gradient-to-br from-sky-50/40 via-blue-50/30 to-emerald-50/20 p-4 shadow-sm">
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div>
               <h3 className="text-base font-bold text-gray-900">
@@ -530,7 +530,7 @@ export default function SearchRankingChartView({
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="rounded-xl border-2 border-purple-200 bg-white/95 backdrop-blur-sm px-4 py-3 shadow-xl"
+        className="rounded-xl border-2 border-sky-200 bg-white/95 backdrop-blur-sm px-4 py-3 shadow-xl"
       >
         <p className="mb-2 border-b border-gray-200 pb-2 text-sm font-bold text-gray-900">
           {resolvedLabel}
@@ -676,14 +676,14 @@ export default function SearchRankingChartView({
       <motion.div
         initial={{ opacity: 0, y: 6 }}
         animate={{ opacity: 1, y: 0 }}
-        className="rounded-xl border border-purple-100 bg-white/95 px-4 py-3 text-xs shadow-xl"
+        className="rounded-xl border border-sky-100 bg-white/95 px-4 py-3 text-xs shadow-xl"
       >
         <div className="mb-2 flex items-center justify-between gap-4 border-b border-gray-100 pb-2">
           <span className="flex items-center gap-2 font-semibold text-gray-900">
             <ProviderIcon provider={providerKey} size="sm" />
             {data.provider}
           </span>
-          <span className="rounded-full bg-purple-50 px-2 py-0.5 text-[10px] font-semibold text-purple-600">
+          <span className="rounded-full bg-sky-50 px-2 py-0.5 text-[10px] font-semibold text-sky-600">
             {data.totalCompanies} companies
           </span>
         </div>
@@ -1034,7 +1034,7 @@ export default function SearchRankingChartView({
       case "provider-ranking":
         return (
           <div className="space-y-4">
-            <div className="rounded-xl border border-purple-200/60 bg-gradient-to-br from-purple-50/40 via-blue-50/30 to-emerald-50/20 p-4 shadow-sm">
+            <div className="rounded-xl border border-sky-200/60 bg-gradient-to-br from-sky-50/40 via-blue-50/30 to-emerald-50/20 p-4 shadow-sm">
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <div>
                   <h3 className="text-base font-bold text-gray-900">
@@ -1052,7 +1052,7 @@ export default function SearchRankingChartView({
                   <select
                     value={topN}
                     onChange={(e) => setTopN(Number(e.target.value))}
-                    className="rounded-lg border-2 border-purple-300 bg-white px-3 py-2 text-xs font-bold cursor-pointer hover:border-purple-500 hover:shadow-md transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-400"
+                    className="rounded-lg border-2 border-sky-300 bg-white px-3 py-2 text-xs font-bold cursor-pointer hover:border-sky-500 hover:shadow-md transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-400"
                   >
                     <option value={10}>Top 10</option>
                     <option value={15}>Top 15</option>
@@ -1151,7 +1151,7 @@ export default function SearchRankingChartView({
       case "provider-trends":
         return (
           <div className="space-y-4">
-            <div className="rounded-xl bg-gradient-to-r from-purple-50 to-blue-50 p-4 border border-purple-200">
+            <div className="rounded-xl bg-gradient-to-r from-sky-50 to-blue-50 p-4 border border-sky-200">
               <h3 className="text-sm font-bold text-gray-800 mb-2">
                 Provider Performance Across Top Companies
               </h3>
@@ -1242,7 +1242,7 @@ export default function SearchRankingChartView({
       case "provider-insights":
         return (
           <div className="space-y-4">
-            <div className="rounded-xl border border-purple-200/60 bg-gradient-to-br from-purple-50/40 via-white to-blue-50/30 p-4 shadow-sm">
+            <div className="rounded-xl border border-sky-200/60 bg-gradient-to-br from-sky-50/40 via-white to-blue-50/30 p-4 shadow-sm">
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <div>
                   <h3 className="text-base font-bold text-gray-900">
@@ -1255,11 +1255,11 @@ export default function SearchRankingChartView({
                 </div>
                 <div className="flex items-center gap-4 text-[11px] font-medium text-gray-600">
                   <div className="flex items-center gap-1.5">
-                    <span className="inline-flex h-2 w-8 rounded-full bg-gradient-to-r from-purple-400 to-purple-600" />
+                    <span className="inline-flex h-2 w-8 rounded-full bg-gradient-to-r from-sky-400 to-sky-600" />
                     <span>Range</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <span className="inline-flex h-2.5 w-2.5 rounded-full border-2 border-purple-600 bg-white shadow-sm" />
+                    <span className="inline-flex h-2.5 w-2.5 rounded-full border-2 border-sky-600 bg-white shadow-sm" />
                     <span>Average</span>
                   </div>
                 </div>
@@ -1369,7 +1369,7 @@ export default function SearchRankingChartView({
       case "company-comparison":
         return (
           <div className="space-y-4">
-            <div className="rounded-xl bg-gradient-to-r from-blue-50 to-purple-50 p-4 border border-blue-200 shadow-sm">
+            <div className="rounded-xl bg-gradient-to-r from-blue-50 to-sky-50 p-4 border border-blue-200 shadow-sm">
               <h3 className="text-sm font-bold text-gray-800 mb-2">
                 Top 5 Companies - Provider Performance
               </h3>
@@ -1625,7 +1625,7 @@ export default function SearchRankingChartView({
       case "top-companies":
         return (
           <div className="space-y-4">
-            <div className="rounded-xl bg-gradient-to-r from-amber-50 to-purple-50 p-4 border border-amber-200 shadow-sm">
+            <div className="rounded-xl bg-gradient-to-r from-amber-50 to-sky-50 p-4 border border-amber-200 shadow-sm">
               <h3 className="text-sm font-bold text-gray-800 mb-2">
                 Top Companies by Average Ranking
               </h3>
@@ -1641,10 +1641,10 @@ export default function SearchRankingChartView({
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.03 }}
-                  className="group relative overflow-hidden rounded-xl border-2 border-gray-200 bg-gradient-to-br from-white to-gray-50 p-4 shadow-sm transition-all hover:shadow-lg hover:border-purple-300"
+                  className="group relative overflow-hidden rounded-xl border-2 border-gray-200 bg-gradient-to-br from-white to-gray-50 p-4 shadow-sm transition-all hover:shadow-lg hover:border-sky-300"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-purple-400 to-purple-600 text-lg font-bold text-white shadow-md">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-sky-400 to-sky-600 text-lg font-bold text-white shadow-md">
                       #{index + 1}
                     </div>
                     <div className="min-w-0 flex-1">
@@ -1671,7 +1671,7 @@ export default function SearchRankingChartView({
                       <div className="text-xs font-medium text-gray-500">
                         Avg Rank
                       </div>
-                      <div className="text-2xl font-bold text-purple-600">
+                      <div className="text-2xl font-bold text-sky-600">
                         {company.avgRank.toFixed(1)}
                       </div>
                       <div className="text-xs text-gray-500">
@@ -1689,7 +1689,7 @@ export default function SearchRankingChartView({
       case "ranking-distribution":
         return (
           <div className="space-y-4">
-            <div className="rounded-xl bg-gradient-to-r from-pink-50 to-purple-50 p-4 border border-pink-200 shadow-sm">
+            <div className="rounded-xl bg-gradient-to-r from-pink-50 to-sky-50 p-4 border border-pink-200 shadow-sm">
               <h3 className="text-sm font-bold text-gray-800 mb-2">
                 Ranking Distribution by Provider
               </h3>
@@ -1806,8 +1806,8 @@ export default function SearchRankingChartView({
                       className={clsx(
                         "relative flex flex-shrink-0 items-center justify-center gap-1.5 rounded-full px-3.5 py-1.5 text-sm font-semibold whitespace-nowrap transition-all duration-200",
                         isActive
-                          ? "text-purple-700"
-                          : "text-gray-600 hover:text-purple-600"
+                          ? "text-sky-700"
+                          : "text-gray-600 hover:text-sky-600"
                       )}
                     >
                       <Icon className="h-4 w-4" />
@@ -1824,7 +1824,7 @@ export default function SearchRankingChartView({
                   );
                 })}
                 <motion.div
-                  className="pointer-events-none absolute bottom-0 left-0 h-0.5 rounded-full bg-gradient-to-r from-purple-500 via-fuchsia-500 to-blue-500"
+                  className="pointer-events-none absolute bottom-0 left-0 h-0.5 rounded-full bg-gradient-to-r from-sky-500 via-fuchsia-500 to-blue-500"
                   initial={false}
                   animate={{
                     left: tabIndicator.left || 0,
@@ -1841,8 +1841,8 @@ export default function SearchRankingChartView({
               type="button"
               onClick={() => setIsProviderDropdownOpen((prev) => !prev)}
               className={clsx(
-                "inline-flex items-center gap-2 rounded-md border border-gray-200 bg-white px-3.5 py-2 text-sm font-semibold text-gray-600 transition hover:border-purple-200 hover:text-purple-600",
-                isProviderDropdownOpen && "border-purple-400 text-purple-600"
+                "inline-flex items-center gap-2 rounded-md border border-gray-200 bg-white px-3.5 py-2 text-sm font-semibold text-gray-600 transition hover:border-sky-200 hover:text-sky-600",
+                isProviderDropdownOpen && "border-sky-400 text-sky-600"
               )}
             >
               <Filter className="h-3.5 w-3.5" />
@@ -1875,7 +1875,7 @@ export default function SearchRankingChartView({
                           htmlFor={checkboxId}
                           className={clsx(
                             "flex cursor-pointer items-center gap-3 px-4 py-2 text-sm text-gray-700 transition",
-                            isSelected ? "bg-purple-50/70" : "hover:bg-gray-50"
+                            isSelected ? "bg-sky-50/70" : "hover:bg-gray-50"
                           )}
                         >
                           <input
@@ -1964,7 +1964,7 @@ export default function SearchRankingChartView({
       </div>
 
       {/* Chart Content */}
-      <div className="flex-1 overflow-y-auto bg-gradient-to-br from-gray-50 via-white to-purple-50/30 p-6">
+      <div className="flex-1 overflow-y-auto bg-gradient-to-br from-gray-50 via-white to-sky-50/30 p-6">
         <AnimatePresence mode="wait">
           <motion.div
             key={selectedChart}

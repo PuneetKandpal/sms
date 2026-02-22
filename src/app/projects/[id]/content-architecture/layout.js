@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Content Architecture | Iriscale | Structure your content strategy",
+  title: "Content Architecture AI | Iriscale | Structure your content strategy",
   description:
     "Iriscale - AI-powered platform for intelligent business growth and strategic insights",
 };

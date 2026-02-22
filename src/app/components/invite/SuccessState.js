@@ -38,7 +38,7 @@ export default function SuccessState({ invitationData }) {
           <p className="text-gray-500 text-sm">Redirecting to dashboard...</p>
         </motion.div>
       </div>
-      <div className="w-full lg:w-1/2 bg-gradient-to-br from-purple-600 via-purple-500 to-blue-600 relative overflow-hidden min-h-[50vh] lg:min-h-screen">
+      <div className="w-full lg:w-1/2 bg-gradient-to-br from-sky-600 via-sky-500 to-blue-600 relative overflow-hidden min-h-[50vh] lg:min-h-screen">
         <MarketingIllustration />
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-10">

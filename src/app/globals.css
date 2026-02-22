@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #9c07ff;
-  --color-secondary: #6b5a99;
+  --color-primary: #0284c7;
+  --color-secondary: #0369a1;
 }
 
 html,
@@ -72,7 +72,7 @@ body {
 }
 
 .sidebar-scroll::-webkit-scrollbar-thumb:hover {
-  background-color: #7b05cc;
+  background-color: #0369a1;
 }
 
 /* ===== Feature Popover Scrollbar (Blend with Background) ===== */
@@ -161,7 +161,7 @@ body {
 }
 
 .horizontal-scroll::-webkit-scrollbar-thumb:hover {
-  background-color: #7b05cc;
+  background-color: #0369a1;
 }
 
 /* Smooth scroll snapping on smaller screens */

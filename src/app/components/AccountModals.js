@@ -32,7 +32,7 @@ const PLATFORM_ICONS = {
 
 // Platform colors
 const PLATFORM_COLORS = {
-  instagram: "from-pink-500 to-purple-600",
+  instagram: "from-pink-500 to-sky-600",
   facebook: "from-blue-500 to-blue-600",
   twitter: "from-gray-800 to-black",
   linkedin: "from-blue-600 to-blue-700",

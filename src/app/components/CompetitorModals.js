@@ -213,7 +213,7 @@ export function AddCompetitorModal({
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Website <span className="text-red-500">*</span>
+              Website <span>*</span>
             </label>
             <input
               type="url"

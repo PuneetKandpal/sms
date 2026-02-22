@@ -224,7 +224,7 @@ export default function FeedbackModal({ isOpen, onClose, maxStars = 10 }) {
                 whileTap={{ scale: selectedStars > 0 ? 0.98 : 1 }}
                 className={`flex-1 px-6 cursor-pointer py-3 rounded-xl font-medium transition-all ${
                   selectedStars > 0 && !isSubmitting
-                    ? "bg-purple-600 text-white hover:bg-purple-700 shadow-lg"
+                    ? "bg-sky-600 text-white hover:bg-sky-700 shadow-lg"
                     : "bg-gray-300 text-gray-500 cursor-not-allowed"
                 }`}
               >

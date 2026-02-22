@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "AI Optimization Answers | Iriscale | Generate AI-ready answers",
+  title: "Parent Q&A (AIO) | Iriscale | Generate AI-ready answers",
   description:
     "Iriscale - AI-powered platform for intelligent business growth and strategic insights",
 };

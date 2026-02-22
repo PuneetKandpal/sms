@@ -28,7 +28,7 @@ export default function KnowledgeBaseGateAlert({
       )}
       <button
         onClick={handleClick}
-        className="inline-flex items-center justify-center w-full px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium cursor-pointer"
+        className="inline-flex items-center justify-center w-full px-6 py-3 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors font-medium cursor-pointer"
       >
         {buttonLabel}
       </button>

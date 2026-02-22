@@ -249,7 +249,7 @@ export default function OverviewSection({ sources, selectedSources = [] }) {
 
     return (
       <div className="space-y-6 mt-4">
-        {/* Industries Section */}
+        {/* School Types Section */}
         {generatedContent.industries && (
           <div className="bg-white rounded-lg p-4 border border-gray-200">
             <button
@@ -257,8 +257,8 @@ export default function OverviewSection({ sources, selectedSources = [] }) {
               className="flex items-center justify-between w-full text-left cursor-pointer hover:bg-gray-50 -m-2 p-2 rounded"
             >
               <div className="flex items-center space-x-2">
-                <Building2 className="w-5 h-5 text-blue-600" />
-                <h4 className="font-semibold text-gray-800">Industries</h4>
+                <Building2 className="w-5 h-5 text-gray-700" />
+                <h4 className="font-semibold text-gray-800">School Types</h4>
               </div>
               {expandedSections.industries ? (
                 <ChevronUp className="w-4 h-4" />
@@ -276,7 +276,7 @@ export default function OverviewSection({ sources, selectedSources = [] }) {
                   {generatedContent.industries.list?.map((industry, idx) => (
                     <div
                       key={idx}
-                      className="bg-blue-50 rounded px-2 py-1 text-xs font-medium text-blue-800"
+                      className="bg-gray-50 border border-gray-200 rounded px-2 py-1 text-xs font-medium text-gray-800"
                     >
                       {industry}
                     </div>
@@ -287,7 +287,7 @@ export default function OverviewSection({ sources, selectedSources = [] }) {
           </div>
         )}
 
-        {/* Buyer Personas Section */}
+        {/* Audience Profiles Section */}
         {generatedContent.buyer_personas && (
           <div className="bg-white rounded-lg p-4 border border-gray-200">
             <button
@@ -295,8 +295,8 @@ export default function OverviewSection({ sources, selectedSources = [] }) {
               className="flex items-center justify-between w-full text-left cursor-pointer hover:bg-gray-50 -m-2 p-2 rounded"
             >
               <div className="flex items-center space-x-2">
-                <Users className="w-5 h-5 text-green-600" />
-                <h4 className="font-semibold text-gray-800">Buyer Personas</h4>
+                <Users className="w-5 h-5 text-gray-700" />
+                <h4 className="font-semibold text-gray-800">Audience Profiles</h4>
               </div>
               {expandedSections.buyer_personas ? (
                 <ChevronUp className="w-4 h-4" />
@@ -314,7 +314,7 @@ export default function OverviewSection({ sources, selectedSources = [] }) {
                   {generatedContent.buyer_personas.list?.map((persona, idx) => (
                     <div
                       key={idx}
-                      className="bg-green-50 rounded px-2 py-1 text-xs font-medium text-green-800"
+                      className="bg-gray-50 border border-gray-200 rounded px-2 py-1 text-xs font-medium text-gray-800"
                     >
                       {persona}
                     </div>
@@ -325,7 +325,7 @@ export default function OverviewSection({ sources, selectedSources = [] }) {
           </div>
         )}
 
-        {/* Products and Services Section */}
+        {/* Programs and Services Section */}
         {generatedContent.products_and_services && (
           <div className="bg-white rounded-lg p-4 border border-gray-200">
             <button
@@ -333,10 +333,8 @@ export default function OverviewSection({ sources, selectedSources = [] }) {
               className="flex items-center justify-between w-full text-left cursor-pointer hover:bg-gray-50 -m-2 p-2 rounded"
             >
               <div className="flex items-center space-x-2">
-                <Lightbulb className="w-5 h-5 text-purple-600" />
-                <h4 className="font-semibold text-gray-800">
-                  Products & Services
-                </h4>
+                <Lightbulb className="w-5 h-5 text-gray-700" />
+                <h4 className="font-semibold text-gray-800">Programs & Services</h4>
               </div>
               {expandedSections.products_services ? (
                 <ChevronUp className="w-4 h-4" />
@@ -349,11 +347,15 @@ export default function OverviewSection({ sources, selectedSources = [] }) {
               <div className="mt-3 space-y-4">
                 {Object.entries(generatedContent.products_and_services).map(
                   ([service, details], idx) => (
-                    <div key={idx} className="bg-purple-50 rounded-lg p-3">
-                      <h5 className="font-medium text-purple-900 mb-2">
+                    <div key={idx} className="bg-gray-50 border border-gray-200 rounded-lg p-3">
+                      <h5 className="font-medium text-gray-900 mb-2">
                         {service}
                       </h5>
-                      {details.keywords && renderKeywords(details.keywords)}
+                      <ul className="list-disc pl-5 text-sm text-gray-700 space-y-1">
+                        {details.map((detail, dIdx) => (
+                          <li key={dIdx}>{detail}</li>
+                        ))}
+                      </ul>
                     </div>
                   )
                 )}
@@ -362,7 +364,7 @@ export default function OverviewSection({ sources, selectedSources = [] }) {
           </div>
         )}
 
-        {/* Target Markets Section */}
+        {/* Target Communities Section */}
         {generatedContent.target_markets && (
           <div className="bg-white rounded-lg p-4 border border-gray-200">
             <button
@@ -370,8 +372,8 @@ export default function OverviewSection({ sources, selectedSources = [] }) {
               className="flex items-center justify-between w-full text-left cursor-pointer hover:bg-gray-50 -m-2 p-2 rounded"
             >
               <div className="flex items-center space-x-2">
-                <Target className="w-5 h-5 text-orange-600" />
-                <h4 className="font-semibold text-gray-800">Target Markets</h4>
+                <Target className="w-5 h-5 text-gray-700" />
+                <h4 className="font-semibold text-gray-800">Target Communities</h4>
               </div>
               {expandedSections.target_markets ? (
                 <ChevronUp className="w-4 h-4" />
@@ -389,7 +391,7 @@ export default function OverviewSection({ sources, selectedSources = [] }) {
                   {generatedContent.target_markets.list?.map((market, idx) => (
                     <span
                       key={idx}
-                      className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-medium"
+                      className="bg-gray-50 border border-gray-200 text-gray-800 px-2 py-1 rounded-full text-xs font-medium"
                     >
                       {market}
                     </span>
@@ -400,7 +402,7 @@ export default function OverviewSection({ sources, selectedSources = [] }) {
           </div>
         )}
 
-        {/* Differentiators Section */}
+        {/* Reasons Families Choose You Section */}
         {generatedContent.differentiators && (
           <div className="bg-white rounded-lg p-4 border border-gray-200">
             <button
@@ -408,8 +410,8 @@ export default function OverviewSection({ sources, selectedSources = [] }) {
               className="flex items-center justify-between w-full text-left cursor-pointer hover:bg-gray-50 -m-2 p-2 rounded"
             >
               <div className="flex items-center space-x-2">
-                <Globe className="w-5 h-5 text-red-600" />
-                <h4 className="font-semibold text-gray-800">Differentiators</h4>
+                <Globe className="w-5 h-5 text-gray-700" />
+                <h4 className="font-semibold text-gray-800">Reasons Families Choose You</h4>
               </div>
               {expandedSections.differentiators ? (
                 <ChevronUp className="w-4 h-4" />
@@ -427,11 +429,16 @@ export default function OverviewSection({ sources, selectedSources = [] }) {
                   {generatedContent.differentiators.list?.map((diff, idx) => (
                     <div
                       key={idx}
-                      className="bg-red-50 border-l-4 border-red-400 p-2 rounded"
+                      className="bg-gray-50 border-l-4 border-gray-400 p-2 rounded"
                     >
-                      <span className="text-red-800 text-xs font-medium">
-                        {diff}
-                      </span>
+                      <p className="text-sm font-medium text-gray-800 mb-1">
+                        {diff.split(":")[0]}
+                      </p>
+                      {diff.includes(":") && (
+                        <p className="text-xs text-gray-600">
+                          {diff.split(":")[1].trim()}
+                        </p>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -448,7 +455,7 @@ export default function OverviewSection({ sources, selectedSources = [] }) {
               className="flex items-center justify-between w-full text-left cursor-pointer hover:bg-gray-50 -m-2 p-2 rounded"
             >
               <div className="flex items-center space-x-2">
-                <Search className="w-5 h-5 text-indigo-600" />
+                <Search className="w-5 h-5 text-gray-700" />
                 <h4 className="font-semibold text-gray-800">SEO Strategy</h4>
               </div>
               {expandedSections.seo_strategy ? (
@@ -466,8 +473,8 @@ export default function OverviewSection({ sources, selectedSources = [] }) {
 
                 {generatedContent.geo_leo_strategy.seo_strategy && (
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="bg-indigo-50 rounded-lg p-3">
-                      <h6 className="font-medium text-indigo-900 mb-2">
+                    <div className="bg-gray-50 border border-gray-200 rounded-lg p-3">
+                      <h6 className="font-medium text-gray-900 mb-2">
                         Industry Modifiers
                       </h6>
                       {renderKeywords(
@@ -475,8 +482,8 @@ export default function OverviewSection({ sources, selectedSources = [] }) {
                           .industry_modifiers
                       )}
                     </div>
-                    <div className="bg-indigo-50 rounded-lg p-3">
-                      <h6 className="font-medium text-indigo-900 mb-2">
+                    <div className="bg-gray-50 border border-gray-200 rounded-lg p-3">
+                      <h6 className="font-medium text-gray-900 mb-2">
                         Location Terms
                       </h6>
                       {renderKeywords(
@@ -484,8 +491,8 @@ export default function OverviewSection({ sources, selectedSources = [] }) {
                           .location_based_terms
                       )}
                     </div>
-                    <div className="bg-indigo-50 rounded-lg p-3">
-                      <h6 className="font-medium text-indigo-900 mb-2">
+                    <div className="bg-gray-50 border border-gray-200 rounded-lg p-3">
+                      <h6 className="font-medium text-gray-900 mb-2">
                         Problem Language
                       </h6>
                       {renderKeywords(
@@ -493,8 +500,8 @@ export default function OverviewSection({ sources, selectedSources = [] }) {
                           .problem_language
                       )}
                     </div>
-                    <div className="bg-indigo-50 rounded-lg p-3">
-                      <h6 className="font-medium text-indigo-900 mb-2">
+                    <div className="bg-gray-50 border border-gray-200 rounded-lg p-3">
+                      <h6 className="font-medium text-gray-900 mb-2">
                         Keyword Combinations
                       </h6>
                       {renderKeywords(

@@ -39,8 +39,8 @@ function QueryListItem({
       className={clsx(
         "group relative overflow-hidden rounded-xl border shadow-sm transition-all cursor-pointer",
         isActive
-          ? "border-purple-400 bg-gradient-to-br from-purple-50 via-white to-purple-100/50 shadow-md ring-1 ring-purple-200/50"
-          : "border-gray-200 bg-white hover:border-purple-300 hover:shadow"
+          ? "border-sky-400 bg-gradient-to-br from-sky-50 via-white to-sky-100/50 shadow-md ring-1 ring-sky-200/50"
+          : "border-gray-200 bg-white hover:border-sky-300 hover:shadow"
       )}
     >
       <button
@@ -60,8 +60,8 @@ function QueryListItem({
               className={clsx(
                 "mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg",
                 isActive
-                  ? "bg-purple-200 text-purple-800"
-                  : "bg-purple-100 text-purple-700"
+                  ? "bg-sky-200 text-sky-800"
+                  : "bg-sky-100 text-sky-700"
               )}
             >
               <History className="h-4 w-4" />
@@ -73,7 +73,7 @@ function QueryListItem({
             </div>
           </div>
           <div className="flex flex-wrap items-center gap-2 pl-[42px]">
-            <span className="inline-flex items-center gap-1 rounded-full bg-purple-100 px-2 py-0.5 text-[11px] font-semibold text-purple-700">
+            <span className="inline-flex items-center gap-1 rounded-full bg-sky-100 px-2 py-0.5 text-[11px] font-semibold text-sky-700">
               <BarChart3 className="h-3 w-3" />
               {query.totalVersions}
             </span>
@@ -94,8 +94,8 @@ function QueryListItem({
           className={clsx(
             "mt-1 h-4 w-4 shrink-0 transition-all",
             isActive
-              ? "text-purple-600"
-              : "text-gray-400 group-hover:translate-x-0.5 group-hover:text-purple-500"
+              ? "text-sky-600"
+              : "text-gray-400 group-hover:translate-x-0.5 group-hover:text-sky-500"
           )}
         />
       </button>
@@ -112,7 +112,7 @@ function QueryListItem({
             e.stopPropagation();
             onRerun(query);
           }}
-          className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-purple-600 px-3 py-1.5 text-[11px] font-semibold text-white transition-all hover:bg-purple-700 cursor-pointer"
+          className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-sky-600 px-3 py-1.5 text-[11px] font-semibold text-white transition-all hover:bg-sky-700 cursor-pointer"
         >
           <RefreshCcw className="h-3 w-3" />
           Rerun
@@ -135,7 +135,7 @@ function VersionList({ versions, loading, onSelect, empty, activeVersionId }) {
           animate={{ rotate: 360 }}
           transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
         >
-          <Loader2 className="h-6 w-6 text-purple-500" />
+          <Loader2 className="h-6 w-6 text-sky-500" />
         </motion.div>
         <p className="font-medium">Loading versions...</p>
       </div>
@@ -149,8 +149,8 @@ function VersionList({ versions, loading, onSelect, empty, activeVersionId }) {
         animate={{ opacity: 1, scale: 1 }}
         className="flex h-full flex-col items-center justify-center gap-4 rounded-2xl border-2 border-dashed border-gray-200 bg-gray-50/50 p-8 text-center"
       >
-        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-100">
-          <BarChart3 className="h-7 w-7 text-purple-600" />
+        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100">
+          <BarChart3 className="h-7 w-7 text-sky-600" />
         </div>
         <div>
           <p className="text-base font-semibold text-gray-900">
@@ -208,8 +208,8 @@ function VersionList({ versions, loading, onSelect, empty, activeVersionId }) {
             className={clsx(
               "group relative w-full overflow-hidden rounded-xl border px-4 py-3 text-left shadow-sm transition-all cursor-pointer",
               isActive
-                ? "border-purple-400 bg-gradient-to-br from-purple-50 via-white to-purple-100/30 shadow-md ring-1 ring-purple-200/50"
-                : "border-gray-200 bg-white hover:border-purple-300 hover:shadow"
+                ? "border-sky-400 bg-gradient-to-br from-sky-50 via-white to-sky-100/30 shadow-md ring-1 ring-sky-200/50"
+                : "border-gray-200 bg-white hover:border-sky-300 hover:shadow"
             )}
           >
             <div className="relative flex items-start justify-between gap-3">
@@ -218,15 +218,15 @@ function VersionList({ versions, loading, onSelect, empty, activeVersionId }) {
                   <span
                     className={clsx(
                       "text-sm font-semibold leading-tight flex items-center gap-1",
-                      isActive ? "text-purple-900" : "text-gray-900"
+                      isActive ? "text-sky-900" : "text-gray-900"
                     )}
                   >
                     <Clock className="h-3 w-3 mt-[2px]" />
                     {createdAtLabel}
                   </span>
                   {isActive && (
-                    <span className="inline-flex items-center gap-1 rounded-full bg-purple-200 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-purple-800">
-                      <span className="h-1.5 w-1.5 rounded-full bg-purple-700 animate-pulse" />
+                    <span className="inline-flex items-center gap-1 rounded-full bg-sky-200 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-sky-800">
+                      <span className="h-1.5 w-1.5 rounded-full bg-sky-700 animate-pulse" />
                       Active
                     </span>
                   )}
@@ -260,8 +260,8 @@ function VersionList({ versions, loading, onSelect, empty, activeVersionId }) {
                 className={clsx(
                   "mt-1 h-4 w-4 shrink-0 transition-all",
                   isActive
-                    ? "text-purple-600"
-                    : "text-gray-400 group-hover:translate-x-0.5 group-hover:text-purple-500"
+                    ? "text-sky-600"
+                    : "text-gray-400 group-hover:translate-x-0.5 group-hover:text-sky-500"
                 )}
               />
             </div>
@@ -339,7 +339,7 @@ export default function SearchRankingHistoryDrawer({
                   onClick={onRefreshQueries}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="inline-flex items-center gap-2 rounded-full border border-purple-200 bg-purple-50 px-4 py-2 text-sm font-semibold text-purple-700 transition hover:border-purple-300 hover:bg-purple-100 disabled:cursor-not-allowed disabled:opacity-60 cursor-pointer"
+                  className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-4 py-2 text-sm font-semibold text-sky-700 transition hover:border-sky-300 hover:bg-sky-100 disabled:cursor-not-allowed disabled:opacity-60 cursor-pointer"
                   disabled={loadingQueries}
                 >
                   {loadingQueries ? (
@@ -361,11 +361,11 @@ export default function SearchRankingHistoryDrawer({
 
             <div className="flex h-full flex-1 flex-col md:flex-row">
               <div className="md:w-[45%] md:border-r md:border-gray-100">
-                <div className="flex items-center justify-between border-b border-gray-100 bg-gradient-to-r from-purple-50/50 to-transparent px-6 py-4">
+                <div className="flex items-center justify-between border-b border-gray-100 bg-gradient-to-r from-sky-50/50 to-transparent px-6 py-4">
                   <h3 className="text-sm font-bold uppercase tracking-wide text-gray-700">
                     Saved Queries
                   </h3>
-                  <span className="inline-flex items-center gap-1 rounded-full bg-purple-100 px-2.5 py-1 text-xs font-bold text-purple-700">
+                  <span className="inline-flex items-center gap-1 rounded-full bg-sky-100 px-2.5 py-1 text-xs font-bold text-sky-700">
                     {queries.length}
                   </span>
                 </div>
@@ -380,7 +380,7 @@ export default function SearchRankingHistoryDrawer({
                           ease: "linear",
                         }}
                       >
-                        <Loader2 className="h-6 w-6 text-purple-500" />
+                        <Loader2 className="h-6 w-6 text-sky-500" />
                       </motion.div>
                       <p className="font-medium">Loading queries...</p>
                     </div>
@@ -390,8 +390,8 @@ export default function SearchRankingHistoryDrawer({
                       animate={{ opacity: 1, scale: 1 }}
                       className="rounded-2xl border-2 border-dashed border-gray-300 bg-gradient-to-br from-gray-50 to-white p-10 text-center shadow-sm"
                     >
-                      <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-purple-100">
-                        <History className="h-8 w-8 text-purple-600" />
+                      <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-sky-100">
+                        <History className="h-8 w-8 text-sky-600" />
                       </div>
                       <h3 className="text-lg font-semibold text-gray-900">
                         No discovery searches yet
@@ -459,8 +459,8 @@ export default function SearchRankingHistoryDrawer({
                       animate={{ opacity: 1, scale: 1 }}
                       className="flex h-full flex-col items-center justify-center gap-4 rounded-2xl border-2 border-dashed border-gray-200 bg-gray-50/50 p-8 text-center"
                     >
-                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-100">
-                        <History className="h-7 w-7 text-purple-600" />
+                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100">
+                        <History className="h-7 w-7 text-sky-600" />
                       </div>
                       <div>
                         <p className="text-base font-semibold text-gray-900">

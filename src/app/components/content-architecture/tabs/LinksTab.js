@@ -49,7 +49,7 @@ export default function LinksTab({ selectedNode }) {
           initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 1, y: 300, x: -400 }}
           transition={{ duration: 0 }}
-          className="px-4 py-1.5 top-0 right-0 bg-purple-600 text-white text-sm font-semibold rounded-full shadow-md border border-white/30"
+          className="px-4 py-1.5 top-0 right-0 bg-sky-600 text-white text-sm font-semibold rounded-full shadow-md border border-white/30"
         >
           Coming Soon
         </motion.div>
@@ -62,7 +62,7 @@ export default function LinksTab({ selectedNode }) {
         transition={{ delay: 0.1 }}
       >
         <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-          <Link className="h-5 w-5 text-purple-600" />
+          <Link className="h-5 w-5 text-sky-600" />
           Internal Text Links
         </h3>
         <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
@@ -102,7 +102,7 @@ export default function LinksTab({ selectedNode }) {
             </tbody>
           </table>
         </div>
-        <button className="mt-3 flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm font-medium cursor-pointer">
+        <button className="mt-3 flex items-center gap-2 px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors text-sm font-medium cursor-pointer">
           <Plus className="h-4 w-4" />
           Add Text Link
         </button>
@@ -205,27 +205,27 @@ export default function LinksTab({ selectedNode }) {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
-        className="mt-8 p-6 bg-gradient-to-br from-purple-50 to-indigo-50 border border-purple-200 rounded-lg"
+        className="mt-8 p-6 bg-gradient-to-br from-sky-50 to-indigo-50 border border-sky-200 rounded-lg"
       >
         <h3 className="text-lg font-semibold text-gray-900 mb-3">
           Link Strategy Tips
         </h3>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex items-start gap-2">
-            <span className="text-purple-600 font-bold">•</span>
+            <span className="text-sky-600 font-bold">•</span>
             <span>
               Use prerequisite links to guide users through content in the right
               order
             </span>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-purple-600 font-bold">•</span>
+            <span className="text-sky-600 font-bold">•</span>
             <span>
               Add supporting links to provide additional context and depth
             </span>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-purple-600 font-bold">•</span>
+            <span className="text-sky-600 font-bold">•</span>
             <span>
               Include external resources to build credibility and provide
               citations

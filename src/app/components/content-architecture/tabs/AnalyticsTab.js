@@ -44,10 +44,10 @@ export default function AnalyticsTab({ selectedNode }) {
       label: "Keyword Ranking",
       value: "#3",
       icon: Target,
-      color: "purple",
-      bgColor: "from-purple-50 to-purple-100",
-      borderColor: "border-purple-200",
-      textColor: "text-purple-600",
+      color: "sky",
+      bgColor: "from-sky-50 to-sky-100",
+      borderColor: "border-sky-200",
+      textColor: "text-sky-600",
     },
   ];
 
@@ -76,7 +76,7 @@ export default function AnalyticsTab({ selectedNode }) {
         <h2 className="text-2xl font-bold text-gray-900">
           Performance Analytics
         </h2>
-        <select className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm font-medium cursor-pointer">
+        <select className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm font-medium cursor-pointer">
           <option>Last 30 Days</option>
           <option>Last 7 Days</option>
           <option>Last 90 Days</option>
@@ -121,7 +121,7 @@ export default function AnalyticsTab({ selectedNode }) {
           className="bg-white border border-gray-200 rounded-xl p-6"
         >
           <div className="flex items-center gap-2 mb-4">
-            <BarChart3 className="h-5 w-5 text-purple-600" />
+            <BarChart3 className="h-5 w-5 text-sky-600" />
             <h3 className="text-lg font-semibold text-gray-900">
               SEO Performance
             </h3>
@@ -213,7 +213,7 @@ export default function AnalyticsTab({ selectedNode }) {
         transition={{ delay: 0.7 }}
         className="flex gap-3"
       >
-        <button className="flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium cursor-pointer">
+        <button className="flex items-center gap-2 px-6 py-3 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors font-medium cursor-pointer">
           <FileDown className="h-4 w-4" />
           Export Report
         </button>

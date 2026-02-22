@@ -196,7 +196,7 @@ export default function ContentTab({ selectedNode, projectId }) {
       animate={{ opacity: 1, y: 0 }}
       className="max-w-3xl mx-auto text-center py-16"
     >
-      <div className="inline-flex items-center gap-2 px-4 py-1 mb-6 rounded-full bg-purple-100 text-purple-700 text-sm font-semibold">
+      <div className="inline-flex items-center gap-2 px-4 py-1 mb-6 rounded-full bg-sky-100 text-sky-700 text-sm font-semibold">
         <Sparkles className="h-4 w-4" />
         Generating Article
       </div>
@@ -209,7 +209,7 @@ export default function ContentTab({ selectedNode, projectId }) {
         while we finish up.
       </p>
       <div className="mt-10 flex justify-center">
-        <div className="h-12 w-12 rounded-full border-4 border-purple-200 border-t-purple-600 animate-spin"></div>
+        <div className="h-12 w-12 rounded-full border-4 border-sky-200 border-t-sky-600 animate-spin"></div>
       </div>
     </motion.div>
   );

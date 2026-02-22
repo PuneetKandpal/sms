@@ -637,7 +637,7 @@ export default function Navbar() {
               )}
             </div>
             {runningAgentsCount > 0 && (
-              <span className="absolute -top-1.5 -right-1.5 min-w-[20px] h-[20px] flex items-center justify-center text-[10px] font-bold text-white bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full px-1 shadow-sm">
+              <span className="absolute -top-1.5 -right-1.5 min-w-[20px] h-[20px] flex items-center justify-center text-[10px] font-bold text-white bg-gradient-to-r from-indigo-500 to-sky-600 rounded-full px-1 shadow-sm">
                 {runningAgentsCount}
               </span>
             )}
@@ -694,8 +694,8 @@ export default function Navbar() {
 
         {/* Beta Release Chip */}
         <div className="relative group">
-          <div className="px-[6px] py-[2px] border-1 border-purple-500 rounded-full flex items-center gap-1.5 cursor-default">
-            <span className="text-xs font-bold text-purple-700 tracking-wide">
+          <div className="px-[6px] py-[2px] border-1 border-sky-500 rounded-full flex items-center gap-1.5 cursor-default">
+            <span className="text-xs font-bold text-sky-700 tracking-wide">
               beta
             </span>
           </div>

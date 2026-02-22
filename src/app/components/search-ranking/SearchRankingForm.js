@@ -53,12 +53,12 @@ export default function SearchRankingForm({
       onSubmit={handleSubmit}
       className="overflow-hidden rounded-2xl border border-gray-200 bg-gradient-to-br from-white to-gray-50/30 shadow-md"
     >
-      <div className="bg-gradient-to-r from-purple-50/50 to-transparent border-b border-gray-100 px-6 py-3">
+      <div className="bg-gradient-to-r from-sky-50/50 to-transparent border-b border-gray-100 px-6 py-3">
         <label
           htmlFor="search-query"
           className="flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-gray-700"
         >
-          <Search className="h-4 w-4 text-purple-600" />
+          <Search className="h-4 w-4 text-sky-600" />
           New Discovery Query
         </label>
       </div>
@@ -71,7 +71,7 @@ export default function SearchRankingForm({
               value={queryValue}
               onChange={handleQueryChange}
               placeholder="e.g., Top dehydrated onion suppliers in India"
-              className="w-full rounded-xl border-2 border-gray-200 px-4 py-3 text-sm transition focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-100 disabled:bg-gray-50 disabled:text-gray-500"
+              className="w-full rounded-xl border-2 border-gray-200 px-4 py-3 text-sm transition focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-100 disabled:bg-gray-50 disabled:text-gray-500"
               disabled={submitting || disabled}
             />
           </div>
@@ -82,7 +82,7 @@ export default function SearchRankingForm({
             whileHover="hover"
             whileTap="tap"
             disabled={primaryDisabled}
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-purple-600 to-purple-700 px-6 py-3 text-sm font-bold text-white shadow-md transition hover:shadow-lg disabled:cursor-not-allowed disabled:from-purple-300 disabled:to-purple-400 disabled:shadow-none cursor-pointer"
+            className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-sky-600 to-sky-700 px-6 py-3 text-sm font-bold text-white shadow-md transition hover:shadow-lg disabled:cursor-not-allowed disabled:from-sky-300 disabled:to-sky-400 disabled:shadow-none cursor-pointer"
           >
             {submitting ? (
               <>

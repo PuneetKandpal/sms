@@ -40,7 +40,7 @@ const COMPARISON_SECTIONS = [
     key: "products_and_services",
     title: "Products & Services",
     icon: Lightbulb,
-    colorClass: "purple",
+    colorClass: "sky",
   },
   {
     key: "target_markets",
@@ -128,11 +128,11 @@ const colorMap = {
     text: "text-green-600",
     iconText: "text-green-600",
   },
-  purple: {
-    bg: "bg-purple-50",
-    border: "border-purple-200",
-    text: "text-purple-600",
-    iconText: "text-purple-600",
+  sky: {
+    bg: "bg-sky-50",
+    border: "border-sky-200",
+    text: "text-sky-600",
+    iconText: "text-sky-600",
   },
   orange: {
     bg: "bg-orange-50",
@@ -623,7 +623,7 @@ function ComparisonSection({
                       return (
                         <div
                           key={`added_${productKey}`}
-                          className="border border-purple-300 rounded-lg p-3 bg-purple-50/40"
+                          className="border border-sky-300 rounded-lg p-3 bg-sky-50/40"
                         >
                           <h6 className="text-sm font-medium text-gray-800 mb-2 capitalize">
                             {productKey.replace(/_/g, " ")} (New Category)
@@ -636,7 +636,7 @@ function ComparisonSection({
                             {newKeywords.map((kw, i) => (
                               <div
                                 key={i}
-                                className="text-xs bg-white px-2 py-1 rounded border border-purple-200"
+                                className="text-xs bg-white px-2 py-1 rounded border border-sky-200"
                               >
                                 {kw}
                               </div>
@@ -707,7 +707,7 @@ function ComparisonSection({
                       return (
                         <div
                           key={`common_${productKey}`}
-                          className="border border-purple-200 rounded-lg p-3"
+                          className="border border-sky-200 rounded-lg p-3"
                         >
                           <h6 className="text-sm font-medium text-gray-700 mb-2 capitalize">
                             {productKey.replace(/_/g, " ")}

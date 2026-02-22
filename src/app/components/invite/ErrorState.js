@@ -35,13 +35,13 @@ export default function ErrorState({ error }) {
           <p className="text-gray-600 text-lg mb-8">{error}</p>
           <button
             onClick={() => router.push("/login")}
-            className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-2xl transition-all duration-200 cursor-pointer"
+            className="bg-gradient-to-r from-sky-600 to-blue-600 hover:from-sky-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-2xl transition-all duration-200 cursor-pointer"
           >
             Go to Login
           </button>
         </motion.div>
       </div>
-      <div className="w-full lg:w-1/2 bg-gradient-to-br from-purple-600 via-purple-500 to-blue-600 relative overflow-hidden min-h-[50vh] lg:min-h-screen">
+      <div className="w-full lg:w-1/2 bg-gradient-to-br from-sky-600 via-sky-500 to-blue-600 relative overflow-hidden min-h-[50vh] lg:min-h-screen">
         <MarketingIllustration />
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-10">

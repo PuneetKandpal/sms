@@ -689,7 +689,7 @@ const SourcesPanel = ({
             className="p-1 hover:bg-gray-200 rounded transition-colors duration-150"
             title={isCollapsed ? "Expand panel" : "Collapse panel"}
           >
-            <FiSidebar className="w-4 h-4 text-purple-600" />
+            <FiSidebar className="w-4 h-4 text-sky-600" />
           </button>
         </div>
 
@@ -787,7 +787,7 @@ const SourcesPanel = ({
             <button
               onClick={handleApproveKeywords}
               disabled={actionLoading.approve || actionLoading.reject}
-              className="w-full cursor-pointer py-1 px-2 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 transition-colors duration-150"
+              className="w-full cursor-pointer py-1 px-2 bg-sky-600 text-white rounded-lg font-medium hover:bg-sky-700 transition-colors duration-150"
             >
               {actionLoading.approve ? (
                 <div className="flex items-center justify-center gap-2">
@@ -817,7 +817,7 @@ const SourcesPanel = ({
           <button
             onClick={handleExpandQuestions}
             disabled={showAIOptimizationLoader}
-            className="w-full cursor-pointer py-1 px-4 bg-purple-600 text-white rounded-lg  font-medium hover:bg-purple-700 transition-colors duration-150"
+            className="w-full cursor-pointer py-1 px-4 bg-sky-600 text-white rounded-lg  font-medium hover:bg-sky-700 transition-colors duration-150"
           >
             {showAIOptimizationLoader ? (
               <PulseLoader color="#fff" size={8} className="text-white" />
@@ -854,7 +854,7 @@ const SourcesPanel = ({
                     "& .MuiOutlinedInput-root": {
                       borderRadius: "0.5rem",
                       "&.Mui-focused fieldset": {
-                        borderColor: "#9333EA", // purple-600
+                        borderColor: "#9333EA", // sky-600
                       },
                     },
                     "& label.Mui-focused": {
@@ -1019,20 +1019,20 @@ const StyledPopper = styled(Popper)({
 
 // Purple-themed button using your tailwind color
 const PurpleButton = styled(Button)({
-  backgroundColor: "#9333EA", // tailwind purple-600
+  backgroundColor: "#9333EA", // tailwind sky-600
   color: "#fff",
   "&:hover": {
-    backgroundColor: "#7E22CE", // tailwind purple-700
+    backgroundColor: "#7E22CE", // tailwind sky-700
     color: "#fff",
     cursor: "pointer",
   },
   "&:disabled": {
-    backgroundColor: "#9333EA", // tailwind purple-600
+    backgroundColor: "#9333EA", // tailwind sky-600
     color: "#fff",
     cursor: "not-allowed",
   },
   "&:disabled:hover": {
-    backgroundColor: "#9333EA", // tailwind purple-600
+    backgroundColor: "#9333EA", // tailwind sky-600
     color: "#fff",
     cursor: "not-allowed",
   },

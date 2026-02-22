@@ -248,7 +248,7 @@ const SourcePanelAIOptimizations = ({
               className="p-1 hover:bg-gray-200 rounded transition-colors duration-150"
               title={isCollapsed ? "Expand panel" : "Collapse panel"}
             >
-              <FiSidebar className="w-4 h-4 text-purple-600" />
+              <FiSidebar className="w-4 h-4 text-sky-600" />
             </button>
           </div>
           <div className="border-1 cursor-pointer border-gray-400 mt-1 mb-3"></div>
@@ -259,8 +259,8 @@ const SourcePanelAIOptimizations = ({
               disabled={isGeneratingContent}
               className={`w-full py-1 px-2 text-white rounded-lg font-medium transition-colors duration-150 flex items-center justify-center ${
                 isGeneratingContent
-                  ? "bg-purple-400 cursor-not-allowed"
-                  : "bg-purple-600 hover:bg-purple-700 cursor-pointer"
+                  ? "bg-sky-400 cursor-not-allowed"
+                  : "bg-sky-600 hover:bg-sky-700 cursor-pointer"
               }`}
             >
               {isGeneratingContent ? (
@@ -279,7 +279,7 @@ const SourcePanelAIOptimizations = ({
               disabled={
                 actionLoading.approve || actionLoading.reject || isGeneratingContent
               }
-              className="w-full cursor-pointer py-1 px-2 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 transition-colors duration-150"
+              className="w-full cursor-pointer py-1 px-2 bg-sky-600 text-white rounded-lg font-medium hover:bg-sky-700 transition-colors duration-150"
             >
               {actionLoading.approve ? (
                 <div className="flex items-center justify-center gap-2">
@@ -319,7 +319,7 @@ const SourcePanelAIOptimizations = ({
               className="p-1 hover:bg-gray-200 rounded transition-colors duration-150"
               title="Expand panel"
             >
-              <FiSidebar className="w-4 h-4 text-purple-600" />
+              <FiSidebar className="w-4 h-4 text-sky-600" />
             </button>
           </div>
         </div>

@@ -475,7 +475,7 @@ export default function AIOAnswersTableComponent({
                           e.stopPropagation();
                           onOpenContentArchitecture(row);
                         }}
-                        className="inline-flex items-center gap-1 text-xs font-semibold text-purple-600 hover:text-purple-800 hover:underline cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+                        className="inline-flex items-center gap-1 text-xs font-semibold text-sky-600 hover:text-sky-800 hover:underline cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
                         disabled={!row.page_id}
                       >
                         Open Page

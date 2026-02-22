@@ -295,7 +295,7 @@ function AddSourcesModal({
             </p>
             <button
               onClick={handleTextClick}
-              className="cursor-pointer flex items-center space-x-2 px-4 py-2 bg-purple-200 rounded"
+              className="cursor-pointer flex items-center space-x-2 px-4 py-2 bg-sky-200 rounded"
             >
               <FaFileAlt /> <span>Copied Text</span>
             </button>
@@ -308,7 +308,7 @@ function AddSourcesModal({
             <div className="flex space-x-2">
               <button
                 onClick={() => handleLinkClick("website")}
-                className="cursor-pointer flex items-center space-x-2 px-4 py-2 bg-purple-200 rounded"
+                className="cursor-pointer flex items-center space-x-2 px-4 py-2 bg-sky-200 rounded"
               >
                 <FaGlobe /> <span>Website</span>
               </button>
@@ -317,7 +317,7 @@ function AddSourcesModal({
                 onClick={() => {
                   toast.success("Feature coming soon");
                 }}
-                className="cursor-pointer flex items-center space-x-2 px-4 py-2 bg-purple-200 rounded"
+                className="cursor-pointer flex items-center space-x-2 px-4 py-2 bg-sky-200 rounded"
               >
                 <FaYoutube /> <span>YouTube</span>
               </button>
@@ -431,7 +431,7 @@ function AddKeywordModal({ isOpen, onClose, onFileUpload, onShowText }) {
             </p>
             <button
               onClick={handleTextClick}
-              className="w-full cursor-pointer flex items-center justify-center gap-2 px-4 py-2 bg-purple-200 hover:bg-purple-300 transition rounded-lg"
+              className="w-full cursor-pointer flex items-center justify-center gap-2 px-4 py-2 bg-sky-200 hover:bg-sky-300 transition rounded-lg"
             >
               <FaFileAlt />
               <span>Copied Text</span>
@@ -505,7 +505,7 @@ function AddSourcesCompetitor({
         <div
           className={`border-2 border-dashed rounded-xl p-12 text-center mb-8 transition-colors ${
             dragOver
-              ? "border-purple-400 bg-purple-50"
+              ? "border-sky-400 bg-sky-50"
               : "border-gray-200 bg-gray-50"
           }`}
           onDragOver={(e) => {
@@ -547,7 +547,7 @@ function AddSourcesCompetitor({
             </p>
             <button
               onClick={handleTextClick}
-              className="cursor-pointer flex items-center space-x-2 px-4 py-2 bg-purple-200 rounded"
+              className="cursor-pointer flex items-center space-x-2 px-4 py-2 bg-sky-200 rounded"
             >
               <FaFileAlt /> <span>Copied Text</span>
             </button>
@@ -560,14 +560,14 @@ function AddSourcesCompetitor({
             <div className="flex space-x-2">
               <button
                 onClick={() => handleLinkClick("website")}
-                className="cursor-pointer flex items-center space-x-2 px-4 py-2 bg-purple-200 rounded"
+                className="cursor-pointer flex items-center space-x-2 px-4 py-2 bg-sky-200 rounded"
               >
                 <FaGlobe /> <span>Website</span>
               </button>
               <button
                 disabled
                 onClick={() => handleLinkClick("youtube")}
-                className="cursor-pointer flex items-center space-x-2 px-4 py-2 bg-purple-200 rounded"
+                className="cursor-pointer flex items-center space-x-2 px-4 py-2 bg-sky-200 rounded"
               >
                 <FaYoutube /> <span>YouTube</span>
               </button>
@@ -1443,7 +1443,7 @@ function ProductLinkConfirmModal({
           </button>
           <button
             onClick={onConfirm}
-            className="cursor-pointer px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 disabled:opacity-50"
+            className="cursor-pointer px-4 py-2 bg-sky-600 text-white rounded hover:bg-sky-700 disabled:opacity-50"
             disabled={isSubmitting}
           >
             {isSubmitting ? "Linking..." : "Link Product"}
@@ -1505,7 +1505,7 @@ export const AddSourceModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
         }`}
       >
         <div className="px-8 py-7 border-b border-gray-100/80 bg-gradient-to-b from-white to-gray-50 rounded-t-[28px]">
-          <div className="inline-flex items-center rounded-full bg-purple-50 text-purple-600 text-[11px] font-semibold px-3 py-1 uppercase tracking-[0.35em]">
+          <div className="inline-flex items-center rounded-full bg-sky-50 text-sky-600 text-[11px] font-semibold px-3 py-1 uppercase tracking-[0.35em]">
             Core Idea Model
           </div>
           <div className="mt-3 space-y-2">
@@ -1543,7 +1543,7 @@ export const AddSourceModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
             <textarea
               rows="5"
               maxLength={CHARACTER_LIMIT}
-              className="w-full rounded-2xl border border-gray-200 bg-white px-4 py-3 text-base text-gray-900 placeholder:text-gray-400 focus:border-purple-500/70 focus:ring-2 focus:ring-purple-500/30 transition-all duration-200 shadow-sm focus:shadow-xl"
+              className="w-full rounded-2xl border border-gray-200 bg-white px-4 py-3 text-base text-gray-900 placeholder:text-gray-400 focus:border-sky-500/70 focus:ring-2 focus:ring-sky-500/30 transition-all duration-200 shadow-sm focus:shadow-xl"
               placeholder="Describe the core concept, problem, or capability you want customers to understand..."
               value={userInput}
               onChange={(e) => setUserInput(e.target.value)}
@@ -1567,7 +1567,7 @@ export const AddSourceModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
           </button>
           <button
             type="button"
-            className="w-full sm:w-auto inline-flex justify-center rounded-2xl px-6 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-[#7c3aed] via-[#6366f1] to-[#0ea5e9] hover:from-[#6d28d9] hover:via-[#4f46e5] hover:to-[#0284c7] disabled:opacity-60 disabled:cursor-not-allowed transition-all shadow-lg shadow-purple-500/20 cursor-pointer"
+            className="w-full sm:w-auto inline-flex justify-center rounded-2xl px-6 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-[#7c3aed] via-[#6366f1] to-[#0ea5e9] hover:from-[#6d28d9] hover:via-[#4f46e5] hover:to-[#0284c7] disabled:opacity-60 disabled:cursor-not-allowed transition-all shadow-lg shadow-sky-500/20 cursor-pointer"
             onClick={handleSubmit}
             disabled={isSubmitting}
           >

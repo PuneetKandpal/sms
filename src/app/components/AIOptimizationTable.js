@@ -241,8 +241,9 @@ const getTypeColor = (type) => {
   switch (type.toLowerCase()) {
     case "people_also_ask":
       return "bg-blue-100 text-blue-700";
-    case "people_also_search":
-      return "bg-purple-100 text-purple-700";
+    case "review":
+    case "in progress":
+      return "bg-sky-100 text-sky-700";
     default:
       return "bg-gray-100 text-gray-800";
   }

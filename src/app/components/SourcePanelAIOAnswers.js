@@ -191,7 +191,7 @@ const SourcePanelAIOAnswers = ({
             className="p-1 hover:bg-gray-200 rounded transition-colors duration-150"
             title={isCollapsed ? "Expand panel" : "Collapse panel"}
           >
-            <FiSidebar className="w-4 h-4 text-purple-600" />
+            <FiSidebar className="w-4 h-4 text-sky-600" />
           </button>
         </div>
         {!isCollapsed && (
@@ -201,7 +201,7 @@ const SourcePanelAIOAnswers = ({
                 <button
                   onClick={handleApprove}
                   disabled={actionLoading.approve || actionLoading.reject}
-                  className="w-full py-2 px-2 bg-purple-600 text-white rounded-md font-medium hover:bg-purple-700 transition-colors duration-150 text-sm"
+                  className="w-full py-2 px-2 bg-sky-600 text-white rounded-md font-medium hover:bg-sky-700 transition-colors duration-150 text-sm"
                 >
                   {actionLoading.approve ? (
                     <div className="flex items-center justify-center gap-2">
@@ -230,13 +230,13 @@ const SourcePanelAIOAnswers = ({
               <div className="space-y-2 mt-3">
                 <button
                   onClick={showError}
-                  className="w-full py-2 px-4 bg-purple-600 text-white rounded-md font-medium hover:bg-purple-700 transition-colors duration-150 text-sm"
+                  className="w-full py-2 px-4 bg-sky-600 text-white rounded-md font-medium hover:bg-sky-700 transition-colors duration-150 text-sm"
                 >
                   Create Email Campaign
                 </button>
                 <button
                   onClick={showError}
-                  className="w-full py-2 px-4 bg-purple-600 text-white rounded-md font-medium hover:bg-purple-700 transition-colors duration-150 text-sm"
+                  className="w-full py-2 px-4 bg-sky-600 text-white rounded-md font-medium hover:bg-sky-700 transition-colors duration-150 text-sm"
                 >
                   Export to CMS
                 </button>
@@ -253,7 +253,7 @@ const SourcePanelAIOAnswers = ({
               Linked Page Overview
             </h3>
             {selectedAnswer?.page_location?.blueprint_letter && (
-              <span className="text-xs font-semibold px-2 py-1 rounded-md bg-purple-50 text-purple-600 border border-purple-100">
+              <span className="text-xs font-semibold px-2 py-1 rounded-md bg-sky-50 text-sky-600 border border-sky-100">
                 {selectedAnswer.page_location.blueprint_letter}
               </span>
             )}
@@ -334,7 +334,7 @@ const SourcePanelAIOAnswers = ({
               {projectId && (
                 <Link
                   href={`/projects/${projectId}/content-architecture?caTab=overview&pageId=${pageOverviewData.page_id}`}
-                  className="inline-flex items-center justify-center w-full px-3 py-2 text-sm font-semibold text-white bg-purple-600 rounded-md hover:bg-purple-700 transition-colors duration-150 cursor-pointer"
+                  className="inline-flex items-center justify-center w-full px-3 py-2 text-sm font-semibold text-white bg-sky-600 rounded-md hover:bg-sky-700 transition-colors duration-150 cursor-pointer"
                 >
                   Open in Content Architecture
                   <FiExternalLink className="ml-2" size={14} />

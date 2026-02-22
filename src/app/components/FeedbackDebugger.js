@@ -48,7 +48,7 @@ export default function FeedbackDebugger() {
     return (
       <button
         onClick={() => setShowDebug(true)}
-        className="fixed bottom-4 left-4 px-3 py-2 bg-purple-600 text-white rounded-lg text-sm shadow-lg hover:bg-purple-700 z-50"
+        className="fixed bottom-4 left-4 px-3 py-2 bg-sky-600 text-white rounded-lg text-sm shadow-lg hover:bg-sky-700 z-50"
         title="Show Feedback Debugger"
       >
         🐛 Debug

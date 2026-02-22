@@ -93,7 +93,7 @@ const SIDEBAR_STRUCTURE = [
     children: [
       {
         id: "knowledge-base",
-        label: "Knowledge Base",
+        label: "School Knowledge Base",
         icon: Database,
         path: "manage",
         routeKey: "knowledge-base",
@@ -101,23 +101,23 @@ const SIDEBAR_STRUCTURE = [
       },
       {
         id: "keywords",
-        label: "Keyword Repository",
+        label: "Enrollment Keywords",
         icon: Key,
         path: "keywords",
         routeKey: "keywords",
         trackingKey: "keywords",
       },
-      {
-        id: "search-ranking",
-        label: "Search Ranking",
-        icon: Search,
-        path: "search-ranking",
-        routeKey: "search-ranking",
-        trackingKey: "search_ranking",
-      },
+      // {
+      //   id: "search-ranking",
+      //   label: "Search Ranking",
+      //   icon: Search,
+      //   path: "search-ranking",
+      //   routeKey: "search-ranking",
+      //   trackingKey: "search_ranking",
+      // },
       {
         id: "competitor-analysis",
-        label: "Competitor Analysis",
+        label: "Other Schools Analysis",
         icon: Swords,
         path: "competitor-analysis",
         routeKey: "competitor-analysis",
@@ -127,8 +127,8 @@ const SIDEBAR_STRUCTURE = [
   },
   {
     id: "strategy",
-    label: "STRATEGY & PLANNING",
-    icon: Network,
+    label: "STRATEGY & CONTENT",
+    icon: FileText,
     children: [
       {
         id: "content-architecture",
@@ -137,60 +137,6 @@ const SIDEBAR_STRUCTURE = [
         path: "content-architecture",
         routeKey: "content-architecture",
         trackingKey: "content_architecture",
-      },
-      {
-        id: "topics",
-        label: "Topic Strategy",
-        icon: Tags,
-        path: "topic",
-        routeKey: "topics",
-        trackingKey: "topics",
-      },
-      {
-        id: "ai-optimizations",
-        label: "AI Optimization Questions",
-        icon: HelpCircle,
-        path: "ai-optimizations",
-        routeKey: "ai-optimizations",
-        trackingKey: "ai_optimizations",
-      },
-    ],
-  },
-  {
-    id: "content",
-    label: "CONTENT CREATION",
-    icon: FileText,
-    children: [
-      {
-        id: "articles",
-        label: "Articles",
-        icon: FileText,
-        path: "articles",
-        routeKey: "articles",
-        trackingKey: "articles",
-      },
-      {
-        id: "aio-answers",
-        label: "AI Optimization Answers",
-        icon: Lightbulb,
-        path: "aio-answers",
-        routeKey: "aio-answers",
-        trackingKey: "aio_answers",
-      },
-    ],
-  },
-  {
-    id: "opportunity",
-    label: "OPPORTUNITY & ENGAGEMENT",
-    icon: MessageSquare,
-    children: [
-      {
-        id: "opportunity-agent",
-        label: "Opportunity Agent",
-        icon: Bot,
-        path: "opportunity-agent",
-        routeKey: "opportunity-agent",
-        trackingKey: "opportunity_agent",
       },
     ],
   },
@@ -449,14 +395,8 @@ export default function Sidebar() {
       home: /^\/$/,
       "knowledge-base": /^\/projects\/[^/]+\/manage/,
       keywords: /^\/projects\/[^/]+\/keywords/,
-      "search-ranking": /^\/projects\/[^/]+\/search-ranking/,
       "competitor-analysis": /^\/projects\/[^/]+\/competitor-analysis/,
-      topics: /^\/projects\/[^/]+\/topic/,
-      "ai-optimizations": /^\/projects\/[^/]+\/ai-optimizations/,
       "content-architecture": /^\/projects\/[^/]+\/content-architecture/,
-      articles: /^\/projects\/[^/]+\/articles/,
-      "aio-answers": /^\/projects\/[^/]+\/aio-answers/,
-      "opportunity-agent": /^\/projects\/[^/]+\/opportunity-agent/,
       socials: /^\/projects\/[^/]+\/socials/,
       "social-history": /^\/projects\/[^/]+\/social-history/,
       connections: /^\/connections/,
@@ -493,20 +433,29 @@ export default function Sidebar() {
   };
 
   useEffect(() => {
-    const stats = getExplorationStats();
-    console.log("[Sidebar] raw engagement stats", stats);
-    if (stats.total === 0) {
-      stats.total = totalFeatureCount || TOTAL_FEATURE_COUNT;
-    }
+    if (featureLogLoading) return;
+
+    if (!flatFeatureList || flatFeatureList.length === 0) return;
+
+    const explored = flatFeatureList.filter((item) => item.explored).length;
+    const total = flatFeatureList.length;
+    const percentage = total > 0 ? Math.round((explored / total) * 100) : 0;
+
+    const stats = { explored, total, percentage };
     console.log("[Sidebar] normalized engagement stats", stats);
     setEngagementStats(stats);
-  }, [getExplorationStats, featureLogLoading, totalFeatureCount]);
+  }, [getExplorationStats, featureLogLoading, totalFeatureCount, flatFeatureList]);
 
   const handleEngagementClick = (event) => {
-    console.log("[Sidebar] engagement chip clicked", {
-      collapsed,
-      anchorExists: Boolean(engagementAnchorEl),
-    });
+    if (!flatFeatureList || flatFeatureList.length === 0) return;
+
+    // Ensure we compute accurate stats from the current (filtered) list of features
+    const explored = flatFeatureList.filter((item) => item.explored).length;
+    const total = flatFeatureList.length;
+    const percentage = total > 0 ? Math.round((explored / total) * 100) : 0;
+
+    setEngagementStats({ explored, total, percentage });
+
     if (engagementAnchorEl) {
       setEngagementAnchorEl(null);
     } else {
@@ -539,7 +488,7 @@ export default function Sidebar() {
             collapsed ? "justify-center w-full" : "gap-2"
           }`}
         >
-          <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+          <div className="w-8 h-8 bg-gradient-to-br from-sky-500 to-blue-500 rounded-lg flex items-center justify-center">
             <span className="text-white font-bold text-sm">D</span>
           </div>
           {!collapsed && (

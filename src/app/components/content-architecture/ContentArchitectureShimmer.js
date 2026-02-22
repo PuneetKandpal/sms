@@ -59,14 +59,14 @@ export default function ContentArchitectureShimmer() {
               <div className="h-8 w-12 bg-green-200 rounded"></div>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200 rounded-lg px-4 py-3 min-w-[140px]">
+            <div className="bg-gradient-to-br from-sky-50 to-sky-100 border border-sky-200 rounded-lg px-4 py-3 min-w-[140px]">
               <div className="flex items-center gap-2 mb-1">
-                <Activity className="h-4 w-4 text-purple-600" />
-                <span className="text-xs font-medium text-purple-700 uppercase tracking-wide">
+                <Activity className="h-4 w-4 text-sky-600" />
+                <span className="text-xs font-medium text-sky-700 uppercase tracking-wide">
                   Keywords
                 </span>
               </div>
-              <div className="h-8 w-12 bg-purple-200 rounded"></div>
+              <div className="h-8 w-12 bg-sky-200 rounded"></div>
             </div>
           </div>
 
@@ -150,7 +150,7 @@ export default function ContentArchitectureShimmer() {
                     disabled
                     className={`relative flex items-center gap-2 px-6 py-3 text-sm font-medium transition-colors ${
                       index === 0
-                        ? "text-purple-600 bg-white"
+                        ? "text-sky-600 bg-white"
                         : "text-gray-600 bg-gray-50"
                     }`}
                   >
@@ -159,7 +159,7 @@ export default function ContentArchitectureShimmer() {
 
                     {/* Active Indicator */}
                     {index === 0 && (
-                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-purple-600" />
+                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-sky-600" />
                     )}
                   </button>
                 );
@@ -206,7 +206,7 @@ export default function ContentArchitectureShimmer() {
 
                     {/* Action Buttons */}
                     <div className="flex gap-3 pt-4">
-                      <div className="h-12 w-36 bg-purple-200 rounded-lg"></div>
+                      <div className="h-12 w-36 bg-sky-200 rounded-lg"></div>
                       <div className="h-12 w-36 bg-green-200 rounded-lg"></div>
                     </div>
                   </div>

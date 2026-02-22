@@ -3,14 +3,15 @@
 import { useState, useRef, useEffect } from "react";
 import {
   FaPlus,
+  FaFile,
   FaEllipsisV,
   FaTrash,
   FaEdit,
-  FaLink,
   FaBuilding,
+  FaLink,
   FaChevronDown,
   FaChevronUp,
-  FaFile,
+  FaGlobe,
 } from "react-icons/fa";
 import { FiSidebar } from "react-icons/fi";
 import Menu from "@mui/material/Menu";
@@ -609,126 +610,88 @@ export default function SourcesAndCompetitorsPanel({
                     </div>
 
                     <div className="flex-1 overflow-y-auto">
-                      <ul className="px-2 py-1">
+                      <ul className="px-2 py-1 space-y-0.5">
                         <li
-                          className={`group px-3 py-2 flex items-center justify-between gap-2 text-xs cursor-pointer rounded-lg border transition-colors ${
-                            currentDataExpanded
-                              ? "bg-white shadow-sm border-gray-200"
-                              : "border-transparent hover:bg-gray-50"
+                          className={`group px-2 py-1.5 flex items-center gap-2 text-xs hover:bg-gray-100 cursor-pointer rounded ${
+                            selectedSources.length === 0 &&
+                            selectedCompetitors.length === 0 &&
+                            selectedInternalSources.length === 0
+                              ? "bg-sky-50"
+                              : ""
                           }`}
+                          onClick={handleCurrentDataClick}
                         >
-                          <div
-                            className="flex-1 flex items-center gap-2"
-                            onClick={handleCurrentDataClick}
-                          >
-                            <div className="flex items-center justify-center w-6 h-6 rounded-full bg-primary/10 text-primary">
-                              <FaLink className="w-3 h-3" />
-                            </div>
-                            <div className="flex flex-col -space-y-0.5">
-                              <span
-                                className="text-sm font-medium text-gray-800 leading-tight"
-                                title="currentdata"
-                              >
-                                School Profile
-                              </span>
-                              <span className="text-[11px] uppercase tracking-wide text-gray-400">
-                                {sources.length} source
-                                {sources.length !== 1 ? "s" : ""}
-                              </span>
-                            </div>
-                          </div>
-                          <button
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              setCurrentDataExpanded((prev) => !prev);
-                            }}
-                            className={`p-1.5 rounded-full hover:bg-gray-100 transition-all ${
-                              currentDataExpanded ? "bg-gray-100" : ""
-                            }`}
-                            title={
-                              currentDataExpanded
-                                ? "Collapse sources"
-                                : "Expand sources"
-                            }
-                          >
-                            <FaChevronDown
-                              className={`text-gray-500 w-3 h-3 transition-transform duration-200 ${
-                                currentDataExpanded ? "rotate-180" : ""
+                          <div className="flex-1 flex items-center gap-1.5">
+                            <FaGlobe className="text-gray-500 w-3 h-3 flex-shrink-0" />
+                            <span
+                              className={`text-xs truncate ${
+                                selectedSources.length === 0 &&
+                                selectedCompetitors.length === 0 &&
+                                selectedInternalSources.length === 0
+                                  ? "font-medium text-gray-900"
+                                  : "text-gray-700"
                               }`}
-                            />
-                          </button>
-                        </li>
-                      </ul>
-
-                      <div
-                        className={`relative overflow-hidden transition-all duration-300 ease-out ${
-                          currentDataExpanded
-                            ? "opacity-100 pt-2"
-                            : "opacity-0 pointer-events-none"
-                        }`}
-                        style={{
-                          maxHeight: currentDataExpanded
-                            ? `${sourceTreeMaxHeight}px`
-                            : "0px",
-                        }}
-                      >
-                        {sources.length === 0 ? (
-                          <div className="text-center text-gray-500 py-4 text-xs">
-                            No school details added yet
+                            >
+                              School Overview
+                            </span>
                           </div>
+                        </li>
+                        
+                        {sources.length === 0 ? (
+                          <li className="text-center text-gray-500 py-4 text-xs">
+                            No school details added yet
+                          </li>
                         ) : (
-                          <ul className="px-2 py-1">
-                            {sources.map((source) => {
-                              const sourceId = getSourceId(source);
-                              const isSelected = selectedSources.includes(sourceId);
-                              const sourceName =
-                                source.file_name || source.url || "Untitled item";
+                          sources.map((source) => {
+                            const sourceId = getSourceId(source);
+                            const isSelected = selectedSources.includes(sourceId);
+                            const sourceName =
+                              source.file_name || source.url || "Untitled item";
 
-                              return (
-                                <li
-                                  key={sourceId}
-                                  className={`group px-2 py-1.5 flex items-center gap-2 text-xs hover:bg-gray-100 cursor-pointer rounded ${
-                                    isSelected ? "bg-sky-50" : ""
-                                  }`}
+                            return (
+                              <li
+                                key={sourceId}
+                                className={`group px-2 py-1.5 flex items-center gap-2 text-xs hover:bg-gray-100 cursor-pointer rounded ${
+                                  isSelected ? "bg-sky-50" : ""
+                                }`}
+                              >
+                                <div
+                                  className="flex-1 flex items-center gap-1.5"
+                                  onClick={(e) => {
+                                    if (!e.defaultPrevented) {
+                                      handleSourceNameClick(sourceId);
+                                    }
+                                  }}
                                 >
-                                  <div
-                                    className="flex-1 flex items-center gap-1.5"
-                                    onClick={(e) => {
-                                      if (!e.defaultPrevented) {
-                                        handleSourceNameClick(sourceId);
-                                      }
-                                    }}
+                                  <FaLink className="text-gray-500 w-3 h-3 flex-shrink-0" />
+                                  <span
+                                    className={`text-xs truncate ${
+                                      isSelected
+                                        ? "font-medium text-gray-900"
+                                        : "text-gray-700"
+                                    }`}
+                                    title={sourceName}
                                   >
-                                    <FaLink className="text-gray-500 w-3 h-3 flex-shrink-0" />
-                                    <span
-                                      className={`text-xs truncate ${
-                                        isSelected
-                                          ? "font-medium text-gray-900"
-                                          : "text-gray-700"
-                                      }`}
-                                      title={sourceName}
-                                    >
-                                      {sourceName}
-                                    </span>
-                                  </div>
+                                    {sourceName}
+                                  </span>
+                                </div>
 
-                                  <IconButton
-                                    size="small"
-                                    onClick={(e) => handleSourceMenuOpen(e, source)}
-                                    className="opacity-0 group-hover:opacity-100 transition-opacity"
-                                    sx={{ padding: "2px" }}
-                                  >
-                                    <FaEllipsisV
-                                      className="text-gray-500"
-                                      style={{ width: "10px", height: "10px" }}
-                                    />
-                                  </IconButton>
-                                </li>
-                              );
-                            })}
-                          </ul>
+                                <IconButton
+                                  size="small"
+                                  onClick={(e) => handleSourceMenuOpen(e, source)}
+                                  className="opacity-0 group-hover:opacity-100 transition-opacity"
+                                  sx={{ padding: "2px" }}
+                                >
+                                  <FaEllipsisV
+                                    className="text-gray-500"
+                                    style={{ width: "10px", height: "10px" }}
+                                  />
+                                </IconButton>
+                              </li>
+                            );
+                          })
                         )}
-                      </div>
+                      </ul>
                     </div>
                   </div>
                 )}

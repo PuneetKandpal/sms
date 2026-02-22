@@ -261,7 +261,7 @@ export default function KeywordsTableComponent({
                                   width: 18,
                                   height: 18,
                                   borderRadius: "6px",
-                                  backgroundColor: "#9810fa", // purple when checked
+                                  backgroundColor: "#9810fa", // sky when checked
                                   display: "flex",
                                   alignItems: "center",
                                   justifyContent: "center",

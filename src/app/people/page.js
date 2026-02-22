@@ -562,8 +562,8 @@ export default function PeoplePage() {
               className="bg-white rounded-xl border border-gray-200 p-6"
             >
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-purple-100 rounded-xl">
-                  <FaCrown className="text-purple-600" size={24} />
+                <div className="p-3 bg-sky-100 rounded-xl">
+                  <FaCrown className="text-sky-600" size={24} />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900">

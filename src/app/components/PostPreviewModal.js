@@ -42,7 +42,7 @@ const InstagramPreview = ({ post }) => (
   <div className="bg-white border border-gray-200 rounded-lg max-w-sm mx-auto">
     {/* Header */}
     <div className="flex items-center p-3 border-b border-gray-100">
-      <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+      <div className="w-8 h-8 bg-gradient-to-r from-sky-500 to-pink-500 rounded-full flex items-center justify-center">
         <FaInstagram className="text-white" size={16} />
       </div>
       <div className="ml-3 flex-1">

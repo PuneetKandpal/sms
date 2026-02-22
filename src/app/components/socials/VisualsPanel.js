@@ -147,7 +147,7 @@ const VisualsPanel = ({
                 </div>
                 <button
                   onClick={() => handleGenerateVisual(sampleIdea.id)}
-                  className="w-full px-2 py-1 bg-purple-500 text-white rounded text-xs hover:bg-purple-600 transition-colors"
+                  className="w-full px-2 py-1 bg-sky-500 text-white rounded text-xs hover:bg-sky-600 transition-colors"
                 >
                   🎨 Generate Visual
                 </button>
@@ -195,7 +195,7 @@ const VisualsPanel = ({
                 <button
                   onClick={() => handleGenerateVisual(idea.id)}
                   disabled={loading}
-                  className="w-full px-2 py-1 bg-purple-500 text-white rounded text-xs hover:bg-purple-600 transition-colors disabled:bg-gray-400"
+                  className="w-full px-2 py-1 bg-sky-500 text-white rounded text-xs hover:bg-sky-600 transition-colors disabled:bg-gray-400"
                 >
                   🎨 Generate Visual
                 </button>

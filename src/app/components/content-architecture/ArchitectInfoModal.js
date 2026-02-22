@@ -30,7 +30,7 @@ export default function ArchitectInfoModal({ architect, isOpen, onClose }) {
             className="fixed inset-4 md:inset-8 lg:inset-16 bg-white rounded-2xl shadow-2xl z-50 flex flex-col overflow-hidden"
           >
             {/* Header */}
-            <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 px-6 py-4 flex items-center justify-between text-white">
+            <div className="bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 px-6 py-4 flex items-center justify-between text-white">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
                   <Building2 className="h-6 w-6" />
@@ -75,7 +75,7 @@ export default function ArchitectInfoModal({ architect, isOpen, onClose }) {
                   className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm"
                 >
                   <div className="flex items-center gap-2 mb-3">
-                    <Building2 className="h-5 w-5 text-purple-600" />
+                    <Building2 className="h-5 w-5 text-sky-600" />
                     <h3 className="text-lg font-bold text-gray-900">Industries</h3>
                   </div>
                   {companyDoc.industries.overview && (
@@ -84,7 +84,7 @@ export default function ArchitectInfoModal({ architect, isOpen, onClose }) {
                   <ul className="space-y-2">
                     {companyDoc.industries.list?.map((item, index) => (
                       <li key={index} className="flex items-start gap-2">
-                        <span className="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2 flex-shrink-0" />
+                        <span className="w-1.5 h-1.5 bg-sky-500 rounded-full mt-2 flex-shrink-0" />
                         <span className="text-sm text-gray-700">{item}</span>
                       </li>
                     ))}
@@ -216,10 +216,10 @@ export default function ArchitectInfoModal({ architect, isOpen, onClose }) {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.7 }}
-                  className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200"
+                  className="bg-gradient-to-br from-sky-50 to-pink-50 rounded-xl p-6 border border-sky-200"
                 >
                   <div className="flex items-center gap-2 mb-3">
-                    <Target className="h-5 w-5 text-purple-600" />
+                    <Target className="h-5 w-5 text-sky-600" />
                     <h3 className="text-lg font-bold text-gray-900">GEO LEO Strategy</h3>
                   </div>
                   {companyDoc.geo_leo_strategy.overview && (
@@ -236,7 +236,7 @@ export default function ArchitectInfoModal({ architect, isOpen, onClose }) {
                           <h4 className="text-sm font-semibold text-gray-800 mb-2">Industry Modifiers</h4>
                           <div className="flex flex-wrap gap-1.5">
                             {companyDoc.geo_leo_strategy.seo_strategy.industry_modifiers.map((mod, idx) => (
-                              <span key={idx} className="text-xs bg-white px-2 py-1 rounded border border-purple-200 text-gray-700">
+                              <span key={idx} className="text-xs bg-white px-2 py-1 rounded border border-sky-200 text-gray-700">
                                 {mod}
                               </span>
                             ))}
@@ -249,7 +249,7 @@ export default function ArchitectInfoModal({ architect, isOpen, onClose }) {
                           <h4 className="text-sm font-semibold text-gray-800 mb-2">Location-Based Terms</h4>
                           <div className="flex flex-wrap gap-1.5">
                             {companyDoc.geo_leo_strategy.seo_strategy.location_based_terms.map((term, idx) => (
-                              <span key={idx} className="text-xs bg-white px-2 py-1 rounded border border-purple-200 text-gray-700">
+                              <span key={idx} className="text-xs bg-white px-2 py-1 rounded border border-sky-200 text-gray-700">
                                 {term}
                               </span>
                             ))}

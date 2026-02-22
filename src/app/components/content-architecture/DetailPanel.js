@@ -276,7 +276,7 @@ export default function DetailPanel({
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-2 px-6 py-3 text-sm font-medium transition-all whitespace-nowrap ${
                   isActive
-                    ? "text-purple-600 bg-white"
+                    ? "text-sky-600 bg-white"
                     : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
                 }`}
                 whileHover={{ y: -2 }}
@@ -289,7 +289,7 @@ export default function DetailPanel({
                 {isActive && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-sky-600 to-blue-600"
                     initial={false}
                     transition={{
                       type: "spring",

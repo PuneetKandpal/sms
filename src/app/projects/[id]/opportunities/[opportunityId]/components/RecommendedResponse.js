@@ -78,7 +78,7 @@ export default function RecommendedResponse({ opportunity }) {
           <button
             onClick={fetchUserData}
             disabled={loading}
-            className="px-6 py-2 bg-purple-500 text-white rounded-lg shadow-lg hover:bg-purple-600 transition"
+            className="px-6 py-2 bg-sky-500 text-white rounded-lg shadow-lg hover:bg-sky-600 transition"
           >
             {loading ? "Fetching Data..." : "Fetch User Data"}
           </button>
@@ -89,18 +89,18 @@ export default function RecommendedResponse({ opportunity }) {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
-        className="bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200 rounded-2xl p-6 mb-6 shadow-sm backdrop-blur-sm relative"
+        className="bg-gradient-to-br from-sky-50 to-sky-100 border border-sky-200 rounded-2xl p-6 mb-6 shadow-sm backdrop-blur-sm relative"
       >
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">
-          <div className="p-2 bg-purple-200 rounded-xl">
-            <SparklesIcon className="w-6 h-6 text-purple-700" />
+          <div className="p-2 bg-sky-200 rounded-xl">
+            <SparklesIcon className="w-6 h-6 text-sky-700" />
           </div>
           <div>
-            <h2 className="text-2xl font-bold text-purple-900">
+            <h2 className="text-2xl font-bold text-sky-900">
               AI-Generated Response
             </h2>
-            <p className="text-sm text-purple-700">
+            <p className="text-sm text-sky-700">
               Tailored outreach crafted by AI, based on opportunity insights
             </p>
           </div>
@@ -111,7 +111,7 @@ export default function RecommendedResponse({ opportunity }) {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className={`relative bg-white/80 rounded-xl border-l-4 border-purple-500 shadow-sm p-4 mb-4 flex flex-wrap justify-between items-center gap-3`}
+          className={`relative bg-white/80 rounded-xl border-l-4 border-sky-500 shadow-sm p-4 mb-4 flex flex-wrap justify-between items-center gap-3`}
         >
           {/* Blur overlay */}
           {!metadataLoaded && (

@@ -238,18 +238,18 @@ const SocialSchedulerBulkPanel = ({
           className="p-1 hover:bg-gray-200 rounded transition-colors duration-150"
           title={isCollapsed ? "Expand panel" : "Collapse panel"}
         >
-          <FiSidebar className="w-4 h-4 text-purple-600" />
+          <FiSidebar className="w-4 h-4 text-sky-600" />
         </button>
       </div>
 
       {/* Collapsed State */}
       {isCollapsed && (
         <div className="flex flex-col items-center gap-2 mt-4">
-          <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
-            <FaUsers className="w-4 h-4 text-purple-600" />
+          <div className="w-8 h-8 bg-sky-100 rounded-full flex items-center justify-center">
+            <FaUsers className="w-4 h-4 text-sky-600" />
           </div>
           {selectedPosts.length > 0 && (
-            <div className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-xs font-bold">
+            <div className="w-6 h-6 bg-sky-600 text-white rounded-full flex items-center justify-center text-xs font-bold">
               {selectedPosts.length}
             </div>
           )}
@@ -263,7 +263,7 @@ const SocialSchedulerBulkPanel = ({
           <div className="mb-6">
             <div className="bg-white rounded-lg p-4 border border-gray-200">
               <div className="flex items-center gap-2 mb-2">
-                <FaUsers className="text-purple-600" size={16} />
+                <FaUsers className="text-sky-600" size={16} />
                 <span className="font-medium text-gray-900">
                   {selectedPosts.length} Selected
                 </span>

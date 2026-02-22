@@ -76,7 +76,7 @@ const StrategyBrief = ({
           <span className="px-2 py-0.5 bg-green-100 text-green-800 rounded text-xs font-medium">
             KPI: {kpi}
           </span>
-          <span className="px-2 py-0.5 bg-purple-100 text-purple-800 rounded text-xs font-medium">
+          <span className="px-2 py-0.5 bg-sky-100 text-sky-800 rounded text-xs font-medium">
             Persona: B2B
           </span>
           <span className="px-2 py-0.5 bg-orange-100 text-orange-800 rounded text-xs font-medium">

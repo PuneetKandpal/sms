@@ -22,7 +22,7 @@ const CheckboxSection = ({
   const colorClasses = {
     blue: "border-blue-200 bg-blue-50",
     green: "border-green-200 bg-green-50",
-    purple: "border-purple-200 bg-purple-50",
+    sky: "border-sky-200 bg-sky-50",
     orange: "border-orange-200 bg-orange-50",
     red: "border-red-200 bg-red-50",
   };
@@ -80,7 +80,7 @@ const CheckboxSection = ({
                 />
               }
               label={
-                <span className="text-xs font-medium text-purple-600">
+                <span className="text-xs font-medium text-sky-600">
                   Select All
                 </span>
               }
@@ -164,7 +164,7 @@ function ProductsSection({
   if (!items || items.length === 0) return null;
 
   return (
-    <div className={`border rounded-lg p-4 bg-purple-50 border-purple-200`}>
+    <div className={`border rounded-lg p-4 bg-sky-50 border-sky-200`}>
       <div className="flex justify-between items-center mb-3">
         <div className="flex items-center gap-2">
           <Icon className="h-4 w-4 text-gray-600" />
@@ -180,7 +180,7 @@ function ProductsSection({
             />
           }
           label={
-            <span className="text-xs font-medium text-purple-600">
+            <span className="text-xs font-medium text-sky-600">
               Select All
             </span>
           }
@@ -191,7 +191,7 @@ function ProductsSection({
         {items.map((product) => (
           <div
             key={product.name}
-            className="rounded-md border border-purple-200 bg-white p-3"
+            className="rounded-md border border-sky-200 bg-white p-3"
           >
             <div className="flex items-center justify-between">
               <FormControlLabel
@@ -216,7 +216,7 @@ function ProductsSection({
               <button
                 type="button"
                 onClick={() => toggleExpand(product.name)}
-                className="text-xs text-purple-600 hover:text-purple-700"
+                className="text-xs text-sky-600 hover:text-sky-700"
               >
                 {expanded[product.name] ? "Hide keywords" : "Show keywords"}
               </button>
@@ -548,10 +548,10 @@ export default function AgentConfigurationModal({
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
       <div className="bg-white rounded-lg shadow-xl w-full max-w-4xl max-h-[90vh] overflow-hidden flex flex-col">
         {/* Header */}
-        <div className="flex justify-between items-center p-6 border-b border-gray-200 bg-gradient-to-r from-purple-50 to-blue-50">
+        <div className="flex justify-between items-center p-6 border-b border-gray-200 bg-gradient-to-r from-sky-50 to-blue-50">
           <div>
             <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-              <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-sky-600 rounded-lg flex items-center justify-center">
                 <Users className="h-5 w-5 text-white" />
               </div>
               {agent ? "Edit Agent" : "Create New Agent"}
@@ -585,7 +585,7 @@ export default function AgentConfigurationModal({
                   value={formData.name}
                   onChange={(e) => handleInputChange("name", e.target.value)}
                   placeholder="e.g., Manufacturing Equipment Agent"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none text-lg font-semibold"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none text-lg font-semibold"
                   required
                 />
               </div>
@@ -663,7 +663,7 @@ export default function AgentConfigurationModal({
                 }
                 placeholder="Focus on private equity deals over $5MM. Monitor for companies with recent funding rounds or new equipment acquisitions. Alert on competitor mentions and equipment sale-leaseback opportunities."
                 rows={4}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none resize-vertical"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none resize-vertical"
               />
               <p className="text-xs text-gray-500 mt-1">
                 Provide specific instructions to customize how this agent
@@ -674,7 +674,7 @@ export default function AgentConfigurationModal({
             {/* Monitoring Targets */}
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-gradient-to-br from-sky-500 to-blue-500 rounded-lg flex items-center justify-center">
                   <Target className="h-5 w-5 text-white" />
                 </div>
                 <div>

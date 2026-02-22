@@ -418,7 +418,7 @@ export default function OpportunitiesPage({ params }) {
                 <div className="h-6 w-12 bg-orange-200 rounded"></div>
                 <div className="h-4 bg-gray-200 rounded"></div>
                 <div className="h-4 bg-gray-200 rounded"></div>
-                <div className="h-8 w-16 bg-purple-200 rounded"></div>
+                <div className="h-8 w-16 bg-sky-200 rounded"></div>
               </div>
             ))}
           </div>
@@ -577,7 +577,7 @@ export default function OpportunitiesPage({ params }) {
 
             <div className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 min-w-[140px] hover:bg-gray-100 transition-colors">
               <div className="flex items-center gap-2 mb-1">
-                <Users className="h-4 w-4 text-purple-600" />
+                <Users className="h-4 w-4 text-sky-600" />
                 <span className="text-xs font-medium text-gray-600 uppercase tracking-wide">
                   Avg Score
                 </span>
@@ -685,14 +685,14 @@ export default function OpportunitiesPage({ params }) {
                       </div>
                     </div>
 
-                    <div className="bg-purple-50 rounded-lg p-4 text-center">
+                    <div className="bg-sky-50 rounded-lg p-4 text-center">
                       <div className="flex items-center justify-center gap-2 mb-2">
-                        <Users className="h-5 w-5 text-purple-600" />
-                        <span className="text-sm font-medium text-purple-900">
+                        <Users className="h-5 w-5 text-sky-600" />
+                        <span className="text-sm font-medium text-sky-900">
                           Subreddits
                         </span>
                       </div>
-                      <div className="text-2xl font-bold text-purple-600">
+                      <div className="text-2xl font-bold text-sky-600">
                         {agentData.total_subreddits_found || 0}
                       </div>
                     </div>
@@ -767,7 +767,7 @@ export default function OpportunitiesPage({ params }) {
                         items={
                           agentData.request_data.products_and_services || []
                         }
-                        color="bg-purple-600"
+                        color="bg-sky-600"
                       />
 
                       <ConfigSection

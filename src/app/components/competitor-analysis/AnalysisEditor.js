@@ -259,7 +259,7 @@
 //                 whileTap={{ scale: 0.95 }}
 //                 onClick={() => handleSave(true)}
 //                 disabled={isSaving}
-//                 className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600 shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
+//                 className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold bg-gradient-to-r from-sky-500 to-blue-500 text-white hover:from-sky-600 hover:to-blue-600 shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
 //               >
 //                 <Save className="w-3.5 h-3.5" />
 //                 Save
@@ -321,7 +321,7 @@
 //                 value={markdown}
 //                 onChange={handleMarkdownChange}
 //                 placeholder="Write your competitive analysis in markdown..."
-//                 className="w-full h-full resize-none border border-gray-300 rounded-lg p-6 font-sans text-base text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+//                 className="w-full h-full resize-none border border-gray-300 rounded-lg p-6 font-sans text-base text-gray-900 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
 //                 style={{
 //                   lineHeight: "1.6",
 //                   fontFamily:
@@ -606,7 +606,7 @@ export default function AnalysisEditor({
                   ? editorTheme === "dark"
                     ? "flex items-center gap-1 text-xs px-3 py-1.5 rounded-lg bg-white/10 text-gray-300 cursor-not-allowed"
                     : "flex items-center gap-1 text-xs px-3 py-1.5 rounded-lg bg-gray-100 text-gray-400 cursor-not-allowed"
-                  : "flex items-center gap-1 text-xs px-3 py-1.5 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600"
+                  : "flex items-center gap-1 text-xs px-3 py-1.5 rounded-lg bg-gradient-to-r from-sky-500 to-blue-500 text-white hover:from-sky-600 hover:to-blue-600"
               }
             >
               {isAcquiringLock ? (
@@ -677,7 +677,7 @@ export default function AnalysisEditor({
                   ? editorTheme === "dark"
                     ? "flex items-center gap-1 text-xs px-3 py-1.5 rounded-lg bg-white/10 text-gray-300 cursor-not-allowed"
                     : "flex items-center gap-1 text-xs px-3 py-1.5 rounded-lg bg-gray-100 text-gray-400 cursor-not-allowed"
-                  : "flex items-center gap-1 text-xs px-3 py-1.5 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600"
+                  : "flex items-center gap-1 text-xs px-3 py-1.5 rounded-lg bg-gradient-to-r from-sky-500 to-blue-500 text-white hover:from-sky-600 hover:to-blue-600"
               }
             >
               <Save className="w-3.5 h-3.5" />
@@ -706,7 +706,7 @@ export default function AnalysisEditor({
               <button
                 onClick={onAcquireLock}
                 disabled={isAcquiringLock}
-                className="w-full px-4 py-2.5 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white rounded-lg text-sm font-medium transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+                className="w-full px-4 py-2.5 bg-gradient-to-r from-sky-500 to-blue-500 hover:from-sky-600 hover:to-blue-600 text-white rounded-lg text-sm font-medium transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
               >
                 {isAcquiringLock ? (
                   <>

@@ -43,7 +43,7 @@ export default function AnalysisList({
         "bg-orange-100 text-orange-700 border-orange-200",
       "Indirect Competitor": "bg-yellow-100 text-yellow-700 border-yellow-200",
       "Alternative Solution": "bg-blue-100 text-blue-700 border-blue-200",
-      Main: "bg-purple-100 text-purple-700 border-purple-200",
+      Main: "bg-sky-100 text-sky-700 border-sky-200",
     };
     return typeColors[type] || "bg-gray-100 text-gray-700 border-gray-200";
   };
@@ -70,8 +70,8 @@ export default function AnalysisList({
               rounded-lg border transition-all duration-200 overflow-hidden
               ${
                 isSelected
-                  ? "bg-purple-50 border-purple-300 shadow-md ring-1 ring-purple-200"
-                  : "bg-white border-gray-200 hover:border-purple-200 hover:shadow-sm"
+                  ? "bg-sky-50 border-sky-300 shadow-md ring-1 ring-sky-200"
+                  : "bg-white border-gray-200 hover:border-sky-200 hover:shadow-sm"
               }
             `}
           >
@@ -83,7 +83,7 @@ export default function AnalysisList({
                 <div className="flex-1 min-w-0">
                   <h3
                     className={`text-sm font-semibold truncate ${
-                      isSelected ? "text-purple-900" : "text-gray-900"
+                      isSelected ? "text-sky-900" : "text-gray-900"
                     }`}
                   >
                     {analysis.analysis_title}
@@ -106,7 +106,7 @@ export default function AnalysisList({
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     className={`p-1 rounded-md transition-colors ${
-                      isSelected ? "hover:bg-purple-200" : "hover:bg-gray-100"
+                      isSelected ? "hover:bg-sky-200" : "hover:bg-gray-100"
                     }`}
                   >
                     <motion.div
@@ -115,7 +115,7 @@ export default function AnalysisList({
                     >
                       <ChevronDown
                         className={`w-3.5 h-3.5 ${
-                          isSelected ? "text-purple-600" : "text-gray-400"
+                          isSelected ? "text-sky-600" : "text-gray-400"
                         }`}
                       />
                     </motion.div>
@@ -163,7 +163,7 @@ export default function AnalysisList({
                         <div
                           className={`flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] ${
                             isSelected
-                              ? "bg-purple-100 text-purple-700"
+                              ? "bg-sky-100 text-sky-700"
                               : "bg-gray-100 text-gray-600"
                           }`}
                         >

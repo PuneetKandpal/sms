@@ -257,7 +257,7 @@ export default function AIOAnswersPage() {
     <div className="w-full px-4 mt-2" style={{ backgroundColor: "#FAFAFA", minHeight: "calc(100vh - 100px)" }}>
       <div className="max-w-full mx-auto space-y-4 py-4">
         <h1 className="text-2xl sm:text-3xl font-bold text-[#171717]">
-          AIO Answers
+          Parent Q&A (AIO)
         </h1>
         <p className="text-base sm:text-lg text-gray-600">
           Review and manage your AI-generated answers

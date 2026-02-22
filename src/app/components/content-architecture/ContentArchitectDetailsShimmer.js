@@ -124,7 +124,7 @@ export default function ContentArchitectDetailsShimmer() {
                     disabled
                     className={`relative flex items-center gap-2 px-6 py-3 text-sm font-medium transition-colors ${
                       index === 0
-                        ? "text-purple-600 bg-white"
+                        ? "text-sky-600 bg-white"
                         : "text-gray-600 bg-gray-50"
                     }`}
                   >
@@ -133,7 +133,7 @@ export default function ContentArchitectDetailsShimmer() {
 
                     {/* Active Indicator */}
                     {index === 0 && (
-                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-purple-600" />
+                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-sky-600" />
                     )}
                   </button>
                 );
@@ -180,7 +180,7 @@ export default function ContentArchitectDetailsShimmer() {
 
                     {/* Action Buttons */}
                     <div className="flex gap-3 pt-4">
-                      <div className="h-12 w-36 bg-purple-200 rounded-lg"></div>
+                      <div className="h-12 w-36 bg-sky-200 rounded-lg"></div>
                       <div className="h-12 w-36 bg-green-200 rounded-lg"></div>
                     </div>
                   </div>

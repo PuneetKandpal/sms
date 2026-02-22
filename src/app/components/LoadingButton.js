@@ -43,8 +43,8 @@ export default function LoadingButton({
     success: "bg-green-600 hover:bg-green-700 disabled:bg-green-400 text-white",
     warning:
       "bg-yellow-600 hover:bg-yellow-700 disabled:bg-yellow-400 text-white",
-    purple:
-      "bg-purple-600 hover:bg-purple-700 disabled:bg-purple-400 text-white",
+    sky:
+      "bg-sky-600 hover:bg-sky-700 disabled:bg-sky-400 text-white",
     ghost:
       "bg-transparent border border-gray-300 hover:bg-gray-100 text-gray-700",
   };

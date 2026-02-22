@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Keyword Repository | Iriscale | Track and analyze keywords",
+  title: "Enrollment Keywords | Iriscale | Track and analyze keywords",
   description:
     "Iriscale - AI-powered platform for intelligent business growth and strategic insights",
 };

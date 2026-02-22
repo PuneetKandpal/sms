@@ -380,7 +380,7 @@ export default function ResetPasswordPage() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={handleBackToLogin}
-              className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-4 px-6 rounded-2xl transition-all duration-200 flex items-center justify-center text-lg cursor-pointer"
+              className="w-full bg-gradient-to-r from-sky-600 to-blue-600 hover:from-sky-700 hover:to-blue-700 text-white font-semibold py-4 px-6 rounded-2xl transition-all duration-200 flex items-center justify-center text-lg cursor-pointer"
             >
               <FaArrowLeft className="mr-2" />
               Go to Login
@@ -389,7 +389,7 @@ export default function ResetPasswordPage() {
         </div>
 
         {/* Right Side - Illustration */}
-        <div className="w-full lg:w-1/2 bg-gradient-to-br from-purple-600 via-purple-500 to-blue-600 relative overflow-hidden min-h-[50vh] lg:min-h-screen">
+        <div className="w-full lg:w-1/2 bg-gradient-to-br from-sky-600 via-sky-500 to-blue-600 relative overflow-hidden min-h-[50vh] lg:min-h-screen">
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -445,7 +445,7 @@ export default function ResetPasswordPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.1 }}
             onClick={handleBackToLogin}
-            className="flex items-center text-gray-600 hover:text-purple-600 transition-colors duration-200 mb-6 cursor-pointer"
+            className="flex items-center text-gray-600 hover:text-sky-600 transition-colors duration-200 mb-6 cursor-pointer"
           >
             <FaArrowLeft className="mr-2" />
             Back to Login
@@ -490,7 +490,7 @@ export default function ResetPasswordPage() {
                   name="newPassword"
                   value={formData.newPassword}
                   onChange={handleInputChange}
-                  className={`w-full pl-12 pr-12 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:bg-white transition-all duration-200 text-gray-900 placeholder-gray-500 outline-none ${
+                  className={`w-full pl-12 pr-12 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500 focus:bg-white transition-all duration-200 text-gray-900 placeholder-gray-500 outline-none ${
                     errors.newPassword
                       ? "ring-2 ring-red-300 border-red-300"
                       : ""
@@ -501,7 +501,7 @@ export default function ResetPasswordPage() {
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute inset-y-0 right-0 pr-4 flex items-center hover:text-purple-600 transition-colors duration-200 cursor-pointer"
+                  className="absolute inset-y-0 right-0 pr-4 flex items-center hover:text-sky-600 transition-colors duration-200 cursor-pointer"
                 >
                   {showPassword ? (
                     <FaEyeSlash className="h-5 w-5 text-gray-400" />
@@ -528,7 +528,7 @@ export default function ResetPasswordPage() {
                   name="newPasswordConfirm"
                   value={formData.newPasswordConfirm}
                   onChange={handleInputChange}
-                  className={`w-full pl-12 pr-12 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 focus:bg-white transition-all duration-200 text-gray-900 placeholder-gray-500 outline-none ${
+                  className={`w-full pl-12 pr-12 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500 focus:bg-white transition-all duration-200 text-gray-900 placeholder-gray-500 outline-none ${
                     errors.newPasswordConfirm
                       ? "ring-2 ring-red-300 border-red-300"
                       : ""
@@ -539,7 +539,7 @@ export default function ResetPasswordPage() {
                 <button
                   type="button"
                   onClick={() => setShowPasswordConfirm(!showPasswordConfirm)}
-                  className="absolute inset-y-0 right-0 pr-4 flex items-center hover:text-purple-600 transition-colors duration-200 cursor-pointer"
+                  className="absolute inset-y-0 right-0 pr-4 flex items-center hover:text-sky-600 transition-colors duration-200 cursor-pointer"
                 >
                   {showPasswordConfirm ? (
                     <FaEyeSlash className="h-5 w-5 text-gray-400" />
@@ -561,7 +561,7 @@ export default function ResetPasswordPage() {
               whileTap={{ scale: 0.98 }}
               type="submit"
               disabled={isLoading}
-              className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-4 px-6 rounded-2xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-lg cursor-pointer"
+              className="w-full bg-gradient-to-r from-sky-600 to-blue-600 hover:from-sky-700 hover:to-blue-700 text-white font-semibold py-4 px-6 rounded-2xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-lg cursor-pointer"
             >
               {isLoading ? (
                 <div className="flex items-center space-x-2">
@@ -582,7 +582,7 @@ export default function ResetPasswordPage() {
                 Remember your password?{" "}
                 <a
                   href="/login"
-                  className="text-purple-600 hover:text-purple-700 font-semibold cursor-pointer"
+                  className="text-sky-600 hover:text-sky-700 font-semibold cursor-pointer"
                 >
                   Sign in here
                 </a>
@@ -593,7 +593,7 @@ export default function ResetPasswordPage() {
       </div>
 
       {/* Right Side - Illustration */}
-      <div className="w-full lg:w-1/2 bg-gradient-to-br from-purple-600 via-purple-500 to-blue-600 relative overflow-hidden min-h-[50vh] lg:min-h-screen">
+      <div className="w-full lg:w-1/2 bg-gradient-to-br from-sky-600 via-sky-500 to-blue-600 relative overflow-hidden min-h-[50vh] lg:min-h-screen">
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}

@@ -66,6 +66,23 @@ const modalStyle = {
   border: "1px solid #e5e7eb",
 };
 
+const getContentTypeColor = (type) => {
+  if (!type) return "bg-gray-100 text-gray-800";
+  const typeLower = type.toLowerCase();
+
+  if (typeLower.includes("authoritative")) {
+    return "bg-blue-100 text-blue-700";
+  }
+  if (typeLower.includes("friendly")) {
+    return "bg-sky-100 text-sky-700";
+  }
+  if (typeLower.includes("professional")) {
+    return "bg-indigo-100 text-indigo-700";
+  }
+
+  return "bg-gray-100 text-gray-800";
+};
+
 const ArticleContentModal = ({ open, handleClose, article }) => {
   if (!article) return null;
 
@@ -292,7 +309,7 @@ const ArticleContentModal = ({ open, handleClose, article }) => {
             </div>
             <button
               onClick={handlePublish}
-              className=" cursor-pointer group inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover:bg-purple-700 transition-colors duration-150"
+              className=" cursor-pointer group inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-primary rounded-lg hover:bg-sky-700 transition-colors duration-150"
             >
               Publish Article
               <Send className="w-4 h-4  transition-transform duration-300 group-hover:translate-x-[2px] group-hover:-translate-y-[2px]" />
@@ -412,7 +429,7 @@ const getStatusColor = (status) => {
       return "bg-orange-100 text-orange-700";
     case "review":
     case "in progress":
-      return "bg-purple-100 text-purple-700";
+      return "bg-sky-100 text-sky-700";
     default:
       return "bg-slate-100 text-slate-800";
   }
@@ -453,11 +470,11 @@ const getStageLabel = (stage) => {
   }
 };
 
-const getContentTypeColor = (type) => {
+const getTypeColor = (type) => {
   if (!type) return "bg-gray-100 text-gray-800";
   const typeLower = type.toLowerCase();
   if (typeLower.includes("authoritative")) return "bg-blue-100 text-blue-700";
-  if (typeLower.includes("friendly")) return "bg-purple-100 text-purple-700";
+  if (typeLower.includes("friendly")) return "bg-indigo-100 text-indigo-700";
   if (typeLower.includes("professional"))
     return "bg-indigo-100 text-indigo-700";
   return "bg-gray-100 text-gray-800";

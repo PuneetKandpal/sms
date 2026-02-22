@@ -486,7 +486,7 @@ export default function ContentArchitectureDetailsPage({ params }) {
                   </div>
                   <button
                     onClick={() => setShowArchitectInfo(true)}
-                    className="flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all shadow-md hover:shadow-lg text-sm font-medium"
+                    className="flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-sky-600 to-blue-600 text-white rounded-lg hover:from-sky-700 hover:to-blue-700 transition-all shadow-md hover:shadow-lg text-sm font-medium"
                   >
                     <Info className="h-4 w-4" />
                     View Details
@@ -515,8 +515,8 @@ export default function ContentArchitectureDetailsPage({ params }) {
                     icon: Activity,
                     label: "Keywords",
                     value: totalKeywords,
-                    gradient: "from-purple-500 to-pink-500",
-                    bg: "from-purple-50 to-pink-50",
+                    gradient: "from-sky-500 to-pink-500",
+                    bg: "from-sky-50 to-pink-50",
                   },
                 ].map((metric, i) => (
                   <div

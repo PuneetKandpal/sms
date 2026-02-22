@@ -337,7 +337,7 @@ export default function OverviewTab({
                 setFormData({ ...formData, contentTitle: e.target.value })
               }
               disabled={!isEditMode || isUpdating || isDeleting}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
               placeholder="Enter content title"
             />
           </div>
@@ -351,7 +351,7 @@ export default function OverviewTab({
               type="text"
               value={pageUrl}
               disabled
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-100 cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-100 cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
             />
           </div>
           <div>
@@ -365,7 +365,7 @@ export default function OverviewTab({
                 setFormData({ ...formData, url: e.target.value })
               }
               disabled={!isEditMode || isUpdating || isDeleting}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
               placeholder="Enter child URL"
             />
           </div>
@@ -382,7 +382,7 @@ export default function OverviewTab({
               }
               rows={3}
               disabled={!isEditMode || isUpdating || isDeleting}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none disabled:bg-gray-100 disabled:cursor-not-allowed"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent resize-none disabled:bg-gray-100 disabled:cursor-not-allowed"
               placeholder="Describe the content purpose and key messages"
             />
           </div>
@@ -391,7 +391,7 @@ export default function OverviewTab({
           <div>
             <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-2">
               Page Template
-              <span className="text-xs px-2 py-0.5 bg-purple-100 text-purple-700 rounded-full font-semibold">
+              <span className="text-xs px-2 py-0.5 bg-sky-100 text-sky-700 rounded-full font-semibold">
                 SEO Optimized
               </span>
             </label>
@@ -414,7 +414,7 @@ export default function OverviewTab({
                       setFormData({ ...formData, pageTemplate: e.target.value })
                     }
                     disabled={!isEditMode || isUpdating || isDeleting}
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 bg-white hover:border-purple-300 transition-all cursor-pointer appearance-none font-medium text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed"
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 bg-white hover:border-sky-300 transition-all cursor-pointer appearance-none font-medium text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed"
                   >
                     {pageTemplates.map((template) => (
                       <option
@@ -428,7 +428,7 @@ export default function OverviewTab({
                   {/* Custom dropdown arrow */}
                   <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
                     <svg
-                      className="w-5 h-5 text-gray-400 group-hover:text-purple-500 transition-colors"
+                      className="w-5 h-5 text-gray-400 group-hover:text-sky-500 transition-colors"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -463,7 +463,7 @@ export default function OverviewTab({
                 setFormData({ ...formData, wordCount: e.target.value })
               }
               disabled={!isEditMode || isUpdating || isDeleting}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
             />
           </div>
 
@@ -513,7 +513,7 @@ export default function OverviewTab({
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   disabled={isUpdating || isDeleting}
-                  className="flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="flex items-center gap-2 px-6 py-3 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors font-medium cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isUpdating ? (
                     <>
@@ -580,16 +580,16 @@ export default function OverviewTab({
           </div>
 
           {/* Differentiators */}
-          <div className="bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200 rounded-lg p-4">
+          <div className="bg-gradient-to-br from-sky-50 to-sky-100 border border-sky-200 rounded-lg p-4">
             <div className="flex items-center justify-between mb-3">
-              <span className="font-medium text-purple-900">
+              <span className="font-medium text-sky-900">
                 Differentiators
               </span>
-              <span className="text-xs px-2 py-1 bg-purple-200 text-purple-700 rounded-full">
+              <span className="text-xs px-2 py-1 bg-sky-200 text-sky-700 rounded-full">
                 📊 Loaded
               </span>
             </div>
-            <p className="text-sm text-purple-800 leading-relaxed">
+            <p className="text-sm text-sky-800 leading-relaxed">
               {projectDetails?.differentiators?.overview || "Not available"}
             </p>
           </div>

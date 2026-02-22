@@ -345,9 +345,9 @@ const PreviewScaffold = ({ platformId, content, hook, pattern, imageUrl, tags = 
     if (isInstagram) {
       return (
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 p-0.5">
+          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-sky-500 to-pink-500 p-0.5">
             <div className="w-full h-full rounded-full bg-white p-0.5">
-              <div className="w-full h-full rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white">
+              <div className="w-full h-full rounded-full bg-gradient-to-br from-sky-500 to-pink-500 flex items-center justify-center text-white">
                 <meta.Icon className="w-3.5 h-3.5" />
               </div>
             </div>

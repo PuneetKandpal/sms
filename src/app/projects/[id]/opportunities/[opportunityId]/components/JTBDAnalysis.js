@@ -46,7 +46,7 @@ export default function JTBDAnalysis({ opportunity }) {
         {jtbdItems.map((item, index) => (
           <div
             key={index}
-            className="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-600"
+            className="bg-gray-50 p-4 rounded-lg border-l-4 border-sky-600"
           >
             <h3 className="text-gray-800 font-semibold mb-1 text-base">
               {item.question}

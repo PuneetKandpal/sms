@@ -506,15 +506,15 @@ export default function CompetitorAnalysisPage() {
       {/* Header Section */}
       <div className="bg-white border-b border-gray-200 px-8 py-6">
         <div className="flex items-start gap-4">
-          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center shadow-lg">
+          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-500 to-blue-500 flex items-center justify-center shadow-lg">
             <Swords className="w-6 h-6 text-white" />
           </div>
           <div className="flex-1">
             <h1 className="text-2xl font-bold text-gray-900 mb-1">
-              Competitor Analysis
+              Other Schools Analysis
             </h1>
             <p className="text-sm text-gray-600">
-              Compare your business with competitors to identify strategic
+              Compare your school with others to identify strategic
               opportunities and market positioning
             </p>
           </div>
@@ -534,7 +534,7 @@ export default function CompetitorAnalysisPage() {
                 placeholder="Search analyses..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-9 pr-4 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                className="w-full pl-9 pr-4 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
               />
             </div>
           </div>
@@ -543,7 +543,7 @@ export default function CompetitorAnalysisPage() {
           <div className="flex-1 overflow-y-auto">
             {isLoadingList ? (
               <div className="flex items-center justify-center h-64">
-                <Loader2 className="w-6 h-6 text-purple-500 animate-spin" />
+                <Loader2 className="w-6 h-6 text-sky-500 animate-spin" />
               </div>
             ) : filteredAnalyses.length === 0 ? (
               <div className="flex flex-col items-center justify-center h-64 text-center px-4">
@@ -551,12 +551,12 @@ export default function CompetitorAnalysisPage() {
                 <p className="text-sm font-medium text-gray-600 mb-1">
                   {searchQuery
                     ? "No matching analyses"
-                    : "No competitor analyses yet"}
+                    : "No school analyses yet"}
                 </p>
                 <p className="text-xs text-gray-500">
                   {searchQuery
                     ? "Try a different search term"
-                    : "Create your first competitor analysis"}
+                    : "Create your first school analysis"}
                 </p>
               </div>
             ) : (
@@ -573,7 +573,7 @@ export default function CompetitorAnalysisPage() {
         <div className="flex-1 min-h-0 overflow-hidden">
           {isLoadingDetail ? (
             <div className="flex items-center justify-center h-full">
-              <Loader2 className="w-8 h-8 text-purple-500 animate-spin" />
+              <Loader2 className="w-8 h-8 text-sky-500 animate-spin" />
             </div>
           ) : selectedAnalysis ? (
             <AnalysisEditor
@@ -590,20 +590,17 @@ export default function CompetitorAnalysisPage() {
               isAcquiringLock={isAcquiringLock}
               isEditing={isEditing}
               onEditingChange={setEditingMode}
-              onCheckLockStatus={() => checkLockStatus(selectedAnalysis.analysis_id)}
-              inactivityTimeoutMinutes={INACTIVITY_TIMEOUT_MINUTES}
-              forcePreviewKey={forcePreviewKey}
             />
           ) : (
-            <div className="flex flex-col items-center justify-center h-full text-center px-8">
-              <div className="w-20 h-20 rounded-full bg-gray-100 flex items-center justify-center mb-4">
-                <Swords className="w-10 h-10 text-gray-400" />
+            <div className="flex-1 flex flex-col items-center justify-center text-center p-8 bg-gray-50/50">
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm border border-gray-200 mb-4">
+                <Swords className="w-8 h-8 text-gray-400" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <h3 className="text-lg font-medium text-gray-900 mb-2">
                 Select an analysis to view
               </h3>
               <p className="text-sm text-gray-500 max-w-md">
-                Choose a competitor analysis from the list to view and edit the
+                Choose a school analysis from the list to view and edit the
                 detailed comparison
               </p>
             </div>

@@ -1044,7 +1044,7 @@ export default function SocialHistoryPage({ params }) {
                   <div className="flex flex-wrap justify-between gap-3">
                     <button
                       onClick={handleOpenArticleSummaryModal}
-                      className="flex-1 px-4 py-2 bg-purple-600 text-nowrap text-white rounded-lg hover:bg-purple-700 transition-colors cursor-pointer text-sm font-medium flex items-center justify-center gap-2"
+                      className="flex-1 px-4 py-2 bg-sky-600 text-nowrap text-white rounded-lg hover:bg-sky-700 transition-colors cursor-pointer text-sm font-medium flex items-center justify-center gap-2"
                     >
                       <svg
                         className="w-4 h-4"
@@ -1603,8 +1603,8 @@ export default function SocialHistoryPage({ params }) {
 
                             {/* Row 3: UTM URL 100% */}
                             <div className="col-span-10">
-                              <div className="bg-purple-50 p-2 rounded text-xs text-purple-800">
-                                <div className="text-[11px] font-medium text-purple-700 mb-1">
+                              <div className="bg-sky-50 p-2 rounded text-xs text-sky-800">
+                                <div className="text-[11px] font-medium text-sky-700 mb-1">
                                   UTM URL
                                 </div>
                                 <div className="flex items-center gap-2">
@@ -1621,7 +1621,7 @@ export default function SocialHistoryPage({ params }) {
                                           "UTM URL copied to clipboard!"
                                         );
                                       }}
-                                      className="px-1 py-0.5 bg-purple-100 hover:bg-purple-200 rounded text-[10px] transition-colors cursor-pointer"
+                                      className="px-1 py-0.5 bg-sky-100 hover:bg-sky-200 rounded text-[10px] transition-colors cursor-pointer"
                                       title="Copy UTM URL"
                                     >
                                       📋
@@ -1646,7 +1646,7 @@ export default function SocialHistoryPage({ params }) {
                                         className={`px-2 py-0.5 rounded text-[10px] transition-colors cursor-pointer ${
                                           imageGenerating[idx]
                                             ? "bg-gray-400 text-white cursor-not-allowed"
-                                            : "bg-purple-500 text-white hover:bg-purple-600"
+                                            : "bg-sky-500 text-white hover:bg-sky-600"
                                         }`}
                                       >
                                         {imageGenerating[idx]
@@ -1808,7 +1808,7 @@ export default function SocialHistoryPage({ params }) {
                               type="button"
                               onMouseEnter={handleInfoMouseEnter}
                               onMouseLeave={handleInfoMouseLeave}
-                              className="p-[1px] text-gray-500 rounded-full hover:bg-purple-200 hover:text-black cursor-pointer transition-colors"
+                              className="p-[1px] text-gray-500 rounded-full hover:bg-sky-200 hover:text-black cursor-pointer transition-colors"
                             >
                               <InfoIcon className="w-4 h-4 " />
                             </button>

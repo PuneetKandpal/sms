@@ -82,11 +82,11 @@ export default function AIInsights({ aiFiltering, blogArticleRecommendation }) {
         {blogArticleRecommendation && (
           <motion.div
             whileHover={{ scale: 1.001 }}
-            className="bg-white/90 backdrop-blur-md rounded-xl shadow-sm border-l-4 border-purple-500 p-5 flex flex-col justify-between transition-transform"
+            className="bg-white/90 backdrop-blur-md rounded-xl shadow-sm border-l-4 border-sky-500 p-5 flex flex-col justify-between transition-transform"
           >
             <div className="flex items-center space-x-2 mb-4">
-              <Lightbulb className="text-purple-600 w-5 h-5" />
-              <h3 className="text-lg font-semibold text-purple-700">
+              <Lightbulb className="text-sky-600 w-5 h-5" />
+              <h3 className="text-lg font-semibold text-sky-700">
                 Blog Article Recommendation
               </h3>
             </div>
@@ -94,7 +94,7 @@ export default function AIInsights({ aiFiltering, blogArticleRecommendation }) {
             <div className="space-y-5">
               {blogTopic && (
                 <div>
-                  <p className="text-xs tracking-[0.2em] text-purple-500">Topic</p>
+                  <p className="text-xs tracking-[0.2em] text-sky-500">Topic</p>
                   <p className="mt-2 text-base font-semibold text-slate-900">
                     {blogTopic}
                   </p>
@@ -103,8 +103,8 @@ export default function AIInsights({ aiFiltering, blogArticleRecommendation }) {
 
               {blogBrief && (
                 <div>
-                  <p className="text-xs tracking-[0.2em] text-purple-500">Content details</p>
-                  <div className="mt-3 space-y-4 text-sm text-slate-700 pl-4 border-l-2 border-purple-100">
+                  <p className="text-xs tracking-[0.2em] text-sky-500">Content details</p>
+                  <div className="mt-3 space-y-4 text-sm text-slate-700 pl-4 border-l-2 border-sky-100">
                     {blogBrief.target_audience && (
                       <div className="bg-white/70 rounded-md p-3 shadow-sm">
                         <p className="text-xs font-semibold tracking-wide text-slate-500">
@@ -129,7 +129,7 @@ export default function AIInsights({ aiFiltering, blogArticleRecommendation }) {
                           <p className="text-xs font-semibold tracking-wide text-slate-500">
                             Key takeaways
                           </p>
-                          <div className="mt-2 bg-purple-50 border border-purple-200 p-3 rounded-lg">
+                          <div className="mt-2 bg-sky-50 border border-sky-200 p-3 rounded-lg">
                             <ul className="list-disc ml-4 space-y-1 text-slate-900">
                               {blogBrief.key_takeaways.map((item, idx) => (
                                 <li key={idx}>{item}</li>
@@ -145,7 +145,7 @@ export default function AIInsights({ aiFiltering, blogArticleRecommendation }) {
                           <p className="text-xs font-semibold tracking-wide text-slate-500">
                             Suggested sections
                           </p>
-                          <div className="mt-2 bg-purple-50 border border-purple-200 p-3 rounded-lg">
+                          <div className="mt-2 bg-sky-50 border border-sky-200 p-3 rounded-lg">
                             <ul className="list-disc ml-4 space-y-1 text-slate-900">
                               {blogBrief.suggested_sections.map((item, idx) => (
                                 <li key={idx}>{item}</li>
@@ -160,7 +160,7 @@ export default function AIInsights({ aiFiltering, blogArticleRecommendation }) {
                         <p className="text-xs font-semibold tracking-wide text-slate-500">
                           Evidence from post
                         </p>
-                        <div className="mt-2 bg-purple-50 border border-purple-200 p-3 rounded-lg leading-relaxed text-slate-900">
+                        <div className="mt-2 bg-sky-50 border border-sky-200 p-3 rounded-lg leading-relaxed text-slate-900">
                           {blogBrief.evidence_from_post}
                         </div>
                       </div>
@@ -171,7 +171,7 @@ export default function AIInsights({ aiFiltering, blogArticleRecommendation }) {
                         <p className="text-xs font-semibold tracking-wide text-slate-500">
                           Company expertise angle
                         </p>
-                        <div className="mt-2 bg-purple-50 border border-purple-200 p-3 rounded-lg leading-relaxed text-slate-900">
+                        <div className="mt-2 bg-sky-50 border border-sky-200 p-3 rounded-lg leading-relaxed text-slate-900">
                           {blogBrief.company_expertise_angle}
                         </div>
                       </div>

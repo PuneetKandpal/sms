@@ -1109,7 +1109,7 @@ export default function OpportunitiesTable({
                   return (
                     <TableCell key={key} align="left" sx={{ p: "8px 12px" }}>
                       <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white text-xs font-medium">
+                        <div className="w-8 h-8 bg-sky-600 rounded-full flex items-center justify-center text-white text-xs font-medium">
                           {row.owner?.substring(0, 2).toUpperCase() || "??"}
                         </div>
                         <span className="text-sm text-gray-700">

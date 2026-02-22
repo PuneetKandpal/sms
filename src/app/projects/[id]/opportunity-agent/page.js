@@ -424,7 +424,7 @@ export default function OpportunityAgentPage({ params }) {
   if (!companyResearchChecked) {
     return (
       <div className="h-[calc(100vh-64px)] flex items-center justify-center bg-gray-50">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-sky-600"></div>
       </div>
     );
   }
@@ -580,7 +580,7 @@ export default function OpportunityAgentPage({ params }) {
 
             <div className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 min-w-[180px] hover:bg-gray-100 transition-colors">
               <div className="flex items-center gap-2 mb-1">
-                <Activity className="h-4 w-4 text-purple-600" />
+                <Activity className="h-4 w-4 text-sky-600" />
                 <span className="text-xs font-medium text-gray-600 uppercase tracking-wide">
                   Sources Found
                 </span>
@@ -600,14 +600,14 @@ export default function OpportunityAgentPage({ params }) {
               <div className="flex items-center gap-1 bg-white border border-gray-300 rounded-lg px-2 py-[6px]">
                 <button
                   onClick={handleExpandAll}
-                  className="flex items-center gap-1 text-xs hover:cursor-pointer px-2 py-1 rounded-lg font-medium text-gray-600 hover:text-gray-800  hover:bg-purple-200 transition-colors"
+                  className="flex items-center gap-1 text-xs hover:cursor-pointer px-2 py-1 rounded-lg font-medium text-gray-600 hover:text-gray-800  hover:bg-sky-200 transition-colors"
                 >
                   Expand All <ChevronDown className="h-3 w-3" />
                 </button>
                 <span className="text-gray-300 mb-1">|</span>
                 <button
                   onClick={handleCollapseAll}
-                  className="flex items-center gap-1 text-xs hover:cursor-pointer px-2 py-1 rounded-lg font-medium text-gray-600 hover:text-gray-800  hover:bg-purple-200 transition-colors"
+                  className="flex items-center gap-1 text-xs hover:cursor-pointer px-2 py-1 rounded-lg font-medium text-gray-600 hover:text-gray-800  hover:bg-sky-200 transition-colors"
                 >
                   <ChevronUp className="h-3 w-3" />
                   Collapse All
@@ -665,7 +665,7 @@ export default function OpportunityAgentPage({ params }) {
                     : [];
                   setStatusFilter(values);
                 }}
-                className="appearance-none bg-white border border-gray-300 rounded-lg px-3 py-2 pr-8 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                className="appearance-none bg-white border border-gray-300 rounded-lg px-3 py-2 pr-8 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
               >
                 <option value="completed,processing,running">
                   Active Agents
@@ -695,7 +695,7 @@ export default function OpportunityAgentPage({ params }) {
               <button
                 onClick={handleCreateAgent}
                 disabled={hasReachedAgentLimit}
-                className="flex items-center hover:cursor-pointer gap-2 px-4 py-2 rounded-lg font-medium text-white transition-colors disabled:opacity-60 disabled:cursor-not-allowed disabled:bg-purple-400 bg-purple-600 hover:bg-purple-700"
+                className="flex items-center hover:cursor-pointer gap-2 px-4 py-2 rounded-lg font-medium text-white transition-colors disabled:opacity-60 disabled:cursor-not-allowed disabled:bg-sky-400 bg-sky-600 hover:bg-sky-700"
               >
                 <Plus className="h-4 w-4" />
                 New Agent
@@ -727,11 +727,11 @@ export default function OpportunityAgentPage({ params }) {
 
         {filteredAgents.length === 0 && !loading && !error ? (
           <div className="flex flex-col items-center justify-center text-center">
-            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+            <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mb-4">
               {agents.length === 0 ? (
-                <Users className="h-8 w-8 text-purple-600" />
+                <Users className="h-8 w-8 text-sky-600" />
               ) : (
-                <Filter className="h-8 w-8 text-purple-600" />
+                <Filter className="h-8 w-8 text-sky-600" />
               )}
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -771,7 +771,7 @@ export default function OpportunityAgentPage({ params }) {
               <button
                 onClick={handleCreateAgent}
                 disabled={hasReachedAgentLimit}
-                className="flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium disabled:opacity-60 disabled:cursor-not-allowed disabled:bg-purple-400"
+                className="flex items-center gap-2 px-6 py-3 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors font-medium disabled:opacity-60 disabled:cursor-not-allowed disabled:bg-sky-400"
               >
                 <Plus className="h-5 w-5" />
                 {agents.length === 0

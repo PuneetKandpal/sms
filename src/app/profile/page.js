@@ -231,7 +231,7 @@ export default function ProfilePage() {
   if (isLoading)
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="animate-spin h-12 w-12 rounded-full border-b-2 border-purple-600"></div>
+        <div className="animate-spin h-12 w-12 rounded-full border-b-2 border-sky-600"></div>
       </div>
     );
 
@@ -256,7 +256,7 @@ export default function ProfilePage() {
               animate={{ opacity: 1, y: 0 }}
               className="bg-white rounded-lg shadow-md p-6 text-center"
             >
-              <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-4 border-purple-200">
+              <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-4 border-sky-200">
                 <img
                   src={avatarUrl}
                   alt="avatar"
@@ -276,7 +276,7 @@ export default function ProfilePage() {
 
                 <div className="flex justify-between">
                   <span className="text-gray-700 flex items-center gap-1">
-                    <Users className="w-4 h-4 text-purple-500 mr-2" /> Platform
+                    <Users className="w-4 h-4 text-sky-500 mr-2" /> Platform
                     Staff:
                   </span>
                   {user.is_platform_staff ? (
@@ -288,7 +288,7 @@ export default function ProfilePage() {
 
                 <div className="flex justify-between">
                   <span className="text-gray-700 flex items-center gap-1">
-                    <UserCheck className="w-4 h-4 text-purple-500 mr-2" />{" "}
+                    <UserCheck className="w-4 h-4 text-sky-500 mr-2" />{" "}
                     Approved:
                   </span>
                   {user.is_approved ? (
@@ -300,7 +300,7 @@ export default function ProfilePage() {
 
                 <div className="flex justify-between">
                   <span className="text-gray-700 flex items-center gap-1">
-                    <UserPlus className="w-4 h-4 text-purple-500 mr-2" />{" "}
+                    <UserPlus className="w-4 h-4 text-sky-500 mr-2" />{" "}
                     Invited:
                   </span>
                   {user.is_invited ? (
@@ -315,7 +315,7 @@ export default function ProfilePage() {
 
                 <div className="flex justify-between">
                   <span className="flex items-center text-gray-500">
-                    <FaGlobe className="mr-2 text-purple-500" /> Timezone
+                    <FaGlobe className="mr-2 text-sky-500" /> Timezone
                   </span>
                   <span className="text-gray-900 font-medium">
                     {user?.timezone || "UTC"}
@@ -324,7 +324,7 @@ export default function ProfilePage() {
 
                 <div className="flex justify-between">
                   <span className="flex items-center text-gray-500">
-                    <FaClock className="mr-2 text-purple-500" /> Created At
+                    <FaClock className="mr-2 text-sky-500" /> Created At
                   </span>
                   <span className="text-gray-900 font-medium">
                     {formatLocalDateTime(user?.created_at)}
@@ -362,7 +362,7 @@ export default function ProfilePage() {
                 {!isEditing ? (
                   <button
                     onClick={() => setIsEditing(true)}
-                    className="flex cursor-pointer items-center space-x-2 text-purple-600 hover:text-purple-700"
+                    className="flex cursor-pointer items-center space-x-2 text-sky-600 hover:text-sky-700"
                   >
                     <FaEdit />
                     <span>Edit</span>
@@ -394,7 +394,7 @@ export default function ProfilePage() {
                           firstName: e.target.value,
                         })
                       }
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent disabled:bg-gray-50"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent disabled:bg-gray-50"
                     />
                   </div>
 
@@ -412,7 +412,7 @@ export default function ProfilePage() {
                           lastName: e.target.value,
                         })
                       }
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent disabled:bg-gray-50"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent disabled:bg-gray-50"
                     />
                   </div>
                 </div>
@@ -433,7 +433,7 @@ export default function ProfilePage() {
                   <div className="flex justify-end">
                     <button
                       type="submit"
-                      className="flex cursor-pointer items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700"
+                      className="flex cursor-pointer items-center space-x-2 bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700"
                     >
                       <FaSave />
                       <span>Save Changes</span>
@@ -455,7 +455,7 @@ export default function ProfilePage() {
                 </h2>
                 <button
                   onClick={handleTogglePasswordForm}
-                  className="flex cursor-pointer items-center space-x-2 text-purple-600 hover:text-purple-700"
+                  className="flex cursor-pointer items-center space-x-2 text-sky-600 hover:text-sky-700"
                 >
                   <FaLock />
                   <span>Change Password</span>
@@ -479,7 +479,7 @@ export default function ProfilePage() {
                           })
                         }
                         required
-                        className="w-full px-3 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        className="w-full px-3 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent"
                       />
                       <button
                         type="button"
@@ -506,7 +506,7 @@ export default function ProfilePage() {
                           })
                         }
                         required
-                        className="w-full px-3 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        className="w-full px-3 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent"
                       />
                       <button
                         type="button"
@@ -537,7 +537,7 @@ export default function ProfilePage() {
                         })
                       }
                       required
-                      className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent ${
+                      className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent ${
                         passwordData.confirmPassword &&
                         passwordData.newPassword !==
                           passwordData.confirmPassword
@@ -564,7 +564,7 @@ export default function ProfilePage() {
                     </button>
                     <button
                       type="submit"
-                      className="flex-1 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700"
+                      className="flex-1 bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700"
                     >
                       Update Password
                     </button>

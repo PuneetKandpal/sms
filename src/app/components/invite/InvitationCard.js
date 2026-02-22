@@ -10,10 +10,10 @@ export default function InvitationCard({ invitationData }) {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.1 }}
-      className="mb-8 p-6 bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl border border-purple-100"
+      className="mb-8 p-6 bg-gradient-to-r from-sky-50 to-blue-50 rounded-2xl border border-sky-100"
     >
       <div className="flex items-center mb-3">
-        <FaBuilding className="text-purple-600 mr-3" />
+        <FaBuilding className="text-sky-600 mr-3" />
         <h3 className="text-lg font-semibold text-gray-900">
           {invitationData.invitation.company_name}
         </h3>

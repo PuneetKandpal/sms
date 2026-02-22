@@ -1666,14 +1666,14 @@ export default function SearchRankingDashboard({ projectId }) {
               className={clsx(
                 "relative z-10 rounded-xl px-4 py-2 text-sm font-semibold transition-colors cursor-pointer",
                 isNewQueryTab
-                  ? "text-purple-800"
+                  ? "text-sky-800"
                   : "text-gray-600 hover:text-gray-900"
               )}
             >
               {isNewQueryTab && (
                 <motion.div
                   layoutId="activeTab"
-                  className="absolute inset-0 rounded-xl bg-purple-100"
+                  className="absolute inset-0 rounded-xl bg-sky-100"
                   transition={{ type: "spring", stiffness: 400, damping: 35 }}
                 />
               )}
@@ -1685,14 +1685,14 @@ export default function SearchRankingDashboard({ projectId }) {
               className={clsx(
                 "relative z-10 rounded-xl px-4 py-2 text-sm font-semibold transition-colors text-nowrap cursor-pointer",
                 isSelectPreviousTab
-                  ? "text-purple-800"
+                  ? "text-sky-800"
                   : "text-gray-600 hover:text-gray-900"
               )}
             >
               {isSelectPreviousTab && (
                 <motion.div
                   layoutId="activeTab"
-                  className="absolute inset-0 rounded-xl bg-purple-100"
+                  className="absolute inset-0 rounded-xl bg-sky-100"
                   transition={{ type: "spring", stiffness: 400, damping: 35 }}
                 />
               )}
@@ -1718,12 +1718,12 @@ export default function SearchRankingDashboard({ projectId }) {
                     onClick={handleOpenHistoryDrawer}
                     whileHover={{ scale: 1.01, y: -1 }}
                     whileTap={{ scale: 0.99 }}
-                    className="group relative overflow-hidden rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-left shadow-sm transition-all hover:border-purple-300 hover:shadow-md cursor-pointer"
+                    className="group relative overflow-hidden rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-left shadow-sm transition-all hover:border-sky-300 hover:shadow-md cursor-pointer"
                     title="Click to select query"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-50/0 via-purple-50/50 to-purple-50/0 opacity-0 transition-opacity group-hover:opacity-100" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-sky-50/0 via-sky-50/50 to-sky-50/0 opacity-0 transition-opacity group-hover:opacity-100" />
                     <div className="relative flex items-start gap-3">
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-purple-100 text-purple-600 transition-colors group-hover:bg-purple-200">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-sky-100 text-sky-600 transition-colors group-hover:bg-sky-200">
                         <Search className="h-5 w-5" />
                       </div>
                       <div className="flex-1 min-w-0">
@@ -1731,7 +1731,7 @@ export default function SearchRankingDashboard({ projectId }) {
                           <div className="text-[10px] font-bold uppercase tracking-wider text-gray-400 mb-1">
                             Selected Query
                           </div>
-                          <div className="flex items-center gap-1 text-gray-400 group-hover:text-purple-600 transition-colors">
+                          <div className="flex items-center gap-1 text-gray-400 group-hover:text-sky-600 transition-colors">
                             <ChevronDown className="h-4 w-4" />
                           </div>
                         </div>
@@ -1762,10 +1762,10 @@ export default function SearchRankingDashboard({ projectId }) {
                     onClick={handleOpenHistoryDrawer}
                     whileHover={{ scale: 1.01, y: -1 }}
                     whileTap={{ scale: 0.99 }}
-                    className="group relative overflow-hidden rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-left shadow-sm transition-all hover:border-purple-300 hover:shadow-md cursor-pointer"
+                    className="group relative overflow-hidden rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-left shadow-sm transition-all hover:border-sky-300 hover:shadow-md cursor-pointer"
                     title="Click to select version"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-50/0 via-purple-50/50 to-purple-50/0 opacity-0 transition-opacity group-hover:opacity-100" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-sky-50/0 via-sky-50/50 to-sky-50/0 opacity-0 transition-opacity group-hover:opacity-100" />
                     <div className="relative flex items-start gap-3">
                       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-100 text-blue-600 transition-colors group-hover:bg-blue-200">
                         <GitBranch className="h-5 w-5" />
@@ -1812,7 +1812,7 @@ export default function SearchRankingDashboard({ projectId }) {
                       initial={{ scale: 0.9, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
                       transition={{ delay: 0.1 }}
-                      className="inline-flex items-center gap-1.5 rounded-full bg-purple-100 px-3 py-1.5 text-xs font-semibold text-purple-700"
+                      className="inline-flex items-center gap-1.5 rounded-full bg-sky-100 px-3 py-1.5 text-xs font-semibold text-sky-700"
                     >
                       <FileText className="h-3.5 w-3.5" />
                       {formatMetricNumber(
@@ -1829,7 +1829,7 @@ export default function SearchRankingDashboard({ projectId }) {
                       onClick={handleOpenHistoryDrawer}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-purple-700 px-4 py-2 text-xs font-semibold text-white shadow-md transition-all hover:shadow-lg cursor-pointer"
+                      className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-600 to-sky-700 px-4 py-2 text-xs font-semibold text-white shadow-md transition-all hover:shadow-lg cursor-pointer"
                     >
                       <History className="h-3.5 w-3.5" />
                       Browse History
@@ -1854,9 +1854,9 @@ export default function SearchRankingDashboard({ projectId }) {
                       }
                       className={clsx(
                         "inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold shadow-md transition-all",
-                        "border-2 border-purple-400 bg-white text-purple-700",
+                        "border-2 border-sky-400 bg-white text-sky-700",
                         selectedQueryRecord && !submitting
-                          ? "hover:bg-purple-50 hover:shadow-lg cursor-pointer"
+                          ? "hover:bg-sky-50 hover:shadow-lg cursor-pointer"
                           : "cursor-not-allowed opacity-50"
                       )}
                     >
@@ -1957,7 +1957,7 @@ export default function SearchRankingDashboard({ projectId }) {
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.1 }}
-                className="inline-flex items-center gap-1.5 rounded-full bg-purple-100 px-3 py-1.5 text-xs font-semibold text-purple-700"
+                className="inline-flex items-center gap-1.5 rounded-full bg-sky-100 px-3 py-1.5 text-xs font-semibold text-sky-700"
               >
                 <Loader2 className="h-3.5 w-3.5 animate-spin" />
                 {isAnyApiLoading ? "Loading..." : "Error"}
@@ -1969,7 +1969,7 @@ export default function SearchRankingDashboard({ projectId }) {
                 onClick={handleRetryAll}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-purple-700 px-4 py-2 text-xs font-semibold text-white shadow-md transition-all hover:shadow-lg cursor-pointer"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-600 to-sky-700 px-4 py-2 text-xs font-semibold text-white shadow-md transition-all hover:shadow-lg cursor-pointer"
               >
                 <RefreshCcw className="h-3.5 w-3.5" />
                 Retry All
