@@ -48,7 +48,7 @@ export function AddCompetitorModal({
       setCompetitorTypes(response.data.competitor_types || []);
     } catch (error) {
       console.error("Error fetching competitor types:", error);
-      toast.error("Failed to load competitor types");
+      toast.error("Failed to load school types");
     } finally {
       setLoadingTypes(false);
     }
@@ -93,7 +93,7 @@ export function AddCompetitorModal({
       const data = response.data;
 
       toast.success(
-        "Competitor analysis started. You can track progress in Task Monitor."
+        "School comparison started. You can track progress in Task Monitor."
       );
 
       if (onResearchTaskStarted) {
@@ -173,7 +173,7 @@ export function AddCompetitorModal({
     <ModalBackdrop isOpen={isOpen} onClose={handleClose}>
       <div className="p-6">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-xl font-semibold">Add Competitor</h2>
+          <h2 className="text-xl font-semibold">Add Another School</h2>
           <button
             onClick={handleClose}
             disabled={isSubmitting}
@@ -186,7 +186,7 @@ export function AddCompetitorModal({
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Competitor Type <span className="text-red-500">*</span>
+              School Type <span className="text-red-500">*</span>
             </label>
             {loadingTypes ? (
               <div className="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50 text-gray-500">
@@ -201,7 +201,7 @@ export function AddCompetitorModal({
                 disabled={isSubmitting}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <option value="">Select competitor type</option>
+                <option value="">Select school type</option>
                 {competitorTypes.map((type) => (
                   <option key={type.id} value={type.competitor_type}>
                     {type.competitor_type}
@@ -236,7 +236,7 @@ export function AddCompetitorModal({
               name="name"
               value={formData.name}
               onChange={handleChange}
-              placeholder="Competitor name"
+              placeholder="School name"
               required
               disabled={isSubmitting}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
@@ -308,7 +308,7 @@ export function RenameModal({ isOpen, onClose, currentName, onRename, isSubmitti
     <ModalBackdrop isOpen={isOpen} onClose={!isSubmitting ? onClose : () => {}}>
       <div className="p-6">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-xl font-semibold">Rename Competitor</h2>
+          <h2 className="text-xl font-semibold">Rename School</h2>
           <button
             onClick={onClose}
             className="text-gray-500 hover:text-gray-700 cursor-pointer"

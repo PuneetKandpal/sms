@@ -139,7 +139,7 @@ const getOverlapPanelTitle = (sectionKey, tone) => {
   const noun = getOverlapPanelNoun(sectionKey);
   return tone === "overlap"
     ? `Shared ${noun}`
-    : `Competitor Only ${noun}`;
+    : `Other School Only ${noun}`;
 };
 
 const OVERLAP_TOOLTIP_TEXT =
@@ -317,7 +317,7 @@ function ProductsAndServicesOverlap({ overlap, nonOverlap, onMove, collapsedStat
                 moveTitle={getOverlapPanelTitle("products_and_services", "non_overlap")}
                 moveIcon={<ArrowRight className="w-3 h-3" />}
                 infoText={OVERLAP_TOOLTIP_TEXT}
-                hintLabel="You + Competitor"
+                hintLabel="Your School + Other School"
                 moveLabel="Remove"
               />
               <OverlapItemsPanel
@@ -336,7 +336,7 @@ function ProductsAndServicesOverlap({ overlap, nonOverlap, onMove, collapsedStat
                 moveTitle={getOverlapPanelTitle("products_and_services", "overlap")}
                 moveIcon={<ArrowLeft className="w-3 h-3" />}
                 infoText={NON_OVERLAP_TOOLTIP_TEXT}
-                hintLabel="Competitor Only"
+                hintLabel="Other School Only"
                 moveLabel="Add"
               />
             </div>
@@ -3167,10 +3167,10 @@ export default function ManageProjectPage({ params }) {
                 <div className="flex items-center justify-between px-3 py-2.5 border-b border-gray-200 bg-white">
                   <div className="min-w-0">
                     <h3 className="font-semibold text-sm text-gray-900 truncate">
-                      Coverage vs Competitor
+                      Coverage vs Other School
                     </h3>
                     <p className="text-xs text-gray-500 truncate">
-                      Review what you share, and what the competitor covers uniquely.
+                      Review what you share, and what the other school covers uniquely.
                     </p>
                   </div>
                   <div className="flex items-center gap-2">
@@ -3275,7 +3275,7 @@ export default function ManageProjectPage({ params }) {
                       <div className="flex items-center justify-between">
                         <div>
                           <div className="text-sm font-semibold text-gray-900">
-                            Competitor: {selectedCompetitorData?.overlap_data?.competitor_name || "Competitor"}
+                            Other School: {selectedCompetitorData?.overlap_data?.competitor_name || "Other School"}
                           </div>
                           <div className="text-xs text-gray-500">
                             {selectedCompetitorData?.overlap_data?.competitor_source ||
@@ -3313,8 +3313,8 @@ export default function ManageProjectPage({ params }) {
                             <OverlapSectionCard
                               key={section.key}
                               sectionKey={section.key}
-                              title={`${section.title} vs Competitor`}
-                              subtitle={`Compare ${section.title} coverage between you and the competitor.`}
+                              title={`${section.title} vs Other School`}
+                              subtitle={`Compare ${section.title} coverage between your school and the other school.`}
                               overview={sectionOverviewText}
                               totalCount={totalCount}
                             >
@@ -3350,8 +3350,8 @@ export default function ManageProjectPage({ params }) {
                           <OverlapSectionCard
                             key={section.key}
                             sectionKey={section.key}
-                            title={`${section.title} vs Competitor`}
-                            subtitle={`Compare ${section.title} coverage between you and the competitor.`}
+                            title={`${section.title} vs Other School`}
+                            subtitle={`Compare ${section.title} coverage between your school and the other school.`}
                             overview={sectionOverviewText}
                             totalCount={totalCount}
                           >
@@ -3376,7 +3376,7 @@ export default function ManageProjectPage({ params }) {
                                     moveTitle={getOverlapPanelTitle(section.key, "non_overlap")}
                                     moveIcon={<ArrowRight className="w-3 h-3" />}
                                     infoText={OVERLAP_TOOLTIP_TEXT}
-                                    hintLabel="You + Competitor"
+                                    hintLabel="Your School + Other School"
                                     moveLabel="Remove"
                                   />
 
@@ -3396,7 +3396,7 @@ export default function ManageProjectPage({ params }) {
                                     moveTitle={getOverlapPanelTitle(section.key, "overlap")}
                                     moveIcon={<ArrowLeft className="w-3 h-3" />}
                                     infoText={NON_OVERLAP_TOOLTIP_TEXT}
-                                    hintLabel="Competitor Only"
+                                    hintLabel="Other School Only"
                                     moveLabel="Add"
                                   />
                                 </div>

@@ -264,7 +264,7 @@ export default function SourcesAndCompetitorsPanel({
       setSelectedCompetitors((prev) =>
         prev.filter((id) => id !== competitorId)
       );
-      toast.success("Competitor deleted successfully");
+      toast.success("School removed successfully");
     } catch (e) {
       console.error("Delete error:", e);
       toast.error(e.response.data.error || "Delete failed");
@@ -293,7 +293,7 @@ export default function SourcesAndCompetitorsPanel({
             : c
         )
       );
-      toast.success(res.data.message || "Competitor renamed");
+      toast.success(res.data.message || "Other school renamed");
     } catch (e) {
       console.error(e);
       toast.error(e.message || "Rename failed");
@@ -534,7 +534,7 @@ export default function SourcesAndCompetitorsPanel({
           <div className="flex items-center justify-between px-3 py-2.5 border-b border-gray-200">
             <div className="flex items-center gap-2">
               <h3 className="font-semibold text-sm text-gray-700 uppercase tracking-wide">
-                Company & Competitors Information
+                School Knowledge Base
               </h3>
             </div>
             <button
@@ -551,13 +551,13 @@ export default function SourcesAndCompetitorsPanel({
             {/* Sources Section */}
             <div className="flex flex-col border-b border-gray-200">
               <div
-                className="flex items-center justify-between px-3 py-2 bg-gray-50 cursor-pointer hover:bg-gray-100 transition-colors"
+                className="flex items-center justify-between px-3 py-2 bg-gray-50 cursor-pointer hover:bg-gray-100 transition-all duration-300 ease-in-out"
                 onClick={() => setSourcesExpanded(!sourcesExpanded)}
               >
                 <div className="flex items-center gap-2">
                   <FaLink className="text-gray-600 w-3.5 h-3.5" />
                   <span className="font-semibold text-xs uppercase tracking-wide text-gray-700">
-                    Company Overview
+                    School Profile
                   </span>
                   <span className="text-xs text-gray-500 font-medium">
                     {sources.length}
@@ -604,7 +604,7 @@ export default function SourcesAndCompetitorsPanel({
                         }}
                         className="py-1.5 w-full px-2 rounded inline-flex items-center justify-center gap-1 bg-primary text-white cursor-pointer hover:bg-primary-dark hover:shadow-md active:scale-95 transition-all duration-200 ease-in-out text-xs"
                       >
-                        <FaPlus size={10} /> Add Company Information
+                        <FaPlus size={10} /> Add School Details
                       </button>
                     </div>
 
@@ -629,7 +629,7 @@ export default function SourcesAndCompetitorsPanel({
                                 className="text-sm font-medium text-gray-800 leading-tight"
                                 title="currentdata"
                               >
-                                Company Overview
+                                School Profile
                               </span>
                               <span className="text-[11px] uppercase tracking-wide text-gray-400">
                                 {sources.length} source
@@ -674,80 +674,59 @@ export default function SourcesAndCompetitorsPanel({
                       >
                         {sources.length === 0 ? (
                           <div className="text-center text-gray-500 py-4 text-xs">
-                            No sources added yet
+                            No school details added yet
                           </div>
                         ) : (
-                          <div className="relative pl-6 pr-2 pb-1">
-                            <div
-                              className="absolute left-3 top-2 bottom-2 w-px bg-gradient-to-b from-gray-200 via-gray-100 to-gray-200"
-                              aria-hidden="true"
-                            />
-                            <ul className="space-y-1">
-                              {sources.map((source) => {
-                                const sourceId = getSourceId(source);
-                                const isSelected =
-                                  selectedSources.includes(sourceId);
-                                const sourceName =
-                                  source.file_name ||
-                                  source.url ||
-                                  "Untitled source";
+                          <ul className="px-2 py-1">
+                            {sources.map((source) => {
+                              const sourceId = getSourceId(source);
+                              const isSelected = selectedSources.includes(sourceId);
+                              const sourceName =
+                                source.file_name || source.url || "Untitled item";
 
-                                return (
-                                  <li
-                                    key={sourceId}
-                                    className={`relative group pl-4 pr-2 py-1.5 flex items-center gap-2 text-xs rounded-md transition-colors ${
-                                      isSelected
-                                        ? "bg-indigo-50 text-indigo-700"
-                                        : "hover:bg-gray-50 text-gray-700"
-                                    }`}
-                                  >
-                                    <span
-                                      className="absolute left-0 top-1/2 -translate-y-1/2 w-3 border-t border-gray-200"
-                                      aria-hidden="true"
-                                    />
-                                    <span
-                                      className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full border border-gray-300 bg-white"
-                                      aria-hidden="true"
-                                    />
-                                    <div
-                                      className="flex-1 flex items-center gap-1.5"
-                                      onClick={(e) => {
-                                        if (!e.defaultPrevented) {
-                                          handleSourceNameClick(sourceId);
-                                        }
-                                      }}
-                                    >
-                                      <FaLink className="text-gray-500 w-3 h-3 flex-shrink-0" />
-                                      <span
-                                        className={`text-xs truncate ${
-                                          isSelected
-                                            ? "font-medium text-indigo-700"
-                                            : "text-gray-700"
-                                        }`}
-                                        title={sourceName}
-                                      >
-                                        {sourceName}
-                                      </span>
-                                    </div>
-
-                                    <IconButton
-                                      size="small"
-                                      onClick={(e) =>
-                                        handleSourceMenuOpen(e, source)
+                              return (
+                                <li
+                                  key={sourceId}
+                                  className={`group px-2 py-1.5 flex items-center gap-2 text-xs hover:bg-gray-100 cursor-pointer rounded ${
+                                    isSelected ? "bg-sky-50" : ""
+                                  }`}
+                                >
+                                  <div
+                                    className="flex-1 flex items-center gap-1.5"
+                                    onClick={(e) => {
+                                      if (!e.defaultPrevented) {
+                                        handleSourceNameClick(sourceId);
                                       }
-                                      className="opacity-0 group-hover:opacity-100 transition-opacity"
-                                      sx={{ padding: "2px" }}
+                                    }}
+                                  >
+                                    <FaLink className="text-gray-500 w-3 h-3 flex-shrink-0" />
+                                    <span
+                                      className={`text-xs truncate ${
+                                        isSelected
+                                          ? "font-medium text-gray-900"
+                                          : "text-gray-700"
+                                      }`}
+                                      title={sourceName}
                                     >
-                                      <FaEllipsisV
-                                        className="text-gray-500"
-                                        style={{ width: "10px", height: "10px" }}
-                                      />
-                                    </IconButton>
-                                  </li>
-                                );
-                              })}
-                            </ul>
-                          </div>
+                                      {sourceName}
+                                    </span>
+                                  </div>
+
+                                  <IconButton
+                                    size="small"
+                                    onClick={(e) => handleSourceMenuOpen(e, source)}
+                                    className="opacity-0 group-hover:opacity-100 transition-opacity"
+                                    sx={{ padding: "2px" }}
+                                  >
+                                    <FaEllipsisV
+                                      className="text-gray-500"
+                                      style={{ width: "10px", height: "10px" }}
+                                    />
+                                  </IconButton>
+                                </li>
+                              );
+                            })}
+                          </ul>
                         )}
                       </div>
                     </div>
@@ -765,7 +744,7 @@ export default function SourcesAndCompetitorsPanel({
                 <div className="flex items-center gap-2">
                   <FaBuilding className="text-gray-600 w-3.5 h-3.5" />
                   <span className="font-semibold text-xs uppercase tracking-wide text-gray-700">
-                    Competitors
+                    Other Schools
                   </span>
                   <span className="text-xs text-gray-500 font-medium">
                     {competitors.length}
@@ -792,26 +771,26 @@ export default function SourcesAndCompetitorsPanel({
                         onClick={() => {
                           if (hasCompetitorResearchInProgress) {
                             toast(
-                              "Competitor research is already running. New competitors will be researched in parallel."
+                              "School research is already running. New schools will be researched in parallel."
                             );
                           }
                           setShowAddCompetitor(true);
                         }}
                         title={
                           hasCompetitorResearchInProgress
-                            ? "Competitor research is already running. New competitors will be researched in parallel."
-                            : "Start a new competitor research task."
+                            ? "School research is already running. New schools will be researched in parallel."
+                            : "Start a new school research task."
                         }
                         className="py-1.5 w-full px-2 rounded inline-flex items-center justify-center gap-1 bg-primary text-white cursor-pointer hover:bg-primary-dark hover:shadow-md active:scale-95 transition-all duration-200 ease-in-out text-xs"
                       >
-                        <FaPlus size={10} /> Add Competitor
+                        <FaPlus size={10} /> Add Another School
                       </button>
                     </div>
 
                     <div className="flex-1 overflow-y-auto">
                       {competitors.length === 0 ? (
                         <div className="text-center text-gray-500 py-4 text-xs">
-                          No competitors added yet
+                          No other schools added yet
                         </div>
                       ) : (
                         <ul className="px-2 py-1">
@@ -829,7 +808,7 @@ export default function SourcesAndCompetitorsPanel({
                               <li
                                 key={competitorId}
                                 className={`group px-2 py-1.5 flex items-center gap-2 text-xs hover:bg-gray-100 cursor-pointer rounded ${
-                                  isSelected ? "bg-blue-50" : ""
+                                  isSelected ? "bg-sky-50" : ""
                                 }`}
                               >
                                 <div
@@ -893,7 +872,7 @@ export default function SourcesAndCompetitorsPanel({
                 <div className="flex items-center gap-2">
                   <FaFile className="text-gray-600 w-3.5 h-3.5" />
                   <span className="font-semibold text-xs uppercase tracking-wide text-gray-700">
-                    Internal
+                    Your Files
                   </span>
                   <span className="text-xs text-gray-500 font-medium">
                     {internalSources.length}
@@ -920,14 +899,14 @@ export default function SourcesAndCompetitorsPanel({
                         onClick={() => setShowAddInternal(true)}
                         className="py-1.5 w-full px-2 rounded inline-flex items-center justify-center gap-1 bg-primary text-white cursor-pointer hover:bg-primary-dark hover:shadow-md active:scale-95 transition-all duration-200 ease-in-out text-xs"
                       >
-                        <FaPlus size={10} /> Add Internal Source
+                        <FaPlus size={10} /> Add File
                       </button>
                     </div>
 
                     <div className="flex-1 overflow-y-auto">
                       {internalSources.length === 0 ? (
                         <div className="text-center text-gray-500 py-4 text-xs">
-                          No internal sources added yet
+                          No files added yet
                         </div>
                       ) : (
                         <ul className="px-2 py-1">
@@ -944,7 +923,7 @@ export default function SourcesAndCompetitorsPanel({
                               <li
                                 key={sourceId}
                                 className={`group px-2 py-1.5 flex items-center gap-2 text-xs hover:bg-gray-100 cursor-pointer rounded ${
-                                  isSelected ? "bg-blue-50" : ""
+                                  isSelected ? "bg-sky-50" : ""
                                 }`}
                               >
                                 <div
@@ -1088,7 +1067,7 @@ export default function SourcesAndCompetitorsPanel({
           currentName={
             renamingCompetitor.competitor_name || renamingCompetitor.url || ""
           }
-          title="Rename Competitor"
+          title="Rename Other School"
           isSubmitting={isRenamingCompetitor}
         />
       )}
@@ -1104,7 +1083,7 @@ export default function SourcesAndCompetitorsPanel({
           itemName={
             deletingCompetitor.competitor_name ||
             deletingCompetitor.url ||
-            "this competitor"
+            "this school"
           }
           isSubmitting={isDeletingCompetitor}
         />

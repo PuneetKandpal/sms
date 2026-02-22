@@ -485,9 +485,9 @@ function AddSourcesCompetitor({
         <div className="flex justify-between items-center mb-[8px]">
           <div className="flex items-center gap-2">
             <h2 className="text-lg font-semibold text-gray-800">Add Sources</h2>
-            <div className="flex items-center gap-2 bg-purple-100 px-3 py-1 rounded-full">
-              <IoIosLink className="text-purple-600" />
-              <span className="text-purple-600 font-medium">Competitor</span>
+            <div className="flex items-center gap-2 bg-sky-100 px-3 py-1 rounded-full">
+              <IoIosLink className="text-sky-700" />
+              <span className="text-sky-700 font-medium">School Profile</span>
             </div>
           </div>
           <button
@@ -499,7 +499,7 @@ function AddSourcesCompetitor({
         </div>
 
         <p className="text-black text-[14px] font-medium mb-[13px]">
-          Add competitor sources for our AI to find opportunities.
+          Add sources about your school so the AI can write better marketing.
         </p>
 
         <div
@@ -515,7 +515,7 @@ function AddSourcesCompetitor({
           onDragLeave={() => setDragOver(false)}
           onDrop={handleDrop}
         >
-          <FiUpload className="text-4xl text-[#9c07ff] mx-auto mb-4" />
+          <FiUpload className="text-4xl text-sky-600 mx-auto mb-4" />
           <h3 className="text-lg font-semibold text-gray-800 mb-2">
             Upload sources
           </h3>
