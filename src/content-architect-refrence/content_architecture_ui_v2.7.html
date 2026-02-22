@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Architecture Dashboard</title>
+    <link rel="stylesheet" href="content-architecture-ui.css">
+</head>
+<body>
+    <div class="header">
+        <h1>TechCorp Content Architecture Dashboard</h1>
+        <div class="header-stats">
+            <span>SEO Keywords: 45 Active</span>
+            <span>Content Pieces: 58 Total</span>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-header-title">
+                    <div class="view-switcher-compact">
+                        <button class="view-btn-icon active" onclick="switchView('content')" title="Content Management">
+                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 2h6l3 3v9H4V2z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                <path d="M10 2v3h3" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                        </button>
+                        <button class="view-btn-icon" onclick="switchView('analytics')" title="Analytics Dashboard">
+                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="10" width="3" height="4" fill="currentColor"/>
+                                <rect x="6" y="6" width="3" height="8" fill="currentColor"/>
+                                <rect x="10" y="3" width="3" height="11" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 id="sidebar-title">Pages</h3>
+                </div>
+                <div id="date-range-container" class="hidden">
+                    <div class="date-range-selector" onclick="openDatePicker()">
+                        <span id="date-range-text">Last 30 Days (Dec 1-31)</span>
+                        <svg class="calendar-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="3" width="12" height="11" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M2 6h12" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M5 2v2M11 2v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-search">
+                <input type="text" class="search-input" placeholder="Search pages...">
+                <button class="expand-collapse-btn" onclick="toggleExpandCollapseAll()" title="Collapse All">
+                    <svg class="expand-icon-svg" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <polyline points="3,5 8,10 13,5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <polyline points="3,9 8,14 13,9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="pillar-tree">
+                <!-- Dynamically generated from pillar-tree-data.js -->
+            </div>
+
+            <div class="analytics-table-wrapper">
+                <div class="analytics-tree-header">
+                    <span class="header-col col-name">Page Name</span>
+                    <span class="header-col col-status">Status</span>
+                    <span class="header-col col-views">Views</span>
+                    <span class="header-col col-conv">Conv%</span>
+                    <span class="header-col col-time">Time</span>
+                    <span class="header-col col-rank">Rank</span>
+                    <span class="header-col col-trend">Trend</span>
+                </div>
+                <div id="analytics-tree" class="analytics-tree-content">
+                    <!-- Dynamically generated from analytics-data.js -->
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-panel">
+            <div class="tabs">
+                <div class="tab active" onclick="switchTab('overview')">Overview</div>
+                <div class="tab" onclick="switchTab('seo')">SEO</div>
+                <div class="tab" onclick="switchTab('links')">Links</div>
+                <div class="tab" onclick="switchTab('content')">Content</div>
+                <div class="tab" onclick="switchTab('promote')">Promote</div>
+                <div class="tab" onclick="switchTab('analytics')">Analytics</div>
+            </div>
+            <div class="tab-content">
+                <!-- Dynamically generated from pillar-tree-data.js -->
+            </div>
+        </div>
+    </div>
+
+    <div class="status-bar">
+        <span>23 Published | 12 In Progress | 8 Awaiting Approval | 15 Planned</span>
+        <span>Last Updated: 2 minutes ago</span>
+    </div>
+
+    <script src="pillar-tree-data.js"></script>
+    <script src="analytics-data.js"></script>
+    <script src="pillar-tree-renderer.js"></script>
+    <script>
+        // View Mode Switching
+        function switchView(viewMode) {
+            document.querySelectorAll('.view-btn-icon').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.closest('.view-btn-icon').classList.add('active');
+            
+            const sidebar = document.querySelector('.sidebar');
+            const detailPanel = document.querySelector('.detail-panel');
+            const sidebarTitle = document.getElementById('sidebar-title');
+            const dateRangeContainer = document.getElementById('date-range-container');
+            
+            if (viewMode === 'content') {
+                sidebar.classList.remove('analytics-mode');
+                detailPanel.style.display = 'flex';
+                sidebarTitle.textContent = 'Pages';
+                dateRangeContainer.classList.add('hidden');
+            } else if (viewMode === 'analytics') {
+                sidebar.classList.add('analytics-mode');
+                detailPanel.style.display = 'none';
+                sidebarTitle.textContent = 'Analytics Dashboard';
+                dateRangeContainer.classList.remove('hidden');
+                loadAnalyticsData();
+            }
+        }
+
+        // Load Analytics Data
+        function loadAnalyticsData() {
+            const container = document.getElementById('analytics-tree');
+            if (!container || !analyticsData) return;
+            
+            container.innerHTML = '';
+            
+            analyticsData.rows.forEach(row => {
+                const item = document.createElement('div');
+                item.className = 'analytics-item';
+                if (row.summary) item.classList.add('summary-row');
+                if (row.indent > 0) item.classList.add(`indent-${row.indent}`);
+                
+                // Determine icon
+                let iconHTML = '';
+                if (row.expanded !== undefined) {
+                    const expandClass = row.expanded ? 'expanded' : '';
+                    iconHTML = `<span class="analytics-expand-icon ${expandClass}">
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <polyline points="6,5 10,8 6,11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>`;
+                }
+                if (!row.summary && row.indent === 0) {
+                    iconHTML += `<span class="analytics-folder-icon">
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 3h5l2 2h5v8H2V3z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                        </svg>
+                    </span>`;
+                } else if (row.indent > 0 && row.expanded === undefined) {
+                    iconHTML += `<span class="analytics-file-icon">
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 2h6l3 3v9H4V2z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            <path d="M10 2v3h3" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                        </svg>
+                    </span>`;
+                } else if (row.summary) {
+                    iconHTML = '<span class="analytics-summary-icon">📊</span>';
+                }
+                
+                const statusDisplay = row.status === 'published' ? '🟢' : (row.status || '-');
+                const trendArrow = row.trendDir === 'up' ? '↗' : (row.trendDir === 'down' ? '↘' : '→');
+                const trendClass = `analytics-item-value trend-${row.trendDir}`;
+                
+                item.innerHTML = `
+                    <div class="analytics-item-name">${iconHTML}${row.name}</div>
+                    <span class="analytics-item-value">${statusDisplay}</span>
+                    <span class="analytics-item-value">${row.views}</span>
+                    <span class="analytics-item-value">${row.conv}</span>
+                    <span class="analytics-item-value">${row.time}</span>
+                    <span class="analytics-item-value">${row.rank}</span>
+                    <span class="${trendClass}">${trendArrow} ${row.trend}</span>
+                `;
+                
+                container.appendChild(item);
+            });
+        }
+
+        // Date Picker
+        function openDatePicker() {
+            alert('Date picker calendar will open here. This allows selecting custom date ranges for analytics data.');
+        }
+
+        // Tab Switching
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Load the appropriate tab content
+            loadDetailPanel(tabName);
+        }
+    </script>
+</body>
+</html>
