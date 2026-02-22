@@ -14,6 +14,14 @@ import useTrackFeatureExploration from "../../../hooks/useTrackFeatureExploratio
 
 export default function AIOptimizationsPage({ params }) {
   const { id } = use(params);
+  const router = useRouter();
+
+  // Redirect to manage page since this feature is disabled
+  useEffect(() => {
+    router.replace(`/projects/${id}/manage`);
+  }, [id, router]);
+
+  return null;
 
   useTrackFeatureExploration("ai_optimizations");
 
@@ -27,7 +35,6 @@ export default function AIOptimizationsPage({ params }) {
   console.log("AIOptimizationsPage id------->", id);
   const searchParams = useSearchParams();
   const pathname = usePathname();
-  const router = useRouter();
   const domainId = searchParams.get("domain");
   const componentId = searchParams.get("component");
   const highlightQuestionId = searchParams.get("highlight");

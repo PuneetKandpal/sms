@@ -36,6 +36,14 @@ export default function OpportunityAgentPage({ params }) {
   const { id } = use(params);
   const { selectedProject } = useSelection();
   const router = useRouter();
+
+  // Redirect to manage page since this feature is disabled
+  useEffect(() => {
+    router.replace(`/projects/${id}/manage`);
+  }, [id, router]);
+
+  return null;
+
   useTrackFeatureExploration("opportunity_agent");
 
   // Knowledge base gate state

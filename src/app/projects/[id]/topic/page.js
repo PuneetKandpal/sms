@@ -18,6 +18,12 @@ export default function TopicPage({ params }) {
   const { id } = use(params);
   const router = useRouter();
 
+  useEffect(() => {
+    router.replace(`/projects/${id}/manage`);
+  }, [id, router]);
+
+  return null;
+
   useTrackFeatureExploration("topics");
 
   // Knowledge base gate state

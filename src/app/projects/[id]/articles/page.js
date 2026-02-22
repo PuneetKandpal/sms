@@ -17,6 +17,15 @@ export default function ArticlesPage({ params }) {
   const { id: projectId } = use(params);
   const { selectedProject } = useSelection();
   const router = useRouter();
+
+  // Redirect to manage page since this feature is disabled
+  useEffect(() => {
+    router.replace(`/projects/${projectId}/manage`);
+  }, [projectId, router]);
+
+  return null;
+
+  const { trackFeatureAction } = useFeatureTracking();
   const searchParams = useSearchParams();
   const highlightArticleId = searchParams.get("highlight");
   const autoScrollFromUrl =

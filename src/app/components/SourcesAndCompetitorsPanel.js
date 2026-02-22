@@ -630,9 +630,9 @@ export default function SourcesAndCompetitorsPanel({
                                 selectedInternalSources.length === 0
                                   ? "font-medium text-gray-900"
                                   : "text-gray-700"
-                              }`}
+                              } transition-colors whitespace-nowrap`}
                             >
-                              School Overview
+                              School Profile
                             </span>
                           </div>
                         </li>

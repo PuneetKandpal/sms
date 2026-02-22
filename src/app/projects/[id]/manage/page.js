@@ -2926,7 +2926,7 @@ export default function ManageProjectPage({ params }) {
                   >
                     <FileText size={14} />
                     <span className="text-sm">
-                      {isReviewMode ? "Exit Review" : "Review Changes"}
+                      {isReviewMode ? "Exit Review" : "Review School Profile"}
                     </span>
                   </button>
                 ) : (
@@ -2941,8 +2941,8 @@ export default function ManageProjectPage({ params }) {
                     }`}
                     title={
                       isEditMode
-                        ? "Exit Edit — stop deleting from the Company Overview"
-                        : "Edit Changes — delete items from the Company Overview"
+                        ? "Exit Edit — stop deleting from the School Profile"
+                        : "Edit Changes — delete items from the School Profile"
                     }
                   >
                     {isEditMode ? <X size={14} /> : <Pencil size={14} />}
@@ -3039,7 +3039,7 @@ export default function ManageProjectPage({ params }) {
                     scrollRef={currentDataScrollRef}
                     onScroll={() => handleSyncScroll(currentDataScrollRef)}
                     data={displayData}
-                    title="Company Overview"
+                    title="School Profile"
                     onRemove={handleRemoveFromCurrentData}
                     showRemove={isReviewMode || isEditMode}
                     expandedSections={sharedExpandedSections}
@@ -3426,9 +3426,9 @@ export default function ManageProjectPage({ params }) {
                       scrollRef={competitorDataScrollRef}
                       onScroll={() => handleSyncScroll(competitorDataScrollRef)}
                       data={selectedCompetitorData}
-                      title={`Competitor: ${
+                      title={`Other School: ${
                         selectedCompetitorData.competitor_name ||
-                        "Competitor Data"
+                        "Other School Data"
                       }`}
                       showRemove={false}
                       expandedSections={sharedExpandedSections}
@@ -3439,7 +3439,7 @@ export default function ManageProjectPage({ params }) {
                 ) : (
                   <div className="flex items-center justify-center h-full">
                     <p className="text-gray-500">
-                      No competitor data available
+                      No other school data available
                     </p>
                   </div>
                 )}
@@ -3699,8 +3699,8 @@ export default function ManageProjectPage({ params }) {
                               <CheckCircle className="w-5 h-5 text-white" />
                             </div>
                             <div>
-                              <span className="text-lg font-medium">
-                                Review Changes
+                              <span className="font-semibold text-[13px] mr-1">
+                                Review School Profile
                               </span>
                               <p className="text-sm text-gray-500">
                                 {" "}
@@ -3754,7 +3754,7 @@ export default function ManageProjectPage({ params }) {
                                 <div className="flex items-center space-x-2 mb-3">
                                   <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
                                   <h4 className="font-medium text-blue-900">
-                                    Company Overview
+                                    School Profile
                                   </h4>
                                 </div>
                                 <pre className="text-xs overflow-auto max-h-60 bg-white/60 rounded-lg p-3 border border-blue-200/40 custom-scrollbar">

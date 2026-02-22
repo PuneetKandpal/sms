@@ -12,6 +12,13 @@ export default function SearchRankingPage({ params }) {
   const { id } = use(params);
   const router = useRouter();
 
+  // Redirect to manage page since this feature is disabled
+  useEffect(() => {
+    router.replace(`/projects/${id}/manage`);
+  }, [id, router]);
+
+  return null;
+
   useTrackFeatureExploration("search_ranking");
 
   // Knowledge base gate state

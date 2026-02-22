@@ -13,8 +13,18 @@ import useTrackFeatureExploration from "../../../hooks/useTrackFeatureExploratio
 export default function AIOAnswersPage() {
   const params = useParams();
   const { id: projectId } = params;
-  const searchParams = useSearchParams();
   const router = useRouter();
+
+  // Redirect to manage page since this feature is disabled
+  useEffect(() => {
+    if (projectId) {
+      router.replace(`/projects/${projectId}/manage`);
+    }
+  }, [projectId, router]);
+
+  return null;
+
+  const searchParams = useSearchParams();
   const highlightAnswerId = searchParams.get("highlight");
   const autoScrollFromUrl =
     searchParams.get("autoScroll") === "true" ||

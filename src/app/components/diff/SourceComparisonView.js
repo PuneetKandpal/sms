@@ -316,7 +316,7 @@ function ComparisonItem({
                 }`}
                 title={
                   acceptDisabled
-                    ? "Duplicate: remove from Company Overview to accept"
+                    ? "Duplicate: remove from School Profile to accept"
                     : "Accept this change"
                 }
               >
@@ -342,8 +342,8 @@ function ComparisonItem({
               {showRemoveFromOld && decision === "accepted" && (
                 <button
                   onClick={handleRemoveFromOld}
-                  className="p-1 rounded transition-colors bg-white text-red-600 hover:bg-red-50 border border-red-300"
-                  title="Remove from the company overview"
+                  className="p-1 rounded cursor-pointer transition-colors bg-white text-orange-500 hover:bg-orange-50 border border-orange-300"
+                  title="Remove from the school profile"
                 >
                   <Trash2 size={12} />
                 </button>
