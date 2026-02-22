@@ -15,15 +15,6 @@ export default function AIOAnswersPage() {
   const { id: projectId } = params;
   const router = useRouter();
 
-  // Redirect to manage page since this feature is disabled
-  useEffect(() => {
-    if (projectId) {
-      router.replace(`/projects/${projectId}/manage`);
-    }
-  }, [projectId, router]);
-
-  return null;
-
   const searchParams = useSearchParams();
   const highlightAnswerId = searchParams.get("highlight");
   const autoScrollFromUrl =

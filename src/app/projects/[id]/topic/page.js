@@ -18,6 +18,7 @@ export default function TopicPage({ params }) {
   const { id } = use(params);
   const router = useRouter();
 
+  // Redirect to manage page since this feature is disabled
   useEffect(() => {
     router.replace(`/projects/${id}/manage`);
   }, [id, router]);

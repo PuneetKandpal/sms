@@ -44,9 +44,9 @@ import {
 // Mapping between API response keys and sidebar navigation keys
 const SIDEBAR_MAPPING = {
   "Keyword Analysis": "keywords",
-  Topics: "topics",
+  Topics: "ai-optimizations",
   "Product Information": "knowledge-base",
-  "Your Articles": "articles",
+  "Your Articles": "aio-answers",
   "AIO Answers": "aio-answers",
   "AI Optimization: Questions": "ai-optimizations",
   "Social Posts & More": "socials",
@@ -57,8 +57,6 @@ const SIDEBAR_MAPPING = {
 // Configuration for which routes should include domain/component params
 const ROUTES_WITH_PARAMS = {
   keywords: true,
-  topics: true,
-  articles: true,
   "aio-answers": true,
   "ai-optimizations": true,
   "knowledge-base": true,
@@ -137,6 +135,22 @@ const SIDEBAR_STRUCTURE = [
         path: "content-architecture",
         routeKey: "content-architecture",
         trackingKey: "content_architecture",
+      },
+      {
+        id: "topics",
+        label: "Topics",
+        icon: Tags,
+        path: "ai-optimizations",
+        routeKey: "ai-optimizations",
+        trackingKey: "ai_optimizations",
+      },
+      {
+        id: "articles",
+        label: "Articles",
+        icon: FileText,
+        path: "aio-answers",
+        routeKey: "aio-answers",
+        trackingKey: "aio_answers",
       },
     ],
   },
@@ -397,6 +411,8 @@ export default function Sidebar() {
       keywords: /^\/projects\/[^/]+\/keywords/,
       "competitor-analysis": /^\/projects\/[^/]+\/competitor-analysis/,
       "content-architecture": /^\/projects\/[^/]+\/content-architecture/,
+      "ai-optimizations": /^\/projects\/[^/]+\/ai-optimizations/,
+      "aio-answers": /^\/projects\/[^/]+\/aio-answers/,
       socials: /^\/projects\/[^/]+\/socials/,
       "social-history": /^\/projects\/[^/]+\/social-history/,
       connections: /^\/connections/,

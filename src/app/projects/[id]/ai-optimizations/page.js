@@ -16,13 +16,6 @@ export default function AIOptimizationsPage({ params }) {
   const { id } = use(params);
   const router = useRouter();
 
-  // Redirect to manage page since this feature is disabled
-  useEffect(() => {
-    router.replace(`/projects/${id}/manage`);
-  }, [id, router]);
-
-  return null;
-
   useTrackFeatureExploration("ai_optimizations");
 
   // Track feature usage

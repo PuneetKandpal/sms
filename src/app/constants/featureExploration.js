@@ -32,6 +32,23 @@ export const FEATURE_EXPLORATION_SECTIONS = [
         description: "Generate structure and strategy for your school's website and content.",
         path: "content-architecture",
       },
+      {
+        key: "ai_optimizations",
+        title: "Topics",
+        description: "Generate topic ideas and organize your content plan.",
+        path: "ai-optimizations",
+      },
+    ],
+  },
+  {
+    section: "CONTENT CREATION",
+    items: [
+      {
+        key: "aio_answers",
+        title: "Articles",
+        description: "Generate articles from topics and briefs.",
+        path: "aio-answers",
+      },
     ],
   },
   {
