@@ -1601,7 +1601,7 @@ export default function SocialsPage({ params }) {
           <div className="flex items-center justify-center pt-28">
             <KnowledgeBaseGateAlert
               projectId={projectId}
-              description="Add your company research sources in the knowledge base before generating social media posts."
+              description="Add your school research sources in the knowledge base before generating social media posts."
             />
           </div>
         </div>
@@ -2492,17 +2492,17 @@ export default function SocialsPage({ params }) {
 
                 <div className="grid grid-cols-2 gap-4">
                   {[
-                    "Buyer persona",
-                    "Target market",
-                    "Differentiators",
+                    "Audience profile",
+                    "Target community",
+                    "Reasons families choose you",
                     "Brand Voice",
                   ].map((field, index) => {
-                    const fieldKey = field.toLowerCase().replace(" ", "");
+                    const fieldKey = field.toLowerCase().replace(/ /g, "");
                     const fieldData = (strategyData?.companyInfo ||
                       prefilledCompanyInfo)?.[
-                      fieldKey === "buyerpersona"
+                      fieldKey === "audienceprofile"
                         ? "buyer_persona"
-                        : fieldKey === "targetmarket"
+                        : fieldKey === "targetcommunity"
                         ? "target_market"
                         : fieldKey === "brandvoice"
                         ? "brand_voice"
@@ -3257,7 +3257,7 @@ export default function SocialsPage({ params }) {
             <textarea
               value={imageEditPrompt}
               onChange={(e) => setImageEditPrompt(e.target.value)}
-              placeholder="e.g., Make it more colorful, add a business theme, change the background..."
+              placeholder="e.g., Make it more colorful, add a school theme, change the background..."
               rows="4"
               className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm placeholder-gray-400 resize-none focus:outline-none focus:ring-2 focus:ring-[#9c07ff] focus:border-transparent"
             />

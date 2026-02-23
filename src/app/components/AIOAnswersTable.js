@@ -717,7 +717,7 @@ export default function AIOAnswersTable({
       // },
       {
         key: "target_customers",
-        label: "Target Customers",
+        label: "Target Families",
         sortable: false,
         filterable: false,
         sx: { width: "10vw" },

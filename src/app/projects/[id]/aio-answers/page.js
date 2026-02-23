@@ -25,7 +25,7 @@ export default function AIOAnswersPage() {
   useTrackFeatureExploration("aio_answers");
 
   // Track feature usage
-  useFeatureTracking("AIO Answers", {
+  useFeatureTracking("Articles", {
     feature_category: "ai_content",
     page_section: "aio_answers",
     project_id: projectId,
@@ -72,7 +72,7 @@ export default function AIOAnswersPage() {
 
       const data = response.data;
 
-      console.log("aio answers data----------", data);
+      console.log("Articles data----------", data);
 
       if (data.results) {
         setContentArchitectureDataId(
@@ -80,7 +80,7 @@ export default function AIOAnswersPage() {
         );
         const processed = data.results.map((answer) => {
           let ragOutput = {};
-          let title = answer.title || "Untitled Answer";
+          let title = answer.title || "Untitled Article";
 
           try {
             if (answer.rag_output) {
@@ -94,7 +94,7 @@ export default function AIOAnswersPage() {
             }
           } catch (e) {
             console.error(
-              "Failed to parse rag_output for answer:",
+              "Failed to parse rag_output for article:",
               answer._id,
               e
             );
@@ -113,7 +113,7 @@ export default function AIOAnswersPage() {
             title,
             question: answer.question || "No question provided",
             question_id: answer.question_id || answer._id, // Store the question ID for linking back to AI Optimizations
-            type: answer.type || "AIO Answer",
+            type: answer.type || "Article",
             company_name:
               answer.company_name || ragOutput?.company?.company_name,
             target_customers: marketing.target_customers || [],
@@ -134,18 +134,18 @@ export default function AIOAnswersPage() {
           answers_count: processed.length,
         });
       } else {
-        throw new Error("Failed to fetch AIO answers.");
+        throw new Error("Failed to fetch Articles.");
       }
     } catch (err) {
-      console.error("Error fetching AIO answers:", err);
+      console.error("Error fetching Articles:", err);
 
       trackFeatureAction("aio_answers_fetch_failed", {
         project_id: currentProjectId,
         is_initial: isInitial,
-        error_message: err.message || "Failed to fetch AIO answers",
+        error_message: err.message || "Failed to fetch Articles",
       });
 
-      toast.error(err.message || "Failed to fetch AIO answers.");
+      toast.error(err.message || "Failed to fetch Articles.");
     } finally {
       if (showLoader) setLoading(false);
       hasFetchedRef.current = true;
@@ -205,7 +205,7 @@ export default function AIOAnswersPage() {
     });
   }, [router]);
 
-  // Handle highlighting/selecting a specific answer when navigated from AI Optimizations
+  // Handle highlighting/selecting a specific article when navigated from Topics
   useEffect(() => {
     if (!highlightAnswerId) return;
     if (processedHighlightRef.current === highlightAnswerId) return;
@@ -220,7 +220,7 @@ export default function AIOAnswersPage() {
 
     if (!answerToHighlight) {
       if (highlightErrorToastRef.current !== highlightAnswerId) {
-        toast.error("Could not find the specified answer in AIO Answers.");
+        toast.error("Could not find the specified article in Articles.");
         highlightErrorToastRef.current = highlightAnswerId;
       }
       cleanupHighlightParams();
@@ -232,7 +232,7 @@ export default function AIOAnswersPage() {
 
     if (highlightSuccessToastRef.current !== highlightAnswerId) {
       toast.success(
-        `Found and selected answer: "${answerToHighlight.question}"`
+        `Found and selected article: "${answerToHighlight.question}"`
       );
       highlightSuccessToastRef.current = highlightAnswerId;
     }
@@ -258,10 +258,10 @@ export default function AIOAnswersPage() {
     <div className="w-full px-4 mt-2" style={{ backgroundColor: "#FAFAFA", minHeight: "calc(100vh - 100px)" }}>
       <div className="max-w-full mx-auto space-y-4 py-4">
         <h1 className="text-2xl sm:text-3xl font-bold text-[#171717]">
-          Parent Q&A (AIO)
+          Articles
         </h1>
         <p className="text-base sm:text-lg text-gray-600">
-          Review and manage your AI-generated answers
+          Review and manage your AI-generated articles
         </p>
 
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-[auto_1fr] w-full min-w-0 gap-4">

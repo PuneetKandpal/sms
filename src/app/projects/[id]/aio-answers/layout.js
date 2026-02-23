@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Parent Q&A (AIO) | SMS | Generate AI-ready answers",
+  title: "Articles | SMS | Turn family questions into full stories",
   description:
-    "SMS - AI-powered platform for intelligent business growth and strategic insights",
+    "Review and refine long-form articles generated from the questions families ask about your school.",
 };
 
 export default function AIOAnswersLayout({ children }) {

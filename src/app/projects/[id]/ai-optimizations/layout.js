@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "AI Parent Questions | SMS | Optimize for AI answers",
+  title: "Topics | SMS | Discover what families ask about your school",
   description:
-    "SMS - AI-powered platform for intelligent business growth and strategic insights",
+    "See the AI questions prospective families ask about your school so you can plan better content.",
 };
 
 export default function AIOptimizationsLayout({ children }) {

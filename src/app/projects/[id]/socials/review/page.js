@@ -296,7 +296,7 @@ const PreviewScaffold = ({ platformId, content, hook, pattern, imageUrl, tags = 
             <meta.Icon className="w-5 h-5 text-white" />
           </div>
           <div className="min-w-0">
-            <p className="text-sm font-semibold text-white">Your Company</p>
+            <p className="text-sm font-semibold text-white">Your School</p>
             <p className="text-[11px] text-blue-100">Promoted</p>
           </div>
           <div className="ml-auto">

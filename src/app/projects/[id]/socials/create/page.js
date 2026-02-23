@@ -472,9 +472,11 @@ export default function CreateSocialPost({ params }) {
         <div>
           <form onSubmit={handleSubmit} className="space-y-10">
             <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <h2 className="text-lg font-semibold text-gray-900">1. Content</h2>
-                <span className="text-xs font-medium text-gray-500 uppercase tracking-wide">Required</span>
+              <div className="flex items-center justify-center pt-28">
+                <KnowledgeBaseGateAlert
+                  projectId={projectId}
+                  description="Add your school research sources in the knowledge base before generating social media posts."
+                />
               </div>
 
               <div className="grid gap-4 lg:grid-cols-2">
@@ -767,7 +769,7 @@ export default function CreateSocialPost({ params }) {
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
                     />
                     <p className="text-sm text-gray-500 mt-1">
-                      The URL users will visit when clicking your post link
+                      The URL families will visit when clicking your post link
                     </p>
                   </div>
 

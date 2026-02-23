@@ -136,7 +136,7 @@ export default function AIOptimizationsPage({ params }) {
     [id, selectedProject?.id, selectedAIOptimizationRows.length]
   );
 
-  // Handle highlighting/selecting a specific question when navigated from AIO Answers
+  // Handle highlighting/selecting a specific question when navigated from Articles
   useEffect(() => {
     if (
       highlightQuestionId &&
@@ -157,11 +157,11 @@ export default function AIOptimizationsPage({ params }) {
         setSelectedAIOptimizationRows([questionToHighlight]);
         // Show success message
         toast.success(
-          `Found and selected question: "${questionToHighlight.question_phrase}"`
+          `Found and selected topic: "${questionToHighlight.question_phrase}"`
         );
       } else {
         toast.error(
-          "Could not find the specified question in AI Optimizations."
+          "Could not find the specified topic in Topics."
         );
       }
 
@@ -203,7 +203,7 @@ export default function AIOptimizationsPage({ params }) {
         );
       } else {
         toast.error(
-          "Could not find any questions for the specified keyword in AI Optimizations."
+          "Could not find any topics for the specified keyword in Topics."
         );
       }
 
@@ -224,12 +224,12 @@ export default function AIOptimizationsPage({ params }) {
     <div className="w-full px-4 mt-2" style={{ backgroundColor: "#FAFAFA", minHeight: "calc(100vh - 100px)" }}>
       <div className="max-w-full mx-auto space-y-4">
         <h1 className="text-2xl sm:text-3xl font-bold text-[#171717]">
-          AI Parent Questions
+          Topics
         </h1>
 
         <div className="space-y-2">
           <p className="text-base sm:text-lg text-gray-600">
-            Questions your customers ask AI
+            Questions your prospective families ask AI about your school
           </p>
         </div>
 

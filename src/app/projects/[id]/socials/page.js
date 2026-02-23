@@ -291,7 +291,7 @@ export default function SocialPostsHome({ params }) {
           <div className="py-16 flex justify-center">
             <KnowledgeBaseGateAlert
               title="Knowledge base sources are required to use this feature"
-              description="Add your company research sources in the knowledge base before using Social Media Posts."
+              description="Add your school research sources in the knowledge base before using Social Media Posts."
               actionText="Go to knowledge base"
               actionLink={`/projects/${projectId}/keywords`}
             />

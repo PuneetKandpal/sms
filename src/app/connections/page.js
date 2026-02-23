@@ -50,7 +50,7 @@ const PLATFORMS = [
     icon: FaFacebook,
     color: "#1877F2",
     gradient: "from-blue-500 to-blue-600",
-    description: "Connect your Facebook business page",
+    description: "Connect your Facebook school page",
     features: ["Pages", "Groups", "Ads Manager"],
   },
   {
@@ -59,17 +59,17 @@ const PLATFORMS = [
     icon: FaInstagram,
     color: "#E4405F",
     gradient: "from-pink-500 to-sky-600",
-    description: "Connect your Instagram business account",
+    description: "Connect your Instagram school account",
     features: ["Posts", "Stories", "Reels"],
   },
   {
     id: "twitter",
     name: "X (Twitter)",
     icon: FaTwitter,
-    color: "#000000",
-    gradient: "from-gray-800 to-black",
-    description: "Connect your X (Twitter) account",
-    features: ["Tweets", "Threads", "Spaces"],
+    color: "#1DA1F2",
+    gradient: "from-sky-400 to-blue-500",
+    description: "Connect your X profile",
+    features: ["Tweets", "Threads", "Analytics"],
   },
   {
     id: "linkedin",
@@ -77,8 +77,8 @@ const PLATFORMS = [
     icon: FaLinkedin,
     color: "#0077B5",
     gradient: "from-blue-600 to-blue-700",
-    description: "Connect your LinkedIn company page",
-    features: ["Posts", "Articles", "Company Updates"],
+    description: "Connect your LinkedIn school page",
+    features: ["Posts", "Articles", "School Updates"],
   },
   {
     id: "tiktok",
@@ -86,7 +86,7 @@ const PLATFORMS = [
     icon: FaTiktok,
     color: "#000000",
     gradient: "from-gray-900 to-black",
-    description: "Connect your TikTok business account",
+    description: "Connect your TikTok school account",
     features: ["Videos", "Live", "Ads"],
   },
   {
@@ -498,10 +498,10 @@ export default function ConnectionsPage() {
             <div className="mb-6">
               <FaBuilding className="mx-auto text-gray-400 mb-4" size={48} />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                No Company Selected
+                No School Selected
               </h3>
               <p className="text-gray-600 max-w-md mx-auto">
-                Please select a company from the navigation bar to view and
+                Please select a school from the navigation bar to view and
                 manage your social media connections.
               </p>
             </div>
