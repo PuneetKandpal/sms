@@ -6,7 +6,7 @@ import * as Sentry from "@sentry/nextjs";
 import {
   getSentryConfig,
   getCurrentEnvironment,
-} from "./src/config/sentry.config.js";
+} from "./src/config/sentry.config";
 
 // Get environment-specific configuration
 const sentryConfig = getSentryConfig();

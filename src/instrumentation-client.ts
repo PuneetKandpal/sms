@@ -6,7 +6,7 @@ import {
   getSentryConfig,
   getCurrentEnvironment,
   getEnvironmentConfig,
-} from "./config/sentry.config.js";
+} from "./config/sentry.config";
 import { getCurrentUser } from "./app/utils/auth.js";
 
 // posthog
