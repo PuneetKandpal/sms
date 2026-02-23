@@ -1,6 +1,6 @@
 import axios from "axios";
 import * as Sentry from "@sentry/nextjs";
-import { getCurrentEnvironment } from "../config/sentry.config";
+import { getCurrentEnvironment } from "../config/sentry.config.js";
 
 const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_BASE_URL ||
