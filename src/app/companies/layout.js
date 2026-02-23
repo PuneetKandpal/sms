@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Projects & Teams | Iriscale | Manage organizations and projects",
+  title: "Projects & Teams | SMS | Manage organizations and projects",
   description:
-    "Iriscale - AI-powered platform for intelligent business growth and strategic insights",
+    "SMS - AI-powered platform for intelligent business growth and strategic insights",
 };
 
 export default function CompaniesLayout({ children }) {

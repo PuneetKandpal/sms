@@ -14,9 +14,9 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Iriscale",
+  title: "SMS",
   description:
-    "Iriscale - AI-powered platform for intelligent business growth and strategic insights",
+    "SMS - AI-powered platform for intelligent business growth and strategic insights",
 };
 
 export default function RootLayout({ children }) {

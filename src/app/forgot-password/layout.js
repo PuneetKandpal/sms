@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Forgot Password | Iriscale | Reset your password",
+  title: "Forgot Password | SMS | Reset your password",
   description:
-    "Iriscale - AI-powered platform for intelligent business growth and strategic insights",
+    "SMS - AI-powered platform for intelligent business growth and strategic insights",
 };
 
 export default function ForgotPasswordLayout({ children }) {

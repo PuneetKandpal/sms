@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "New Project | Iriscale | Create new project",
+  title: "New Project | SMS | Create new project",
   description:
-    "Iriscale - AI-powered platform for intelligent business growth and strategic insights",
+    "SMS - AI-powered platform for intelligent business growth and strategic insights",
 };
 
 export default function NewProjectLayout({ children }) {

@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Search Ranking | Iriscale | Monitor search performance",
+  title: "Search Ranking | SMS | Monitor search performance",
   description:
-    "Iriscale - AI-powered platform for intelligent business growth and strategic insights",
+    "SMS - AI-powered platform for intelligent business growth and strategic insights",
 };
 
 export default function SearchRankingLayout({ children }) {

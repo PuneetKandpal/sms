@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Accept Invitation | Iriscale | Join organization",
+  title: "Accept Invitation | SMS | Join organization",
   description:
-    "Iriscale - AI-powered platform for intelligent business growth and strategic insights",
+    "SMS - AI-powered platform for intelligent business growth and strategic insights",
 };
 
 export default function InviteLayout({ children }) {

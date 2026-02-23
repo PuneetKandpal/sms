@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "New Organization | Iriscale | Create new organization",
+  title: "New Organization | SMS | Create new organization",
   description:
-    "Iriscale - AI-powered platform for intelligent business growth and strategic insights",
+    "SMS - AI-powered platform for intelligent business growth and strategic insights",
 };
 
 export default function NewOrganizationLayout({ children }) {

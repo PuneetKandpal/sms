@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Opportunity Agent | Iriscale | Discover business opportunities",
+  title: "Opportunity Agent | SMS | Discover business opportunities",
   description:
-    "Iriscale - AI-powered platform for intelligent business growth and strategic insights",
+    "SMS - AI-powered platform for intelligent business growth and strategic insights",
 };
 
 export default function OpportunityAgentLayout({ children }) {

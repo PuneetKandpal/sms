@@ -1513,7 +1513,7 @@ export const AddSourceModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
               Turn One Idea Into a Full-Funnel Topic Plan
             </h3>
             <p className="text-sm text-gray-500 max-w-2xl leading-relaxed">
-              Enter a single concept, problem, or theme. Iriscale will generate
+              Enter a single concept, problem, or theme. SMS will generate
               coordinated top-, middle-, and bottom-of-funnel topics that
               educate, convert, and support buyers.
             </p>

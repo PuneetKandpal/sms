@@ -703,7 +703,7 @@ export default function Navbar() {
           <div className="absolute top-full right-0 mt-2 w-64 bg-gray-900 text-white text-xs rounded-lg p-3 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
             <div className="font-semibold mb-1">Beta Release</div>
             <div className="text-gray-300 leading-relaxed">
-              You're using an early version of Iriscale. Features are actively
+              You're using an early version of SMS. Features are actively
               being developed and improved. Your feedback helps us build a
               better product!
             </div>

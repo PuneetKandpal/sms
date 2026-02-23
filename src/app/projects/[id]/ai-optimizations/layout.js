@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "AI Parent Questions | Iriscale | Optimize for AI answers",
+  title: "AI Parent Questions | SMS | Optimize for AI answers",
   description:
-    "Iriscale - AI-powered platform for intelligent business growth and strategic insights",
+    "SMS - AI-powered platform for intelligent business growth and strategic insights",
 };
 
 export default function AIOptimizationsLayout({ children }) {

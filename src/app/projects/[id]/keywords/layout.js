@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Enrollment Keywords | Iriscale | Track and analyze keywords",
+  title: "Enrollment Keywords | SMS | Track and analyze keywords",
   description:
-    "Iriscale - AI-powered platform for intelligent business growth and strategic insights",
+    "SMS - AI-powered platform for intelligent business growth and strategic insights",
 };
 
 export default function KeywordsLayout({ children }) {

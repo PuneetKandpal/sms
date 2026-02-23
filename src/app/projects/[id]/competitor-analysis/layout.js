@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Competitor Analysis | Iriscale | Analyze competitor strategies",
+  title: "Competitor Analysis | SMS | Analyze competitor strategies",
   description:
-    "Iriscale - AI-powered platform for intelligent business growth and strategic insights",
+    "SMS - AI-powered platform for intelligent business growth and strategic insights",
 };
 
 export default function CompetitorAnalysisLayout({ children }) {

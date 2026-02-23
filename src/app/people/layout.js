@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "People | Iriscale | Manage team members",
+  title: "People | SMS | Manage team members",
   description:
-    "Iriscale - AI-powered platform for intelligent business growth and strategic insights",
+    "SMS - AI-powered platform for intelligent business growth and strategic insights",
 };
 
 export default function PeopleLayout({ children }) {

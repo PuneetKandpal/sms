@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Login | Iriscale | Sign in to your account",
+  title: "Login | SMS | Sign in to your account",
   description:
-    "Iriscale - AI-powered platform for intelligent business growth and strategic insights",
+    "SMS - AI-powered platform for intelligent business growth and strategic insights",
 };
 
 export default function LoginLayout({ children }) {

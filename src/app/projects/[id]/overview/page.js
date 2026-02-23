@@ -1,9 +1,9 @@
 import ProjectOverviewPage from "../../../components/ProjectOverviewPage";
 
 export const metadata = {
-  title: "Overview Dashboard | Iriscale | Project insights and analytics",
+  title: "Overview Dashboard | SMS | Project insights and analytics",
   description:
-    "Iriscale - AI-powered platform for intelligent business growth and strategic insights",
+    "SMS - AI-powered platform for intelligent business growth and strategic insights",
 };
 
 export default async function OverviewPage({ params }) {
