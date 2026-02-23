@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import * as Sentry from "@sentry/nextjs";
-import { getCurrentEnvironment } from "../../config/sentry.config.js";
+import { getCurrentEnvironment } from "../../config/sentry.config";
 import api from "../../api/axios";
 
 const SentryEnvironmentTest = () => {
