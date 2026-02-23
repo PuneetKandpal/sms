@@ -4,7 +4,7 @@ import { getCurrentEnvironment } from "../config/sentry.config.js";
 
 const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_BASE_URL ||
-  "https://jbibackend-dev.up.railway.app";
+  "https://educationmarket-production.up.railway.app/";
 
 // Create axios instance
 const api = axios.create({
