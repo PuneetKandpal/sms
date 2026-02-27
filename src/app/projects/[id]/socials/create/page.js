@@ -17,6 +17,8 @@ import toast from "react-hot-toast";
 import { INTENTS, KPIS, PLATFORMS } from "../../../../../constants";
 import { useTaskMonitor } from "../../../../context/TaskMonitorContext";
 import { useSelection } from "../../../../context/SelectionContext";
+import KnowledgeBaseGateAlert from "../../../../components/KnowledgeBaseGateAlert";
+import api from "../../../../../api/axios";
 
 const TONE_OPTIONS = ["Professional", "Casual", "Enthusiastic", "Educational", "Conversational"];
 
@@ -96,6 +98,9 @@ export default function CreateSocialPost({ params }) {
 
   const [formData, setFormData] = useState(() => createInitialFormData());
 
+  const [hasCompanyResearch, setHasCompanyResearch] = useState(false);
+  const [companyResearchChecked, setCompanyResearchChecked] = useState(false);
+
   const [availableTags, setAvailableTags] = useState([]);
   const [tagInput, setTagInput] = useState("");
   const [showTagSuggestions, setShowTagSuggestions] = useState(false);
@@ -142,6 +147,26 @@ export default function CreateSocialPost({ params }) {
       ),
     [formData.platforms]
   );
+
+  useEffect(() => {
+    if (!projectId) return;
+
+    const checkCompanyResearch = async () => {
+      try {
+        const response = await api.get(
+          `/keyword-api/company-research-data/exists/?project_id=${projectId}`
+        );
+        setHasCompanyResearch(response?.data?.exists || false);
+      } catch (error) {
+        console.error("Error checking company research:", error);
+        setHasCompanyResearch(false);
+      } finally {
+        setCompanyResearchChecked(true);
+      }
+    };
+
+    checkCompanyResearch();
+  }, [projectId]);
 
   const connectedSummary = useMemo(() => {
     if (connectedPlatforms.length === 0) {
@@ -434,6 +459,38 @@ export default function CreateSocialPost({ params }) {
     return platformConnections[platformId]?.connected || false;
   };
 
+  if (!companyResearchChecked) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <Loader2 className="w-8 h-8 text-indigo-600 animate-spin" />
+      </div>
+    );
+  }
+
+  if (!hasCompanyResearch) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-white">
+        <div className="w-full px-6 sm:px-10 lg:px-16 xl:px-20 py-10 space-y-8">
+          <button
+            onClick={() => router.back()}
+            className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors cursor-pointer"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            Back to Posts
+          </button>
+
+          <div className="flex justify-center pt-28">
+            <KnowledgeBaseGateAlert
+              title="Knowledge base sources are required to use this feature"
+              description="Add your school research sources in the knowledge base before generating social media posts."
+              actionLink={`/projects/${projectId}/keywords`}
+            />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-white">
       <div className="w-full px-6 sm:px-10 lg:px-16 xl:px-20 py-10 space-y-8">
@@ -472,13 +529,6 @@ export default function CreateSocialPost({ params }) {
         <div>
           <form onSubmit={handleSubmit} className="space-y-10">
             <div className="space-y-4">
-              <div className="flex items-center justify-center pt-28">
-                <KnowledgeBaseGateAlert
-                  projectId={projectId}
-                  description="Add your school research sources in the knowledge base before generating social media posts."
-                />
-              </div>
-
               <div className="grid gap-4 lg:grid-cols-2">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
